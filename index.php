@@ -29,7 +29,7 @@
 <span class="mdi mdi-cart-outline"></span>
 
 ㅤ
-
+ <h1>ze da manga</h1>
 
 </div>
 
