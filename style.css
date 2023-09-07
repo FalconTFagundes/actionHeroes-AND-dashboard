@@ -1,0 +1,25 @@
+/* *******************************************************INICIO NAVBAR */
+
+
+/* COR DOS ICONES */
+.bgcoloricon{
+color: rgb(255, 255, 255);
+margin: -2% 80%;
+font-size: x-large;
+
+
+}
+/* POSICAO DOS ICONES */
+.posicaoicon {
+
+margin: -2% 70%;
+display:flex
+
+}
+/* TAMANHO DO CAMPO DE PESQUISA NAVBAR */
+.widthpesquisa {
+    border-radius: 5px;
+width: 200px;
+}
+
+/* *******************************************************FIM NAVBAR */
