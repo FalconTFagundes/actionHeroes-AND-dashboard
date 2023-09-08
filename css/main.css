@@ -65,7 +65,14 @@ section {
 }
 
 .section-bg {
-  background-color: #eee;
+  background-color: #eeeeee;
+}
+
+.section-bg-marvel {
+  background-image: url(../img/fundocard1.png);
+}
+.section-bg-dc {
+  background-image: url(../img/fundocard2.png);
 }
 
 .section-header {
@@ -1135,6 +1142,7 @@ section {
 
 .chefs .chef-member .member-info {
   padding: 10px 15px 20px 15px;
+  z-index: 1;
 }
 
 .chefs .chef-member .member-info h4 {

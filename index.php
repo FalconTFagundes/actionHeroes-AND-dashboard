@@ -67,6 +67,7 @@ SOMENTE HOJE 🚀 Até 50% OFF nas ofertas diárias</h1>
 
   <!-- banner index carrocel -->
 
+
   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" >
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -114,10 +115,11 @@ SOMENTE HOJE 🚀 Até 50% OFF nas ofertas diárias</h1>
 
   <!-- fim banner carrocel -->
  <!-- INICIO CARDS INDEX -->
- 
- <section id="chefs" class="chefs section-bg">
-      <div class="container" data-aos="fade-up">
+ ㅤ
 
+ <section id="chefs" class="chefs section-bg-marvel">
+      <div class="container" data-aos="fade-up">
+      
         <div class="section-header">
           <h2>Action Figures</h2>
           <p> <span>Marvel</span> </p>
@@ -136,13 +138,14 @@ SOMENTE HOJE 🚀 Até 50% OFF nas ofertas diárias</h1>
                   <a href=""><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
+           <!-- cards dc -->
               <div class="member-info">
                 <h4>Galactos</h4>
-                <span>Marvel</span>
+                <span>Marvel Universe</span>
                 <p>Galactus, também conhecido como Devorador de Mundos, é um personagem de histórias em quadrinhos, uma entidade cósmica dentro do universo Marvel da Marvel Comics. </p>
               </div>
             </div>
-          </div><!-- End Chefs Member -->
+          </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="chef-member ">
@@ -161,7 +164,7 @@ SOMENTE HOJE 🚀 Até 50% OFF nas ofertas diárias</h1>
                 <p>Thanos é um supervilão fictício das histórias em quadrinhos publicadas pela editora norte-americana Marvel Comics inspirado em Thanatos. Com primeira aparição na edição The Invincible Iron Man #55 e foi criado pelo escritor-artista Jim Starlin, com visual inspirado em Darkseid. </p>
               </div>
             </div>
-          </div><!-- End Chefs Member -->
+          </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="chef-member ">
@@ -179,13 +182,132 @@ SOMENTE HOJE 🚀 Até 50% OFF nas ofertas diárias</h1>
                 <span>Marvel</span>
                 <p>Magneto é um personagem fictício do Universo Marvel, um supervilão criado e publicado pela editora Marvel Comics, sendo considerado um dos principais inimigos dos X-Men. Magneto é um mutante com enormes poderes de manipulação de campos magnéticos, além de controlar qualquer tipo de metal, incluindo o Adamantium. </p>
               </div>
+    
             </div>
-          </div><!-- End Chefs Member -->
-
+     
+          </div>
+         
         </div>
 
       </div>
-    </section><!-- End Chefs Section -->
+    </section>
+
+    <h1> </h1>
+
+ 
+    <!-- CARDS DC -->
+    <section id="chefs" class="chefs section-bg-dc">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Action Figures</h2>
+          <p> <span>DC</span> </p>
+        </div>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="chef-member ">
+              <div class="member-img bordacard">
+                <img src="./img/imgcard4.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Superman</h4>
+                <span>Dc omics</span>
+                <p>Superman ou Super-Homem é um super-herói de histórias em quadrinhos publicadas pela DC Comics. O personagem, entretanto, desde os anos 1930, já foi adaptado para diversos outros meios, como cinema, rádio, televisão, literatura e videogame. </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="chef-member ">
+              <div class="member-img bordacard">
+                <img src="./img/imgcard5.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Batman</h4>
+                <span>Dc Comics</span>
+                <p>O Batman também conhecido pelas alcunhas Homem-Morcego, Cavaleiro das Trevas, Cruzado Encapuzado, Maior Detetive do Mundo, é um personagem fictício e super-herói encapuzado da editora norte-americana DC  </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="chef-member ">
+              <div class="member-img bordacard">
+                <img src="./img/imgcard7.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Loki</h4>
+                <span>Dc Comics</span>
+                <p>Loki é um deus da mitologia nórdica. É um deus da trapaça e da travessura e do fogo, também está ligado à magia e pode assumir a forma que quiser. Ele não pertence aos Aesir, embora viva com eles. É frequentemente considerado um símbolo da maldade, traiçoeiro, de pouca confiança; e, embora suas artimanhas geralmente causem problemas a curto prazo aos deuses, estes frequentemente se beneficiam, no fim, das travessuras de Loki. Ele está entre as figuras mais complexas da mitologia nórdica. </p>
+              </div>
+            </div>
+          </div>
+            
+      </div>
+      
+    </section>
+
+    
+    <!-- fim cards index -->
+
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Star wars</h2>
+          <p>Venha Para o lado negro da <span>Força</span></p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-7 position-relative about-img" style="background-image: url(./img/darth.jpg) ;" data-aos="fade-up" data-aos-delay="150">
+            <div class="call-us position-absolute">
+              <h4>Darth Vader</h4>
+              <p>50% off</p>
+            </div>
+          </div>
+          <div class="col-lg-5 d-flex align-items-end" data-aos="fade-up" data-aos-delay="300">
+            <div class="content ps-0 ps-lg-5">
+              <p class="fst-italic">
+              Darth Vader é um personagem fictício da franquia Star Wars. O personagem é o antagonista central da trilogia original e, como Anakin Skywalker, é um dos principais protagonistas de toda a trilogia prequela. O criador de Star Wars, George Lucas, se referiu coletivamente aos seis primeiros filmes episódicos da franquia como "a tragédia de Darth Vader".[1] Ele se tornou um dos vilões mais icônicos da cultura popular e foi listado entre os maiores vilões e personagens fictícios de todos os tempos.
+              </p>
+              <ul>
+               
+                <li><i class="bi bi-check2-all"></i>Durante a produção de O Retorno de Jedi, a equipe de elenco procurou um ator experiente para o papel de Vader sem a máscara (neste ponto considera-se que ele voltara a ser Anakin Skywalker), já que sua morte foi inquestionavelmente o clímax emocional do filme, e Sebastian Shaw foi selecionado para o papel.[</li>
+              </ul>
+              <p>
+              Em Ataque dos Clones, Anakin Skywalker se sente "sufocado" por Obi-Wan Kenobi e incapaz de controlar sua própria vida.[85] Em A Vingança dos Sith, no entanto, seu atrito "pai-filho" com seu mestre amadureceu em um relacionamento mais igualitário e fraterno.[86] Uma vez que ele se torna Darth Vader, cada ato maligno que ele comete destrói qualquer esperança ou conexão com sua vida anterior, afastando-o do caminho Jedi,[87] mas ele se redime sacrificando sua vida para salvar seu filho, Luke Skywalker, e matar o Imperador em O Retorno de Jedi.
+              </p>
+
+              <div class="position-relative mt-4">
+                <img src="assets/img/about-2.jpg" class="img-fluid" alt="">
+                <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
 </body>
 
 
