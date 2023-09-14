@@ -96,11 +96,22 @@
             </button>
         </div>
     </div>
-    <!-- Carousel End -->
 
-
-    <!-- Facts Start -->
     <br><br>
+    <div class="container">
+
+
+        <div class="card border-5" style="text-align: center;" >
+            <div class="card-body">
+                <i class="mdi mdi-account-lock-open"></i> Segurança nas suas compras |
+                <i class="mdi mdi-account-cash"> </i> Cabe no seu Bolso |
+                <i class="mdi mdi-thumb-up"> </i> Produtos de Qualidade |
+                <i class="mdi mdi-bike-fast"> </i> Entrega Rápida
+            </div>
+        </div>
+    </div>
+
+    <br><br><br>
     <p class="text-center"><b>O SEU UNIVERSO GEEK</b></p>
 
     <marquee id="textomexendohome" bgcolor="white" loop="20" scrollamount="40" width="100%" style="height: 10%;">
@@ -126,7 +137,10 @@
         <img src="img/marcas/jujutsuKaizen.png" alt="..." width="150px" class="mx-3">
         <img src="img/marcas/deathNote.png" alt="..." width="150px" class="mx-3">
     </marquee>
+
     <br><br><br><br><br><br><br>
+
+
 
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
@@ -185,12 +199,45 @@
                 </div>
             </div>
 
-
-            <!-- Segundo grupo de cards -->
-
-            <!--   <div class="carousel-item">
+            <div class="carousel-item">
                 <div class="container">
                     <div class="card-group">
+                        <div class="card mb-3">
+                            <img src="img/produtos/deadpool.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">deadpool</h5>
+                                <p class="card-text" style="color: black; font-size: 18pt ;">R$1600,00</p>
+                                <p class="card-text" style="color: LimeGreen;"><b>Desconto 30%</b></p>
+                                <p class="card-text" style="color: LimeGreen;"><b>Frete Gratis</b></p>
+                            </div>
+                        </div>
+                        <div class="card mb-3">
+                            <img src="img/produtos/deadpool.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">deadpool</h5>
+                                <p class="card-text" style="color: black; font-size: 18pt ;">R$1600,00</p>
+                                <p class="card-text" style="color: LimeGreen;"><b>Desconto 30%</b></p>
+                                <p class="card-text" style="color: LimeGreen;"><b>Frete Gratis</b></p>
+                            </div>
+                        </div>
+                        <div class="card mb-3">
+                            <img src="img/produtos/deadpool.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">deadpool</h5>
+                                <p class="card-text" style="color: black; font-size: 18pt ;">R$1600,00</p>
+                                <p class="card-text" style="color: LimeGreen;"><b>Desconto 30%</b></p>
+                                <p class="card-text" style="color: LimeGreen;"><b>Frete Gratis</b></p>
+                            </div>
+                        </div>
+                        <div class="card mb-3">
+                            <img src="img/produtos/deadpool.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">deadpool</h5>
+                                <p class="card-text" style="color: black; font-size: 18pt ;">R$1600,00</p>
+                                <p class="card-text" style="color: LimeGreen;"><b>Desconto 30%</b></p>
+                                <p class="card-text" style="color: LimeGreen;"><b>Frete Gratis</b></p>
+                            </div>
+                        </div>
                         <div class="card mb-3">
                             <img src="img/produtos/deadpool.png" class="card-img-top" alt="...">
                             <div class="card-body">
@@ -203,7 +250,8 @@
 
                     </div>
                 </div>
-            </div> -->
+            </div>
+
 
         </div>
 
@@ -612,8 +660,11 @@
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!--  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
