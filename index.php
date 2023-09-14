@@ -15,7 +15,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -30,6 +30,7 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -44,12 +45,12 @@
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-2">
         <a href="index.html" class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
             <h2 class="m-0"><img src="img/logotipo/logoActionHeroesSemFundo.png"></h2>
-         
+
         </a>
         <form class="d-flex">
-            <input class="form-control me-2" type="search"  style="width: 700px;" placeholder="Pesquisa" aria-label="Search">
+            <input class="form-control me-2" type="search" style="width: 700px;" placeholder="Pesquisa" aria-label="Search">
             <button class="btn btn-outline-success" type="submit"><i class="mdi mdi-account-search"></i></button>
-          </form>
+        </form>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -71,7 +72,7 @@
                 <div class="carousel-item active">
                     <img class="w-100 custom-height-banner" src="./img/banner/batman.jpg" alt="Image">
                 </div>
-                
+
 
                 <div class="carousel-item">
                     <img class="w-100 custom-height-banner" src="img/banner/superman.jpg" alt="Image">
@@ -85,13 +86,11 @@
 
 
 
-            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
@@ -101,84 +100,127 @@
 
 
     <!-- Facts Start -->
-        <br><br>
-        <p class="text-center"><b>O SEU UNIVERSO GEEK</b></p>
+    <br><br>
+    <p class="text-center"><b>O SEU UNIVERSO GEEK</b></p>
 
-        <marquee id="textomexendohome" bgcolor="white" loop="20" scrollamount="40" width="100%" style="height: 10%;"> 
-            <img src="img/marcas/DBZ.png" alt="..." width="150px" class="mx-3">
-            <img src="img/marcas/marvel.png" alt="..." width="150px" class="mx-3">
-            <img src="img/marcas/narutoLogo.png" alt="..." width="150px" class="mx-3">
-           <img src="img/marcas/avengersMarvel.png" alt="..." width="150px" class="mx-3">
-            <img src="img/marcas/DC.png" alt="..." width="150px" class="mx-3">
-            <img src="img/marcas/nitendo.png" alt="..." width="150px" class="mx-3">
-            <img src="img/marcas/onePiece.png" alt="..." width="150px" class="mx-3">
-            <img src="img/marcas/sega.png" alt="..." width="150px" class="mx-3">
-            <img src="img/marcas/streetFighter.png" alt="..." width="150px" class="mx-3">
-            <img src="img/marcas/warnerBros.png" alt="..." width="150px" class="mx-3">
-            <img src="img/marcas/mortalKombat.png" alt="..." width="150px" class="mx-3">
-            <img src="img/marcas/mario.png" alt="..." width="150px" class="mx-3">
-            <img src="img/marcas/cavaleirosdoZodiaco.png" alt="..." width="150px" class="mx-3">
-            <img src="img/marcas/cod.png" alt="..." width="150px" class="mx-3">
-            <img src="img/marcas/dokeyKong.png" alt="..." width="150px" class="mx-3">
-            <img src="img/marcas/nanatsunoTaizai.png" alt="..." width="150px" class="mx-3">
-            <img src="img/marcas/atackOnTitan.png" alt="..." width="150px" class="mx-3">
-            <img src="img/marcas/bleach.png" alt="..." width="150px" class="mx-3">
-            <img src="img/marcas/jojo.png" alt="..." width="150px" class="mx-3">
-            <img src="img/marcas/jujutsuKaizen.png" alt="..." width="150px" class="mx-3">
-            <img src="img/marcas/deathNote.png" alt="..." width="150px" class="mx-3">
-        </marquee>
-        
+    <marquee id="textomexendohome" bgcolor="white" loop="20" scrollamount="40" width="100%" style="height: 10%;">
+        <img src="img/marcas/DBZ.png" alt="..." width="150px" class="mx-3">
+        <img src="img/marcas/marvel.png" alt="..." width="150px" class="mx-3">
+        <img src="img/marcas/narutoLogo.png" alt="..." width="150px" class="mx-3">
+        <img src="img/marcas/avengersMarvel.png" alt="..." width="150px" class="mx-3">
+        <img src="img/marcas/DC.png" alt="..." width="150px" class="mx-3">
+        <img src="img/marcas/nitendo.png" alt="..." width="150px" class="mx-3">
+        <img src="img/marcas/onePiece.png" alt="..." width="150px" class="mx-3">
+        <img src="img/marcas/sega.png" alt="..." width="150px" class="mx-3">
+        <img src="img/marcas/streetFighter.png" alt="..." width="150px" class="mx-3">
+        <img src="img/marcas/warnerBros.png" alt="..." width="150px" class="mx-3">
+        <img src="img/marcas/mortalKombat.png" alt="..." width="150px" class="mx-3">
+        <img src="img/marcas/mario.png" alt="..." width="150px" class="mx-3">
+        <img src="img/marcas/cavaleirosdoZodiaco.png" alt="..." width="150px" class="mx-3">
+        <img src="img/marcas/cod.png" alt="..." width="150px" class="mx-3">
+        <img src="img/marcas/dokeyKong.png" alt="..." width="150px" class="mx-3">
+        <img src="img/marcas/nanatsunoTaizai.png" alt="..." width="150px" class="mx-3">
+        <img src="img/marcas/atackOnTitan.png" alt="..." width="150px" class="mx-3">
+        <img src="img/marcas/bleach.png" alt="..." width="150px" class="mx-3">
+        <img src="img/marcas/jojo.png" alt="..." width="150px" class="mx-3">
+        <img src="img/marcas/jujutsuKaizen.png" alt="..." width="150px" class="mx-3">
+        <img src="img/marcas/deathNote.png" alt="..." width="150px" class="mx-3">
+    </marquee>
+    <br><br><br><br><br><br><br>
 
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="card-group">
 
-    <!-- About Start -->
-    <div class="container-xxl py-6">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="position-relative overflow-hidden ps-5 pt-5 h-100" style="min-height: 400px;">
-                        <img class="position-absolute w-100 h-100" src="img/about-1.jpg" alt="" style="object-fit: cover;">
-                        <img class="position-absolute top-0 start-0 bg-white pe-3 pb-3" src="img/about-2.jpg" alt="" style="width: 200px; height: 200px;">
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="h-100">
-                        <h6 class="text-primary text-uppercase mb-2">About Us</h6>
-                        <h1 class="display-6 mb-4">We Help Students To Pass Test & Get A License On The First Try</h1>
-                        <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                        <div class="row g-2 mb-4 pb-2">
-                            <div class="col-sm-6">
-                                <i class="fa fa-check text-primary me-2"></i>Fully Licensed
-                            </div>
-                            <div class="col-sm-6">
-                                <i class="fa fa-check text-primary me-2"></i>Online Tracking
-                            </div>
-                            <div class="col-sm-6">
-                                <i class="fa fa-check text-primary me-2"></i>Afordable Fee 
-                            </div>
-                            <div class="col-sm-6">
-                                <i class="fa fa-check text-primary me-2"></i>Best Trainers
+                        <!-- Primeiro grupo de cards -->
+
+                        <div class="card mb-3 ">
+                            <img src="img/produtos/esqueletao.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Eskeleto</h5>
+                                <p class="card-text" style="color: black; font-size: 18pt ;">R$600,00</p>
+                                <p class="card-text" style="color: LimeGreen;"><b>Desconto 50%</b></p>
+                                <p class="card-text" style="color: LimeGreen;"><b>Frete Gratis</b></p>
                             </div>
                         </div>
-                        <div class="row g-4">
-                            <div class="col-sm-6">
-                                <a class="btn btn-primary py-3 px-5" href="">Read More</a>
+                        <div class="card mb-3 ">
+                            <img src="img/produtos/esqueletao.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Eskeleto</h5>
+                                <p class="card-text" style="color: black; font-size: 18pt ;">R$600,00</p>
+                                <p class="card-text" style="color: LimeGreen;"><b>Desconto 50%</b></p>
+                                <p class="card-text" style="color: LimeGreen;"><b>Frete Gratis</b></p>
                             </div>
-                            <div class="col-sm-6">
-                                <a class="d-inline-flex align-items-center btn btn-outline-primary border-2 p-2" href="tel:+0123456789">
-                                    <span class="flex-shrink-0 btn-square bg-primary">
-                                        <i class="fa fa-phone-alt text-white"></i>
-                                    </span>
-                                    <span class="px-3">+012 345 6789</span>
-                                </a>
+                        </div>
+                        <div class="card mb-3 ">
+                            <img src="img/produtos/esqueletao.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Eskeleto</h5>
+                                <p class="card-text" style="color: black; font-size: 18pt ;">R$600,00</p>
+                                <p class="card-text" style="color: LimeGreen;"><b>Desconto 50%</b></p>
+                                <p class="card-text" style="color: LimeGreen;"><b>Frete Gratis</b></p>
+                            </div>
+                        </div>
+                        <div class="card mb-3 ">
+                            <img src="img/produtos/esqueletao.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Eskeleto</h5>
+                                <p class="card-text" style="color: black; font-size: 18pt ;">R$600,00</p>
+                                <p class="card-text" style="color: LimeGreen;"><b>Desconto 50%</b></p>
+                                <p class="card-text" style="color: LimeGreen;"><b>Frete Gratis</b></p>
+                            </div>
+                        </div>
+                        <div class="card mb-3 ">
+                            <img src="img/produtos/esqueletao.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Eskeleto</h5>
+                                <p class="card-text" style="color: black; font-size: 18pt ;">R$600,00</p>
+                                <p class="card-text" style="color: LimeGreen;"><b>Desconto 50%</b></p>
+                                <p class="card-text" style="color: LimeGreen;"><b>Frete Gratis</b></p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+
+            <!-- Segundo grupo de cards -->
+
+            <!--   <div class="carousel-item">
+                <div class="container">
+                    <div class="card-group">
+                        <div class="card mb-3">
+                            <img src="img/produtos/deadpool.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">deadpool</h5>
+                                <p class="card-text" style="color: black; font-size: 18pt ;">R$1600,00</p>
+                                <p class="card-text" style="color: LimeGreen;"><b>Desconto 30%</b></p>
+                                <p class="card-text" style="color: LimeGreen;"><b>Frete Gratis</b></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div> -->
+
         </div>
+
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
-    <!-- About End -->
+
+
+
+
+
 
 
     <!-- Courses Start -->
@@ -196,8 +238,10 @@
                             <h5 class="mb-3">Automatic Car Lessons</h5>
                             <p>Tempor erat elitr rebum at clita dolor diam ipsum sit diam amet diam et eos</p>
                             <ol class="breadcrumb justify-content-center mb-0">
-                                <li class="breadcrumb-item small"><i class="fa fa-signal text-primary me-2"></i>Beginner</li>
-                                <li class="breadcrumb-item small"><i class="fa fa-calendar-alt text-primary me-2"></i>3 Week</li>
+                                <li class="breadcrumb-item small"><i class="fa fa-signal text-primary me-2"></i>Beginner
+                                </li>
+                                <li class="breadcrumb-item small"><i class="fa fa-calendar-alt text-primary me-2"></i>3
+                                    Week</li>
                             </ol>
                         </div>
                         <div class="position-relative mt-auto">
@@ -215,8 +259,10 @@
                             <h5 class="mb-3">Highway Driving Lesson</h5>
                             <p>Tempor erat elitr rebum at clita dolor diam ipsum sit diam amet diam et eos</p>
                             <ol class="breadcrumb justify-content-center mb-0">
-                                <li class="breadcrumb-item small"><i class="fa fa-signal text-primary me-2"></i>Beginner</li>
-                                <li class="breadcrumb-item small"><i class="fa fa-calendar-alt text-primary me-2"></i>3 Week</li>
+                                <li class="breadcrumb-item small"><i class="fa fa-signal text-primary me-2"></i>Beginner
+                                </li>
+                                <li class="breadcrumb-item small"><i class="fa fa-calendar-alt text-primary me-2"></i>3
+                                    Week</li>
                             </ol>
                         </div>
                         <div class="position-relative mt-auto">
@@ -234,8 +280,10 @@
                             <h5 class="mb-3">International Driving</h5>
                             <p>Tempor erat elitr rebum at clita dolor diam ipsum sit diam amet diam et eos</p>
                             <ol class="breadcrumb justify-content-center mb-0">
-                                <li class="breadcrumb-item small"><i class="fa fa-signal text-primary me-2"></i>Beginner</li>
-                                <li class="breadcrumb-item small"><i class="fa fa-calendar-alt text-primary me-2"></i>3 Week</li>
+                                <li class="breadcrumb-item small"><i class="fa fa-signal text-primary me-2"></i>Beginner
+                                </li>
+                                <li class="breadcrumb-item small"><i class="fa fa-calendar-alt text-primary me-2"></i>3
+                                    Week</li>
                             </ol>
                         </div>
                         <div class="position-relative mt-auto">
@@ -301,7 +349,9 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <h6 class="text-primary text-uppercase mb-2">Why Choose Us!</h6>
                     <h1 class="display-6 mb-4">Best Driving Training Agency In Your City</h1>
-                    <p class="mb-5">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                    <p class="mb-5">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
+                        eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet
+                    </p>
                     <div class="row gy-5 gx-4">
                         <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
                             <div class="d-flex align-items-center mb-3">
@@ -448,7 +498,9 @@
                                     <i class="fa fa-quote-left fa-2x text-primary"></i>
                                 </div>
                             </div>
-                            <p class="fs-4">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
+                            <p class="fs-4">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore
+                                lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.
+                            </p>
                             <hr class="w-25 mx-auto">
                             <h5>Client Name</h5>
                             <span>Profession</span>
@@ -460,7 +512,9 @@
                                     <i class="fa fa-quote-left fa-2x text-primary"></i>
                                 </div>
                             </div>
-                            <p class="fs-4">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
+                            <p class="fs-4">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore
+                                lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.
+                            </p>
                             <hr class="w-25 mx-auto">
                             <h5>Client Name</h5>
                             <span>Profession</span>
@@ -472,7 +526,9 @@
                                     <i class="fa fa-quote-left fa-2x text-primary"></i>
                                 </div>
                             </div>
-                            <p class="fs-4">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
+                            <p class="fs-4">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore
+                                lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.
+                            </p>
                             <hr class="w-25 mx-auto">
                             <h5>Client Name</h5>
                             <span>Profession</span>
