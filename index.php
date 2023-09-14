@@ -48,7 +48,7 @@
 
         </a>
         <form class="d-flex">
-            <input class="form-control me-2" type="search" style="width: 700px;" placeholder="Pesquisa" aria-label="Search">
+            <input class="form-control me-2" type="search" style="width: 400px;" placeholder="Pesquisa" aria-label="Search">
             <button class="btn btn-outline-success" type="submit"><i class="mdi mdi-account-search"></i></button>
         </form>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
