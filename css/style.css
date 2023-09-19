@@ -206,7 +206,7 @@
 /*** Courses ***/
 .courses {
     min-height: 100vh;
-    background: linear-gradient(rgba(255, 255, 255, .1), rgba(255, 255, 255, 0.473)), url(../img/fundoVegeta.jpg) center center no-repeat;
+    background: linear-gradient(rgba(255, 255, 255, 0.119), rgba(255, 255, 255, 0.256)), url(../img/fundoVegeta.jpg) center center no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
@@ -364,3 +364,7 @@
 }
 
 
+.card-img-top {
+    height: 300px; 
+    object-fit: cover;
+}

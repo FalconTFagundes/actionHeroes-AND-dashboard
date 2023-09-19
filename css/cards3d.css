@@ -86,16 +86,17 @@
     
     .card-back span {
       font-weight: 600;
-      color: yellow;
+      color: black;
+      text-align: justify;
     }
     .btn {
       text-decoration: none;
       font-weight: 500;
       padding: 0.5rem 2.2rem;
-      color: yellow;
+      color: black;
       border: 2px solid white;
       border-radius: 100px;
-      text-align: center;
+      text-align: justify;
       align-self: center;
       margin-top: 1rem;
       transform: translateZ(2rem);
@@ -103,7 +104,7 @@
     }
     .btn:hover {
       background-color: rgb(185, 164, 0);
-      color: white;
+      color: black;
       border: 2px solid rgb(185, 164, 0);
     }
     
