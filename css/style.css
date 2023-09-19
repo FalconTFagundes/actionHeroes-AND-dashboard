@@ -363,16 +363,16 @@
     width: 10px;
 }
 
-<<<<<<< HEAD
+
 .card-img-top {
    object-fit: auto;
-    height: 400px; /* Isso garante que a proporção da imagem seja mantida */
+    height: 400px; 
   }
   
-=======
+
 
 .card-img-top {
     height: 300px; 
     object-fit: cover;
 }
->>>>>>> 981d4748b4c4e7e9ad4f5063880d7fcabfa86061
+

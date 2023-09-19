@@ -34,15 +34,9 @@
     </div>
     <div class="col">
       <div class="card">
-<<<<<<< HEAD
-      <div class="image-container" style="height: 400px;">
-        <img src="./img/produtos/bane1.jpg" class="card-img-top" alt="">
-      </div>
-=======
         <div class="image-container" style="height: 300px;">
           <img src="img/produtos/esqueletao.png" class="card-img-top" alt="...">
         </div>
->>>>>>> 981d4748b4c4e7e9ad4f5063880d7fcabfa86061
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
           <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -50,17 +44,17 @@
       </div>
     </div>
     <div class="col">
-<<<<<<< HEAD
+
       <div class="car">
       <div class="image-container" style="height: 400px;">
         <img src="./img/produtos/freeza1.jpg" class="card-img-top " alt="...">
       
-=======
+
       <div class="card">
         <div class="image-container" style="height: 300px;">
           <img src="img/produtos/deadpool.png" class="card-img-top" alt="...">
         </div>
->>>>>>> 981d4748b4c4e7e9ad4f5063880d7fcabfa86061
+
         <div class="card-body">
         </div>
           <h5 class="card-title">Card title</h5>
