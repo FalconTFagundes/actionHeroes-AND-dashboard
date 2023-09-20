@@ -376,3 +376,10 @@
     object-fit: cover;
 }
 
+.card-hover-index{
+    cursor: pointer;
+}
+
+.card-hover-index:hover{
+    box-shadow: 1px 10px 12px gray;
+}
