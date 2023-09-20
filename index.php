@@ -119,7 +119,7 @@
                                 <p class="card-text" style="color: LimeGreen;"><b>Frete Gratis</b></p>
                             </div>
                         </div>
-                        <div class="card mb-3 card mb-3 card-hover-index"style="border: 3px black solid;">
+                        <div class="card mb-3 card mb-3 card-hover-index" style="border: 3px black solid;">
                             <img src="img/produtos/esqueletao.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Eskeleto</h5>
@@ -128,7 +128,7 @@
                                 <p class="card-text" style="color: LimeGreen;"><b>Frete Gratis</b></p>
                             </div>
                         </div>
-                        <div class="card mb-3 card mb-3 card-hover-index"style="border: 3px black solid;">
+                        <div class="card mb-3 card mb-3 card-hover-index" style="border: 3px black solid;">
                             <img src="img/produtos/esqueletao.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Eskeleto</h5>
@@ -137,7 +137,7 @@
                                 <p class="card-text" style="color: LimeGreen;"><b>Frete Gratis</b></p>
                             </div>
                         </div>
-                        <div class="card mb-3 card mb-3 card-hover-index"style="border: 3px black solid;">
+                        <div class="card mb-3 card mb-3 card-hover-index" style="border: 3px black solid;">
                             <img src="img/produtos/esqueletao.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Eskeleto</h5>
@@ -153,7 +153,7 @@
             <div class="carousel-item">
                 <div class="container">
                     <div class="card-group">
-                        <div class="card mb-3" style="border: 3px black solid;">
+                        <div class="card mb-3 card mb-3 card-hover-index" style="border: 3px black solid;">
                             <img src="img/produtos/deadpool.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">deadpool</h5>
@@ -162,7 +162,7 @@
                                 <p class="card-text" style="color: LimeGreen;"><b>Frete Gratis</b></p>
                             </div>
                         </div>
-                        <div class="card mb-3" style="border: 3px black solid;">
+                        <div class="card mb-3 card mb-3 card-hover-index" style="border: 3px black solid;">
                             <img src="img/produtos/deadpool.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">deadpool</h5>
@@ -171,7 +171,7 @@
                                 <p class="card-text" style="color: LimeGreen;"><b>Frete Gratis</b></p>
                             </div>
                         </div>
-                        <div class="card mb-3" style="border: 3px black solid;">
+                        <div class="card mb-3 card mb-3 card-hover-index" style="border: 3px black solid;">
                             <img src="img/produtos/deadpool.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">deadpool</h5>
@@ -180,7 +180,7 @@
                                 <p class="card-text" style="color: LimeGreen;"><b>Frete Gratis</b></p>
                             </div>
                         </div>
-                        <div class="card mb-3" style="border: 3px black solid;">
+                        <div class="card mb-3 card mb-3 card-hover-index" style="border: 3px black solid;">
                             <img src="img/produtos/deadpool.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">deadpool</h5>
@@ -189,7 +189,7 @@
                                 <p class="card-text" style="color: LimeGreen;"><b>Frete Gratis</b></p>
                             </div>
                         </div>
-                        <div class="card mb-3" style="border: 3px black solid;">
+                        <div class="card mb-3 card mb-3 card-hover-index" style="border: 3px black solid;">
                             <img src="img/produtos/deadpool.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">deadpool</h5>
@@ -233,7 +233,7 @@
 
                         <!-- Primeiro grupo de cards -->
 
-                        <div class="card mb-3 "  style="border: 3px black solid;">
+                        <div class="card mb-3 card mb-3 card-hover-index" style="border: 3px black solid;">
                             <img src="img/produtos/esqueletao.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Eskeleto</h5>
@@ -242,7 +242,7 @@
                                 <p class="card-text" style="color: LimeGreen;"><b>Frete Gratis</b></p>
                             </div>
                         </div>
-                        <div class="card mb-3 " style="border: 3px black solid;">
+                        <div class="card mb-3 card mb-3 card-hover-index" style="border: 3px black solid;">
                             <img src="img/produtos/esqueletao.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Eskeleto</h5>
@@ -251,7 +251,7 @@
                                 <p class="card-text" style="color: LimeGreen;"><b>Frete Gratis</b></p>
                             </div>
                         </div>
-                        <div class="card mb-3 " style="border: 3px black solid;">
+                        <div class="card mb-3 card mb-3 card-hover-index" style="border: 3px black solid;">
                             <img src="img/produtos/esqueletao.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Eskeleto</h5>
@@ -260,7 +260,7 @@
                                 <p class="card-text" style="color: LimeGreen;"><b>Frete Gratis</b></p>
                             </div>
                         </div>
-                        <div class="card mb-3 " style="border: 3px black solid;">
+                        <div class="card mb-3 card mb-3 card-hover-index" style="border: 3px black solid;">
                             <img src="img/produtos/esqueletao.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Eskeleto</h5>
@@ -269,7 +269,7 @@
                                 <p class="card-text" style="color: LimeGreen;"><b>Frete Gratis</b></p>
                             </div>
                         </div>
-                        <div class="card mb-3 " style="border: 3px black solid;">
+                        <div class="card mb-3 card mb-3 card-hover-index" style="border: 3px black solid;">
                             <img src="img/produtos/esqueletao.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Eskeleto</h5>
@@ -285,7 +285,7 @@
             <div class="carousel-item">
                 <div class="container">
                     <div class="card-group">
-                        <div class="card mb-3">
+                        <div class="card mb-3 card mb-3 card-hover-index" style="border: 3px black solid;">
                             <img src="img/produtos/deadpool.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">deadpool</h5>
@@ -294,7 +294,7 @@
                                 <p class="card-text" style="color: LimeGreen;"><b>Frete Gratis</b></p>
                             </div>
                         </div>
-                        <div class="card mb-3">
+                        <div class="card mb-3 card mb-3 card-hover-index" style="border: 3px black solid;">
                             <img src="img/produtos/deadpool.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">deadpool</h5>
@@ -303,7 +303,7 @@
                                 <p class="card-text" style="color: LimeGreen;"><b>Frete Gratis</b></p>
                             </div>
                         </div>
-                        <div class="card mb-3">
+                        <div class="card mb-3 card mb-3 card-hover-index" style="border: 3px black solid;">
                             <img src="img/produtos/deadpool.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">deadpool</h5>
@@ -312,7 +312,7 @@
                                 <p class="card-text" style="color: LimeGreen;"><b>Frete Gratis</b></p>
                             </div>
                         </div>
-                        <div class="card mb-3">
+                        <div class="card mb-3 card mb-3 card-hover-index" style="border: 3px black solid;">
                             <img src="img/produtos/deadpool.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">deadpool</h5>
@@ -321,7 +321,7 @@
                                 <p class="card-text" style="color: LimeGreen;"><b>Frete Gratis</b></p>
                             </div>
                         </div>
-                        <div class="card mb-3">
+                        <div class="card mb-3 card mb-3 card-hover-index" style="border: 3px black solid;">
                             <img src="img/produtos/deadpool.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">deadpool</h5>
