@@ -97,7 +97,7 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="container">
-                    <div class="card-group " >
+                    <div class="card-group" >
 
                         <!-- Primeiro grupo de cards -->
 
@@ -447,12 +447,6 @@
     </div>
     <!-- Features End -->
 
-
-    <!-- Team Start -->
-    aqui vem a aba de categorias
-    <!-- Team End -->
-
-
     <!-- Testimonial Start -->
     <div class="container-xxl py-6">
         <div class="container">
@@ -499,6 +493,7 @@
                             <hr class="w-25 mx-auto">
                             <h5>Diego Programas</h5>
                             <span>O bom de guerra</span>
+                    
                         </div>
                     </div>
                 </div>
