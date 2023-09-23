@@ -15,10 +15,10 @@ if ($servidorLocal) {
     define('HOST', 'localhost');
     define('USER', 'root');
     define('PASS', '');
-    define('DBNAME', 'action');
+    define('DBNAME', 'actionheroesdb');
 } else {
     define('HOST', 'localhost');
     define('USER', 'nomeUsuarioServidor');
     define('PASS', 'SenhaBdServidor');
-    define('DBNAME', 'action');
+    define('DBNAME', 'actionheroesdb');
 }
