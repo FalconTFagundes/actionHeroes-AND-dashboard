@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 24/09/2023 às 21:03
+-- Tempo de geração: 24/09/2023 às 21:32
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -44,6 +44,31 @@ INSERT INTO `banner` (`idbanner`, `img`, `cadastro`, `alteracao`, `ativo`) VALUE
 (2, 'deadpool.jpg', '2023-09-23 15:51:00', '2023-09-24 18:46:56', 'A'),
 (3, 'off.jpg', '2023-09-23 15:52:00', '2023-09-24 18:46:56', 'A'),
 (4, 'superman.jpg', '2023-09-23 15:56:00', '2023-09-24 18:46:56', 'A');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `init`
+--
+
+CREATE TABLE `init` (
+  `idinit` int(10) UNSIGNED NOT NULL,
+  `icon` varchar(60) NOT NULL DEFAULT '',
+  `text` varchar(75) NOT NULL DEFAULT '',
+  `cadastro` datetime DEFAULT NULL,
+  `alteracao` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `ativo` char(1) NOT NULL DEFAULT 'A'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `init`
+--
+
+INSERT INTO `init` (`idinit`, `icon`, `text`, `cadastro`, `alteracao`, `ativo`) VALUES
+(1, 'mdi mdi-account-lock-open', 'Silzinha Amor de Me vida', '2023-09-24 16:10:00', '2023-09-24 19:20:02', 'A'),
+(2, 'mdi mdi-account-cash', 'Cabe no seu Bolso', '2023-09-24 16:10:00', '2023-09-24 19:12:52', 'A'),
+(3, 'mdi mdi-thumb-up', 'Produtos de Qualidade', '2023-09-24 16:12:00', '2023-09-24 19:12:52', 'A'),
+(4, 'mdi mdi-bike-fast', 'Entrega Rápida', '2023-09-24 16:12:00', '2023-09-24 19:12:52', 'A');
 
 -- --------------------------------------------------------
 
@@ -108,6 +133,68 @@ INSERT INTO `produto` (`idproduto`, `nome`, `img1`, `img2`, `img3`, `descricao`,
 (34, 'Sagat', 'sagat1.jpg', 'sagat2.jpg', 'sagat3.jpg', 'Sagat conquistou o título de Imperador do Muay Thai quando ainda era adolescente, se tornando então um herói nacional na Thailândia.Com o tempo treinou Adon, e anos mais tarde criou o primeiro torneio Street Fighter, a fim de provar que não era somente o mais forte lutador de Muay Thai do mundo mas sim o mais forte lutador do mundo.', 'Plastico', '20x18x12cm', '300g', 200.00, '2023-09-15 21:30:00', '2023-09-16 00:54:46', 'A'),
 (35, 'Stormtrooper', 'stormtrooper1.jpg', 'stormtrooper2.jpg', 'stormtrooper3.jpg', 'Stormtrooper era um ramo independente militar sob o Exército Imperial do Império Galático. O Corpo era mais conhecido por seu numeroso suprimento de obedientes stormtroopers treinados em Academias Imperiais em toda a galáxia, bem como sua devoção fanática a Darth Vader.', 'PVC', '15 x 20 x 30 cm', '400g', 180.00, '2023-09-15 21:30:00', '2023-09-16 00:54:46', 'A');
 
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `titleuniversogeek`
+--
+
+CREATE TABLE `titleuniversogeek` (
+  `idtitleUniversoGeek` int(10) UNSIGNED NOT NULL,
+  `title` varchar(45) NOT NULL DEFAULT '',
+  `cadastro` datetime DEFAULT NULL,
+  `alteracao` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `ativo` char(1) NOT NULL DEFAULT 'A'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `titleuniversogeek`
+--
+
+INSERT INTO `titleuniversogeek` (`idtitleUniversoGeek`, `title`, `cadastro`, `alteracao`, `ativo`) VALUES
+(1, 'SEU MUNDO GEEK CHEGOU', '2023-09-24 16:23:00', '2023-09-24 19:25:20', 'A');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `universogeek`
+--
+
+CREATE TABLE `universogeek` (
+  `iduniversoGeek` int(10) UNSIGNED NOT NULL,
+  `img` varchar(60) NOT NULL DEFAULT '',
+  `cadastro` datetime DEFAULT NULL,
+  `alteracao` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `ativo` char(1) NOT NULL DEFAULT 'A'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `universogeek`
+--
+
+INSERT INTO `universogeek` (`iduniversoGeek`, `img`, `cadastro`, `alteracao`, `ativo`) VALUES
+(1, 'DBZ.png', '2023-09-24 16:29:00', '2023-09-24 19:29:35', 'A'),
+(2, 'marvel.png', '2023-09-24 16:29:00', '2023-09-24 19:29:35', 'A'),
+(3, 'narutoLogo.png', '2023-09-24 16:29:00', '2023-09-24 19:29:35', 'A'),
+(4, 'avengersMarvel.png', '2023-09-24 16:29:00', '2023-09-24 19:29:35', 'A'),
+(5, 'DC.png', '2023-09-24 16:29:00', '2023-09-24 19:29:35', 'A'),
+(6, 'nitendo.png', '2023-09-24 16:29:00', '2023-09-24 19:29:35', 'A'),
+(7, 'onePiece.png', '2023-09-24 16:29:00', '2023-09-24 19:29:35', 'A'),
+(8, 'sega.png', '2023-09-24 16:29:00', '2023-09-24 19:29:35', 'A'),
+(9, 'streetFighter.png', '2023-09-24 16:29:00', '2023-09-24 19:29:35', 'A'),
+(10, 'warnerBros.png', '2023-09-24 16:29:00', '2023-09-24 19:29:35', 'A'),
+(11, 'mortalKombat.png', '2023-09-24 16:29:00', '2023-09-24 19:29:35', 'A'),
+(12, 'mario.png', '2023-09-24 16:29:00', '2023-09-24 19:29:35', 'A'),
+(13, 'cavaleirosdoZodiaco.png', '2023-09-24 16:29:00', '2023-09-24 19:29:35', 'A'),
+(14, 'cod.png', '2023-09-24 16:29:00', '2023-09-24 19:29:35', 'A'),
+(15, 'dokeyKong.png', '2023-09-24 16:29:00', '2023-09-24 19:29:35', 'A'),
+(16, 'nanatsunoTaizai.png', '2023-09-24 16:29:00', '2023-09-24 19:29:35', 'A'),
+(17, 'atackOnTitan.png', '2023-09-24 16:29:00', '2023-09-24 19:29:35', 'A'),
+(18, 'bleach.png', '2023-09-24 16:29:00', '2023-09-24 19:29:35', 'A'),
+(19, 'jojo.png', '2023-09-24 16:29:00', '2023-09-24 19:29:35', 'A'),
+(20, 'jujutsuKaizen.png', '2023-09-24 16:29:00', '2023-09-24 19:29:35', 'A'),
+(21, 'deathNote.png', '2023-09-24 16:29:00', '2023-09-24 19:29:36', 'A');
+
 --
 -- Índices para tabelas despejadas
 --
@@ -119,10 +206,28 @@ ALTER TABLE `banner`
   ADD PRIMARY KEY (`idbanner`);
 
 --
+-- Índices de tabela `init`
+--
+ALTER TABLE `init`
+  ADD PRIMARY KEY (`idinit`);
+
+--
 -- Índices de tabela `produto`
 --
 ALTER TABLE `produto`
   ADD PRIMARY KEY (`idproduto`);
+
+--
+-- Índices de tabela `titleuniversogeek`
+--
+ALTER TABLE `titleuniversogeek`
+  ADD PRIMARY KEY (`idtitleUniversoGeek`);
+
+--
+-- Índices de tabela `universogeek`
+--
+ALTER TABLE `universogeek`
+  ADD PRIMARY KEY (`iduniversoGeek`);
 
 --
 -- AUTO_INCREMENT para tabelas despejadas
@@ -135,10 +240,28 @@ ALTER TABLE `banner`
   MODIFY `idbanner` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT de tabela `init`
+--
+ALTER TABLE `init`
+  MODIFY `idinit` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT de tabela `produto`
 --
 ALTER TABLE `produto`
   MODIFY `idproduto` int(50) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+
+--
+-- AUTO_INCREMENT de tabela `titleuniversogeek`
+--
+ALTER TABLE `titleuniversogeek`
+  MODIFY `idtitleUniversoGeek` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de tabela `universogeek`
+--
+ALTER TABLE `universogeek`
+  MODIFY `iduniversoGeek` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

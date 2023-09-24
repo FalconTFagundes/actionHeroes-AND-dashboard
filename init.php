@@ -1,12 +1,15 @@
 <div class="container">
+    <div class="card border-5" style="text-align: center;">
+        <div class="card-body">
+            <?php
+            $retornoInit = listarTodosRegistros('init', 'icon, text', 'A');
+            foreach ($retornoInit as $itemInit) {
+                $iconInit = $itemInit->icon;
+                $textInit = $itemInit->text;
 
-
-<div class="card border-5" style="text-align: center;">
-    <div class="card-body">
-        <i class="mdi mdi-account-lock-open"></i> Segurança nas suas compras |
-        <i class="mdi mdi-account-cash"> </i> Cabe no seu Bolso |
-        <i class="mdi mdi-thumb-up"> </i> Produtos de Qualidade |
-        <i class="mdi mdi-bike-fast"> </i> Entrega Rápida
+            ?>
+                <i class="<?php echo $iconInit; ?>"></i></i> <?php echo $textInit; ?> |
+            <?php } ?>
+        </div>
     </div>
-</div>
 </div>
