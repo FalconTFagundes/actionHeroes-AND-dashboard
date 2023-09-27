@@ -219,3 +219,24 @@ function insertTres($tabela, $camposTabela, $valor1, $valor2, $value3)
 
 
 
+function listarTodosRegistrosMaisUmCampo($tabela, $campos, $ativo, $destaque, $freteGratis)
+{
+    $conn = conectar();
+    try {
+        $sqlLista = $conn->prepare("SELECT $campos FROM $tabela WHERE ativo = ? AND destaque = ? AND freteGratis = ?");
+        $sqlLista->bindValue(1, $ativo, PDO::PARAM_STR);
+        $sqlLista->bindValue(2, $destaque, PDO::PARAM_STR);
+        $sqlLista->bindValue(3, $freteGratis, PDO::PARAM_STR);
+        $sqlLista->execute();
+        if ($sqlLista->rowCount() > 0) {
+            return $sqlLista->fetchAll(PDO::FETCH_OBJ);
+        } else {
+            return 'Vazio';
+        }
+    } catch (PDOException $e) {
+        echo 'Exception -> ';
+        return $e->getMessage();
+    } finally {
+        $conn = null;
+    }
+}

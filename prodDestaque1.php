@@ -1,118 +1,75 @@
 <div class="container">
-        <p class="fs-5" style="color: black;"> Produtos Com Desconto</p>
+    <p class="fs-5" style="color: black;"> Produtos Com Frete Gratis</p>
+</div>
+<div id="prodDestaque" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="container">
+                <div class="card-group">
+                    <?php
+                    $listarDestaqueUm = listarTodosRegistrosMaisUmCampo('produto', 'nome, img1, valor, ativo, desconto, destaque, freteGratis', 'A', 'N', 'S');
+                    foreach ($listarDestaqueUm as $itemDestaqueUm) {
+                        $nomePageDestaqueUm = $itemDestaqueUm->nome;
+                        $imgPageDestaqueUm = $itemDestaqueUm->img1;
+                        $valorPageDestaqueUm = $itemDestaqueUm->valor;
+                        $descontoPageDestaqueUm = $itemDestaqueUm->desconto;
+                        $fretePageDestaqueUm = $itemDestaqueUm->freteGratis;
 
-    </div>
-    <div id="prodDestaque" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="container">
-                    <div class="card-group">
-
-                        <!-- Primeiro grupo de cards -->
+                    ?>
 
                         <div class="card mb-3 card-hover-index" style="border: 3px black solid;">
-                            <img src="img/produtos/esqueletao.png" class="card-img-top" alt="...">
+                            <img src="img/produtos/<?php echo $imgPageDestaqueUm; ?>" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Eskeleto</h5>
-                                <p class="card-text" style="color: black; font-size: 18pt ;">R$600,00</p>
-                                <p class="card-text" style="color: LimeGreen;"><b>Desconto 50%</b></p>
-                                <p class="card-text" style="color: LimeGreen;"><b>Frete Gratis</b></p>
+                                <h5 class="card-title"><?php echo $nomePageDestaqueUm; ?></h5>
+                                <p class="card-text" style="color: black; font-size: 18pt ;">R$<?php echo $valorPageDestaqueUm; ?></p>
+                                <p class="card-text" style="color: LimeGreen;"><b>Desconto <?php echo $descontoPageDestaqueUm; ?></b></p>
+                                <?php
+                                $msgFrete = False;
+                                if ($fretePageDestaqueUm == 'S') {
+                                    $msgFrete = "Frete Gratis";
+                                }
+                                ?>
+                                <p class="card-text" style="color: LimeGreen;"><b><?php echo $msgFrete; ?></b></p>
                             </div>
                         </div>
+                    <?php } ?>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="carousel-item">
+            <div class="container">
+                <div class="card-group">
+                    <?php
+                    $listarDestaqueDois = listarTodosRegistrosMaisUmCampo('produto', 'nome, img1, valor, ativo, desconto, destaque, freteGratis', 'A', 'N', 'S');
+                    foreach ($listarDestaqueDois as $itemDestaqueDois) {
+                        $nomePageDestaqueDois = $itemDestaqueDois->nome;
+                        $imgPageDestaqueDois = $itemDestaqueDois->img1;
+                        $valorPageDestaqueDois = $itemDestaqueDois->valor;
+                        $descontoPageDestaqueDois = $itemDestaqueDois->desconto;
+                        $fretePageDestaqueDois = $itemDestaqueDois->freteGratis;
+
+                    ?>
                         <div class="card mb-3 card mb-3 card-hover-index" style="border: 3px black solid;">
-                            <img src="img/produtos/esqueletao.png" class="card-img-top" alt="...">
+                            <img src="img/produtos/<?php echo $imgPageDestaqueDois; ?>" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Eskeleto</h5>
-                                <p class="card-text" style="color: black; font-size: 18pt ;">R$600,00</p>
-                                <p class="card-text" style="color: LimeGreen;"><b>Desconto 50%</b></p>
-                                <p class="card-text" style="color: LimeGreen;"><b>Frete Gratis</b></p>
+                                <h5 class="card-title"> <?php echo $nomePageDestaqueDois; ?></h5>
+                                <p class="card-text" style="color: black; font-size: 18pt ;">R$<?php echo $valorPageDestaqueDois; ?></p>
+                                <p class="card-text" style="color: LimeGreen;"><b>Desconto <?php echo $descontoPageDestaqueDois; ?></b></p>
+                                <?php
+                                $msgFrete = False;
+                                if ($fretePageDestaqueDois == 'S') {
+                                    $msgFrete = "Frete Gratis";
+                                }
+                                ?>
+                                <p class="card-text" style="color: LimeGreen;"><b><?php echo $msgFrete; ?></b></p>
                             </div>
                         </div>
-                        <div class="card mb-3 card mb-3 card-hover-index" style="border: 3px black solid;">
-                            <img src="img/produtos/esqueletao.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Eskeleto</h5>
-                                <p class="card-text" style="color: black; font-size: 18pt ;">R$600,00</p>
-                                <p class="card-text" style="color: LimeGreen;"><b>Desconto 50%</b></p>
-                                <p class="card-text" style="color: LimeGreen;"><b>Frete Gratis</b></p>
-                            </div>
-                        </div>
-                        <div class="card mb-3 card mb-3 card-hover-index" style="border: 3px black solid;">
-                            <img src="img/produtos/esqueletao.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Eskeleto</h5>
-                                <p class="card-text" style="color: black; font-size: 18pt ;">R$600,00</p>
-                                <p class="card-text" style="color: LimeGreen;"><b>Desconto 50%</b></p>
-                                <p class="card-text" style="color: LimeGreen;"><b>Frete Gratis</b></p>
-                            </div>
-                        </div>
-                        <div class="card mb-3 card mb-3 card-hover-index" style="border: 3px black solid;">
-                            <img src="img/produtos/esqueletao.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Eskeleto</h5>
-                                <p class="card-text" style="color: black; font-size: 18pt ;">R$600,00</p>
-                                <p class="card-text" style="color: LimeGreen;"><b>Desconto 50%</b></p>
-                                <p class="card-text" style="color: LimeGreen;"><b>Frete Gratis</b></p>
-                            </div>
-                        </div>
-                    </div>
+                    <?php } ?>
                 </div>
             </div>
-
-            <div class="carousel-item">
-                <div class="container">
-                    <div class="card-group">
-                        <div class="card mb-3 card mb-3 card-hover-index" style="border: 3px black solid;">
-                            <img src="img/produtos/deadpool.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">deadpool</h5>
-                                <p class="card-text" style="color: black; font-size: 18pt ;">R$1600,00</p>
-                                <p class="card-text" style="color: LimeGreen;"><b>Desconto 30%</b></p>
-                                <p class="card-text" style="color: LimeGreen;"><b>Frete Gratis</b></p>
-                            </div>
-                        </div>
-                        <div class="card mb-3 card mb-3 card-hover-index" style="border: 3px black solid;">
-                            <img src="img/produtos/deadpool.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">deadpool</h5>
-                                <p class="card-text" style="color: black; font-size: 18pt ;">R$1600,00</p>
-                                <p class="card-text" style="color: LimeGreen;"><b>Desconto 30%</b></p>
-                                <p class="card-text" style="color: LimeGreen;"><b>Frete Gratis</b></p>
-                            </div>
-                        </div>
-                        <div class="card mb-3 card mb-3 card-hover-index" style="border: 3px black solid;">
-                            <img src="img/produtos/deadpool.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">deadpool</h5>
-                                <p class="card-text" style="color: black; font-size: 18pt ;">R$1600,00</p>
-                                <p class="card-text" style="color: LimeGreen;"><b>Desconto 30%</b></p>
-                                <p class="card-text" style="color: LimeGreen;"><b>Frete Gratis</b></p>
-                            </div>
-                        </div>
-                        <div class="card mb-3 card mb-3 card-hover-index" style="border: 3px black solid;">
-                            <img src="img/produtos/deadpool.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">deadpool</h5>
-                                <p class="card-text" style="color: black; font-size: 18pt ;">R$1600,00</p>
-                                <p class="card-text" style="color: LimeGreen;"><b>Desconto 30%</b></p>
-                                <p class="card-text" style="color: LimeGreen;"><b>Frete Gratis</b></p>
-                            </div>
-                        </div>
-                        <div class="card mb-3 card mb-3 card-hover-index" style="border: 3px black solid;">
-                            <img src="img/produtos/deadpool.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">deadpool</h5>
-                                <p class="card-text" style="color: black; font-size: 18pt ;">R$1600,00</p>
-                                <p class="card-text" style="color: LimeGreen;"><b>Desconto 30%</b></p>
-                                <p class="card-text" style="color: LimeGreen;"><b>Frete Gratis</b></p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-
         </div>
 
         <a class="carousel-control-prev" href="#prodDestaque" role="button" data-slide="prev">
@@ -124,4 +81,3 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-
