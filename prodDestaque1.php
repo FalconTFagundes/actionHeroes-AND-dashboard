@@ -7,76 +7,68 @@
             <div class="container">
                 <div class="card-group">
                     <?php
-                    $listarDestaqueUm = listarTodosRegistrosMaisUmCampo('produto', 'nome, img1, valor, ativo, desconto, destaque, freteGratis', 'A', 'N', 'S');
-                    foreach ($listarDestaqueUm as $itemDestaqueUm) {
-                        $nomePageDestaqueUm = $itemDestaqueUm->nome;
-                        $imgPageDestaqueUm = $itemDestaqueUm->img1;
-                        $valorPageDestaqueUm = $itemDestaqueUm->valor;
-                        $descontoPageDestaqueUm = $itemDestaqueUm->desconto;
-                        $fretePageDestaqueUm = $itemDestaqueUm->freteGratis;
+                   
+                    $listarDestaque = listarTodosRegistrosMaisUmCampo('produto', 'nome, img1, valor, ativo, desconto, destaque, freteGratis', 'A', 'N', 'S');
+                    foreach ($listarDestaque as $itemDestaque) {
+                        $nomePageDestaque = $itemDestaque->nome;
+                        $imgPageDestaque = $itemDestaque->img1;
+                        $valorPageDestaque = $itemDestaque->valor;
+                        $descontoPageDestaque = $itemDestaque->desconto;
+                        $fretePageDestaque = $itemDestaque->freteGratis;
+                        $controleCarrosel = 0; /* proximo passo - ajustar controle */
 
                     ?>
 
                         <div class="card mb-3 card-hover-index" style="border: 3px black solid;">
-                            <img src="img/produtos/<?php echo $imgPageDestaqueUm; ?>" class="card-img-top" alt="...">
+                            <img src="img/produtos/<?php echo $imgPageDestaque; ?>" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title"><?php echo $nomePageDestaqueUm; ?></h5>
-                                <p class="card-text" style="color: black; font-size: 18pt ;">R$<?php echo $valorPageDestaqueUm; ?></p>
-                                <p class="card-text" style="color: LimeGreen;"><b>Desconto <?php echo $descontoPageDestaqueUm; ?></b></p>
+                                <h5 class="card-title"><?php echo $nomePageDestaque; ?></h5>
+                                <p class="card-text" style="color: black; font-size: 18pt ;">R$<?php echo $valorPageDestaque; ?></p>
+                                <p class="card-text" style="color: LimeGreen;"><b>Desconto <?php echo $descontoPageDestaque; ?></b></p>
                                 <?php
                                 $msgFrete = False;
-                                if ($fretePageDestaqueUm == 'S') {
+                                if ($fretePageDestaque == 'S') {
                                     $msgFrete = "Frete Gratis";
                                 }
                                 ?>
                                 <p class="card-text" style="color: LimeGreen;"><b><?php echo $msgFrete; ?></b></p>
                             </div>
                         </div>
-                    <?php } ?>
+                    <?php
+                    }
+                    $controleCarrosel++;
+
+                    if ($controleCarrosel >=6) {
+
+                    ?>
                 </div>
 
             </div>
         </div>
-
 
         <div class="carousel-item">
             <div class="container">
                 <div class="card-group">
-                    <?php
-                    $listarDestaqueDois = listarTodosRegistrosMaisUmCampo('produto', 'nome, img1, valor, ativo, desconto, destaque, freteGratis', 'A', 'N', 'S');
-                    foreach ($listarDestaqueDois as $itemDestaqueDois) {
-                        $nomePageDestaqueDois = $itemDestaqueDois->nome;
-                        $imgPageDestaqueDois = $itemDestaqueDois->img1;
-                        $valorPageDestaqueDois = $itemDestaqueDois->valor;
-                        $descontoPageDestaqueDois = $itemDestaqueDois->desconto;
-                        $fretePageDestaqueDois = $itemDestaqueDois->freteGratis;
+                    <div class="card mb-3 card mb-3 card-hover-index" style="border: 3px black solid;">
+                        <img src="img/produtos/<?php echo $imgPageDestaque; ?>" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"> <?php echo $nomePageDestaque; ?></h5>
+                            <p class="card-text" style="color: black; font-size: 18pt ;">R$<?php echo $valorPageDestaque; ?></p>
+                            <p class="card-text" style="color: LimeGreen;"><b>Desconto <?php echo $descontoPageDestaque; ?></b></p>
 
-                    ?>
-                        <div class="card mb-3 card mb-3 card-hover-index" style="border: 3px black solid;">
-                            <img src="img/produtos/<?php echo $imgPageDestaqueDois; ?>" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title"> <?php echo $nomePageDestaqueDois; ?></h5>
-                                <p class="card-text" style="color: black; font-size: 18pt ;">R$<?php echo $valorPageDestaqueDois; ?></p>
-                                <p class="card-text" style="color: LimeGreen;"><b>Desconto <?php echo $descontoPageDestaqueDois; ?></b></p>
-                                <?php
-                                $msgFrete = False;
-                                if ($fretePageDestaqueDois == 'S') {
-                                    $msgFrete = "Frete Gratis";
-                                }
-                                ?>
-                                <p class="card-text" style="color: LimeGreen;"><b><?php echo $msgFrete; ?></b></p>
-                            </div>
+                            <p class="card-text" style="color: LimeGreen;"><b><?php echo $msgFrete; ?></b></p>
                         </div>
-                    <?php } ?>
+                    </div>
+                <?php } ?>
                 </div>
             </div>
         </div>
 
-        <a class="carousel-control-prev" href="#prodDestaque" id="" role="button" data-slide="prev">
+        <a class="carousel-control-prev" href="#prodDestaque" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#prodDestaque" id="" role="button" data-slide="next">
+        <a class="carousel-control-next" href="#prodDestaque" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
