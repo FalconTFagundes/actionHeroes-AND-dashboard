@@ -43,7 +43,7 @@
             <div class="col">
                 <div class="card h-100 cards3d mx-auto d-flex align-items-center" style="background-color: transparent; border: none;">
                     <div class="card levi" style="background-color: transparent; border: none;">
-                        <div class="card-content"></div>
+                        <div class="card-content">
                             <div class="card-front">
                                 <p class="sub-title">Shingeki no Kyojin</p>
                                 <h1 class="title" style="color: yellow;">Levi</h1>
