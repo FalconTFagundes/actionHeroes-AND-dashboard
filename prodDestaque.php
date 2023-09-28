@@ -16,8 +16,6 @@
     ?>
       <div class="cardCarousel">
 
-
-        <div class="like"></div>
         <img class="product" src="./img/produtos/<?php echo $imgPageDestaque; ?>">
         <h4><?php echo $nomePageDestaque; ?></h4>
         <div class="rating"></div>
