@@ -6,6 +6,8 @@
     --dark: #0C2B4B;
 }
 
+@import "component/c-carousel";
+
 .py-6 {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -112,7 +114,7 @@
 }
 
 @media (max-width: 991.98px) {
-    .navbar .navbar-nav .nav-link  {
+    .navbar .navbar-nav .nav-link {
         margin-right: 0;
         padding: 10px 0;
     }
@@ -174,7 +176,7 @@
         position: relative;
         min-height: 450px;
     }
-    
+
     #header-carousel .carousel-item img {
         position: absolute;
         width: 100%;
@@ -352,34 +354,78 @@
 
 
 .custom-height-banner {
-    height: 400px; 
+    height: 400px;
 }
 
 .custom-height-banner-marcas {
-    height: 100px; 
+    height: 100px;
 }
 
-.tamanhoCard{
+.tamanhoCard {
     width: 10px;
 }
 
 
 .card-img-top {
-   object-fit: auto;
-    height: 400px; 
-  }
-  
+    object-fit: auto;
+    height: 400px;
+}
+
 
 
 .card-img-top {
-    height: 300px; 
+    height: 300px;
     object-fit: cover;
 }
 
-.card-hover-index{
+.card-hover-index {
     cursor: pointer;
 }
 
-.card-hover-index:hover{
+.card-hover-index:hover {
     box-shadow: 1px 10px 12px gray;
+}
+
+.swiper {
+    width: 600px;
+    height: 300px;
+}
+
+.slider {
+    display: flex;
+
+}
+
+.slider .card {
+    background-color: rgb(240, 240, 240);
+    border-radius: 5px;
+    margin: 1rem;
+    padding: 1rem;
+    -webkit-box-shadow: -1px 3px 13px -1px rgba(0, 0, 0, 0.52);
+    -moz-box-shadow: -1px 3px 13px -1px rgba(0, 0, 0, 0.52);
+    box-shadow: -1px 3px 13px -1px rgba(0, 0, 0, 0.52);
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.slider .card .product{
+    width: 100%;
+    height: 100%;
+}
+
+.card:hover{
+    cursor: pointer;
+    -webkit-box-shadow: -1px 3px 13px -1px rgba(255, 217, 0, 0.52);
+    -moz-box-shadow: -1px 3px 13px -1px rgba(255, 217, 0, 0.52);
+    box-shadow: -1px 3px 13px -1px rgba(255, 217, 0, 0.52);
+    transition: 0.5s;
+}
+
+.slider .card .btnCard{
+    padding: 5px;
+    border-radius: 1rem;
 }
