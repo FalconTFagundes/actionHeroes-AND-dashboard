@@ -63,12 +63,12 @@
 
     <br><br><br><br><br>
 
-    <?php include_once 'prodDestaque1.php'; ?>
+    <?php include_once 'prodFreteGratis.php'; ?>
 
 
     <br><br><br>
 
-    <?php include_once 'prodDestaque2.php'; ?>
+    <?php include_once 'prodDestaque.php'; ?>
 
     <?php include_once 'div3dCards.php'; ?>
 

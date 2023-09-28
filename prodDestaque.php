@@ -1,11 +1,11 @@
 
 
 <div class="container-fluid">
-<p class="fs-5" style="color: black;"> Frete Gratis</p>
+<p class="fs-5" style="color: black;"> Produtos Destaque</p>
   <div class="slider js-slider">
     <?php
 
-    $listarDestaque = listarTodosRegistrosMaisUmCampo('produto', 'nome, img1, valor, ativo, desconto, destaque, freteGratis', 'A', 'N', 'S');
+    $listarDestaque = listarTodosRegistrosMaisUmCampo('produto', 'nome, img1, valor, ativo, desconto, destaque, freteGratis', 'A', 'S', 'N');
     foreach ($listarDestaque as $itemDestaque) {
       $nomePageDestaque = $itemDestaque->nome;
       $imgPageDestaque = $itemDestaque->img1;
@@ -14,7 +14,7 @@
       $fretePageDestaque = $itemDestaque->freteGratis;
 
     ?>
-      <div class="card">
+      <div class="cardCarousel">
 
 
         <div class="like"></div>
@@ -39,8 +39,6 @@
         ?>
         <div class="frete"><span style="color: green ;"><?php echo $alertFrete; ?></span></div>
         <br>
-        <button class="btnCard" type="submit">Adicionar ao Carrinho</button>
-
       </div>
     <?php } ?>
   </div>

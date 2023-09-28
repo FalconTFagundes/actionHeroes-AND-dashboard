@@ -57,7 +57,7 @@
 
 $(document).ready(function () {
     $('.js-slider').slick({
-        dots: false,
+        dots: true,
         infinite: true,
         speed: 300,
         slidesToShow: 5,
