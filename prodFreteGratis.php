@@ -17,7 +17,7 @@
       <div class="cardCarousel">
 
 
-        <div class="like"></div>
+
         <img class="product" src="./img/produtos/<?php echo $imgPageFrete; ?>">
         <h4><?php echo $nomePageFrete; ?></h4>
         <div class="rating"></div>
