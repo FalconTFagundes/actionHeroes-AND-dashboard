@@ -3,11 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
-<<<<<<< HEAD
--- Tempo de geração: 29/09/2023 às 23:48
-=======
--- Tempo de geração: 29/09/2023 às 03:15
->>>>>>> 0e91c8e9397c47679795817bdd8ff2f968bc2e06
+-- Tempo de geração: 30/09/2023 às 00:45
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -72,6 +68,32 @@ INSERT INTO `cardclientes` (`idcardclientes`, `imagemcliente`, `comentarioclient
 (1, './img/comentarios/diegao.png', 'teste comentario card cliente 1', 'teste nome cliente 1', 'teste profissao 1', 'A'),
 (2, './img/comentarios/gabigol.jpg', 'teste comentario card cliente 2', 'teste nome cliente 2', 'teste profissao 2', 'A'),
 (3, './img/comentarios/lcp.jpg', 'teste comentario card cliente 3', 'teste nome cliente 3', 'teste profissao 3', 'A');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `cardofertasdodia`
+--
+
+CREATE TABLE `cardofertasdodia` (
+  `idcardofertasdodia` int(10) UNSIGNED NOT NULL,
+  `imagem1` longtext NOT NULL,
+  `titulo` varchar(45) NOT NULL,
+  `comentario` varchar(144) NOT NULL,
+  `ativo` char(1) NOT NULL DEFAULT 'A'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `cardofertasdodia`
+--
+
+INSERT INTO `cardofertasdodia` (`idcardofertasdodia`, `imagem1`, `titulo`, `comentario`, `ativo`) VALUES
+(1, '', 'teste titulo 1', 'teste comentario 1', 'A'),
+(2, '', 'teste titulo 2', 'teste comentario 2', 'A'),
+(3, '', 'teste titulo 3', 'teste comentario 3', 'A'),
+(4, '', 'teste titulo 4', 'teste comentario 4', 'A'),
+(5, '', 'teste titulo 5 ', 'teste comentario 5', 'A'),
+(6, '', 'teste titulo 6', 'teste comentario 6', 'A');
 
 -- --------------------------------------------------------
 
@@ -296,6 +318,12 @@ ALTER TABLE `cardclientes`
   ADD PRIMARY KEY (`idcardclientes`);
 
 --
+-- Índices de tabela `cardofertasdodia`
+--
+ALTER TABLE `cardofertasdodia`
+  ADD PRIMARY KEY (`idcardofertasdodia`);
+
+--
 -- Índices de tabela `info`
 --
 ALTER TABLE `info`
@@ -346,6 +374,12 @@ ALTER TABLE `banner`
 --
 ALTER TABLE `cardclientes`
   MODIFY `idcardclientes` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de tabela `cardofertasdodia`
+--
+ALTER TABLE `cardofertasdodia`
+  MODIFY `idcardofertasdodia` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de tabela `info`
