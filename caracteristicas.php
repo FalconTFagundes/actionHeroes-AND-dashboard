@@ -18,9 +18,6 @@
  ?>
 
 
-?>
-
-
 <div class="container-xxl py-6">
         <div class="container">
             <div class="row g-5">
