@@ -50,6 +50,9 @@ include_once 'config/constantes.php';
 
             $box4 = $itemInfo -> titulo4info;
             $descBox4 = $itemInfo -> descricao4info;
+
+            $cadastroInfo = $itemInfo -> cadastro;
+            $ativoInfo = $itemInfo -> ativo;
         ?>
 
             <tr>

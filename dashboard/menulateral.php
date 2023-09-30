@@ -34,9 +34,9 @@
                         </li>
                     
                         <li class="nav-item">
-                            <a class="nav-link clickMenulateral" data-menu="informacoes">
+                            <a class="nav-link clickMenulateral" data-menu="caracteristicas">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Informações</p>
+                                <p>Caracteristicas</p>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -45,11 +45,6 @@
                                 <p>Init</p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link clickMenulateral" data-menu="caracteristicas">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Caracteristicas</p>
-                            </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link clickMenulateral" data-menu="produto">

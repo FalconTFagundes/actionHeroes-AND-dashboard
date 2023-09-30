@@ -1,15 +1,18 @@
-<?php 
+<?php
 
 $acao = filter_input(INPUT_POST, 'acao', FILTER_SANITIZE_STRING);
 
-switch($acao){
+switch ($acao) {
     case 'banner';
-        include_once 'empresa/banner.php';
+        include_once 'empresa/bannerDashboard.php';
         break;
     case 'comentarios';
-        include_once 'empresa/comentarios.php';
+        include_once 'empresa/comentariosDashboard.php';
         break;
-    case 'informacoes';
-        include_once 'empresa/informacoes.php';
+    case 'caracteristicas';
+        include_once 'empresa/caracteristicasDashboard.php';
+        break;
+    case 'init';
+        include_once 'empresa/initDashboard.php';
         break;
 }
