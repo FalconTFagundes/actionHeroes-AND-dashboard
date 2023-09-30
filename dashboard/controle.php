@@ -9,4 +9,7 @@ switch($acao){
     case 'comentarios';
         include_once 'empresa/comentarios.php';
         break;
+    case 'informacoes';
+        include_once 'empresa/informacoes.php';
+        break;
 }
