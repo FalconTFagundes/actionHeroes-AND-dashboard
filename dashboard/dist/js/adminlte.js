@@ -2176,7 +2176,7 @@
   var CLASS_NAME_LIST_GROUP = 'list-group';
   var SELECTOR_DATA_WIDGET$1 = '[data-widget="sidebar-search"]';
   var SELECTOR_SIDEBAR = '.main-sidebar .nav-sidebar';
-  var SELECTOR_NAV_LINK = '.nav-link';
+  var SELECTOR_NAV_LINK = '.nav-link' ;
   var SELECTOR_NAV_TREEVIEW = '.nav-treeview';
   var SELECTOR_SEARCH_INPUT$1 = SELECTOR_DATA_WIDGET$1 + " .form-control";
   var SELECTOR_SEARCH_BUTTON = SELECTOR_DATA_WIDGET$1 + " .btn";

@@ -20,51 +20,51 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <li class="nav-item ">
-                            <a href="" class="nav-link clickMenulateral">
+                        <li class="nav-item">
+                            <a class="nav-link clickMenulateral" data-menu="banner">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Banner</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link clickMenulateral">
+                            <a class="nav-link clickMenulateral" data-menu="comentarios">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>comentarios</p>
+                                <p>Comentarios</p>
                             </a>
                         </li>
                     
                         <li class="nav-item">
-                            <a href="" class="nav-link clickMenulateral" data-menu="informacoes">
+                            <a class="nav-link clickMenulateral" data-menu="informacoes">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Informações</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link clickMenulateral" data-menu="init">
+                            <a class="nav-link clickMenulateral" data-menu="init">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Init</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link clickMenulateral" data-menu="caracteristicas">
+                            <a class="nav-link clickMenulateral" data-menu="caracteristicas">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Caracteristicas</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link clickMenulateral" data-menu="produto">
+                            <a class="nav-link clickMenulateral" data-menu="produto">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Produto</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link clickMenulateral" data-menu="titleuniversogeek">
+                            <a class="nav-link clickMenulateral" data-menu="titleuniversogeek">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Titulo Universo Geek</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link clickMenulateral" data-menu="universogeek">
+                            <a class="nav-link clickMenulateral" data-menu="universogeek">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Universo Geek</p>
                             </a>
