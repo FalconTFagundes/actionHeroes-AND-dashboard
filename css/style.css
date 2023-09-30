@@ -368,15 +368,11 @@
 
 .card-img-top {
     object-fit: auto;
-    height: 400px;
+    height: 450px;
 }
 
 
 
-.card-img-top {
-    height: 300px;
-    object-fit: cover;
-}
 
 .card-hover-index {
     cursor: pointer;
@@ -412,18 +408,19 @@
     transition: 0.5s;
 }
 
-.slider .cardCarousel .product{
+.slider .cardCarousel .product {
     width: 100%;
     height: 100%;
 }
 
-.cardCarousel:hover{
+.cardCarousel:hover {
     cursor: pointer;
     -webkit-box-shadow: -1px 3px 13px -1px rgba(255, 217, 0, 0.52);
     -moz-box-shadow: -1px 3px 13px -1px rgba(255, 217, 0, 0.52);
     box-shadow: -1px 3px 13px -1px rgba(255, 217, 0, 0.52);
     transition: 0.5s;
 }
+
 
 
 
