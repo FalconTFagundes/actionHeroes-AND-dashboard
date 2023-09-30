@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 30/09/2023 às 00:45
+-- Tempo de geração: 30/09/2023 às 02:24
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -88,12 +88,12 @@ CREATE TABLE `cardofertasdodia` (
 --
 
 INSERT INTO `cardofertasdodia` (`idcardofertasdodia`, `imagem1`, `titulo`, `comentario`, `ativo`) VALUES
-(1, '', 'teste titulo 1', 'teste comentario 1', 'A'),
-(2, '', 'teste titulo 2', 'teste comentario 2', 'A'),
-(3, '', 'teste titulo 3', 'teste comentario 3', 'A'),
-(4, '', 'teste titulo 4', 'teste comentario 4', 'A'),
-(5, '', 'teste titulo 5 ', 'teste comentario 5', 'A'),
-(6, '', 'teste titulo 6', 'teste comentario 6', 'A');
+(1, './img/produtos/ironman1.jpg', 'teste titulo 1', 'teste comentario 1', 'A'),
+(2, './img/produtos/batman1.jpg', 'teste titulo 2', 'teste comentario 2', 'A'),
+(3, './img/produtos/beerus1.jpg', 'teste titulo 3', 'teste comentario 3', 'A'),
+(4, './img/produtos/blackadam.jpg', 'teste titulo 4', 'teste comentario 4', 'A'),
+(5, './img/produtos/freeza1.jpg', 'teste titulo 5 ', 'teste comentario 5', 'A'),
+(6, './img/produtos/noobsaibot1.jpg', 'teste titulo 6', 'teste comentario 6', 'A');
 
 -- --------------------------------------------------------
 

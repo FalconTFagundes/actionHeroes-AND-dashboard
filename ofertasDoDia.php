@@ -65,9 +65,10 @@
     <div class="col">
       <div class="card">
         <div class="image-container" style="height: 400px;">
-          <img src="<?php echo $imagem1oferta; ?>" class="card-img-top " alt="...">
+          <img src="<?php echo $imagem1oferta; ?>" class="card-img-top" alt="...">
         </div>
-
+<br>
+<br>
         <div class="card-body">
           <h5 class="card-title"><?php echo $titulo1oferta; ?></h5>
           <p class="card-text"><?php echo $comentario1oferta; ?></p>

@@ -368,15 +368,11 @@
 
 .card-img-top {
     object-fit: auto;
-    height: 400px;
+    height: 450px;
 }
 
 
 
-.card-img-top {
-    height: 300px;
-    object-fit: cover;
-}
 
 .card-hover-index {
     cursor: pointer;
