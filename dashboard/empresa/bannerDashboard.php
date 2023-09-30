@@ -19,13 +19,13 @@ include_once 'config/constantes.php';
   </thead>
   <tbody>
     <?php
-    $listarBanner = listarTodosRegistros('banner', 'idbanner, img, cadastro, alteracao, ativo', 'A');
-    foreach ($listarBanner as $itemBanner) {
-      $idBanner = $itemBanner->idbanner;
-      $imgBanner = $itemBanner->img;
-      $cadastroBanner = $itemBanner->cadastro;
-      $alteracaoBanner = $itemBanner->alteracao;
-      $ativoBanner = $itemBanner->ativo;
+    $listarBannerDash = listarTodosRegistros('banner', 'idbanner, img, cadastro, alteracao, ativo', 'A');
+    foreach ($listarBannerDash as $itemBannerDash) {
+      $idBanner = $itemBannerDash->idbanner;
+      $imgBanner = $itemBannerDash->img;
+      $cadastroBanner = $itemBannerDash->cadastro;
+      $alteracaoBanner = $itemBannerDash->alteracao;
+      $ativoBanner = $itemBannerDash->ativo;
 
     ?>
 

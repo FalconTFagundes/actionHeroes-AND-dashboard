@@ -21,13 +21,13 @@ include_once 'config/constantes.php';
   </thead>
   <tbody>
     <?php
-    $listarInit = listarTodosRegistros('init', 'idinit, icon, text, cadastro, alteracao, ativo', 'A');
-    foreach ($listarInit as $itemInit) {
-      $idInit = $itemInit->idinit;
-      $iconInitDashboard = $itemInit->icon;
-      $textInit = $itemInit->text;
-      $cadastroInit = $itemInit->cadastro;
-      $ativoInit = $itemInit->ativo;
+    $listarInitDash = listarTodosRegistros('init', 'idinit, icon, text, cadastro, alteracao, ativo', 'A');
+    foreach ($listarInitDash as $itemInitDash) {
+      $idInit = $itemInitDash->idinit;
+      $iconInitDashboard = $itemInitDash->icon;
+      $textInit = $itemInitDash->text;
+      $cadastroInit = $itemInitDash->cadastro;
+      $ativoInit = $itemInitDash->ativo;
 
     ?>
 

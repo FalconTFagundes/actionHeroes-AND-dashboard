@@ -15,4 +15,7 @@ switch ($acao) {
     case 'init';
         include_once 'empresa/initDashboard.php';
         break;
+    case 'produto';
+        include_once 'empresa/produtoDashboard.php';
+        break;
 }
