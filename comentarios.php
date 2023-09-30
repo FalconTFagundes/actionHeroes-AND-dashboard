@@ -9,17 +9,17 @@
                     <div class="owl-carousel testimonial-carousel">
 
                     <?php
- $comentarioscards = listarTodosRegistros('cardclientes', 'idcardclientes, imagemcliente, comentariocliente, nomecliente, profissao, ativo', 'A');
+ $comentarioscards = listarTodosRegistros('comentarios', 'img, comentario, nome, profissao', 'A');
  foreach ($comentarioscards as $listarcomentarioscards) {
-   $imagemclientecomentario = $listarcomentarioscards->imagemcliente;
-   $comentariocliente = $listarcomentarioscards->comentariocliente;
-   $nomeclientecomentario = $listarcomentarioscards->nomecliente;
+   $imagemclientecomentario = $listarcomentarioscards->img;
+   $comentariocliente = $listarcomentarioscards->comentario;
+   $nomeclientecomentario = $listarcomentarioscards->nome;
    $profissaoclientecomentario = $listarcomentarioscards->profissao;
 
  ?>
                         <div class="testimonial-item text-center">
                             <div class="position-relative mb-5">
-                                <img class="img-fluid rounded-circle mx-auto" src="<?php echo $imagemclientecomentario; ?>" alt="">
+                                <img class="img-fluid rounded-circle mx-auto" src="./img/comentarios/<?php echo $imagemclientecomentario?>" alt="">
                                 <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white rounded-circle" style="width: 60px; height: 60px;">
                                     <i class="fa fa-quote-left fa-2x text-primary"></i>
                                 </div>
@@ -38,4 +38,3 @@
             </div>
         </div>
     </div>
-    <!-- Testimonial End -->

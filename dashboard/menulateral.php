@@ -14,34 +14,59 @@
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
-                            Layout Options
+                            Cadastros 
                             <i class="fas fa-angle-left right"></i>
                             <span class="badge badge-info right"></span>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="" class="nav-link">
+                        <li class="nav-item ">
+                            <a href="" class="nav-link clickMenulateral">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Top Navigation</p>
+                                <p>Banner</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a href="" class="nav-link clickMenulateral">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Top Navigation</p>
+                                <p>comentarios</p>
+                            </a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a href="" class="nav-link clickMenulateral" data-menu="informacoes">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Informações</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a href="" class="nav-link clickMenulateral" data-menu="init">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Top Navigation</p>
+                                <p>Init</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a href="" class="nav-link clickMenulateral" data-menu="caracteristicas">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Top Navigation</p>
+                                <p>Caracteristicas</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link clickMenulateral" data-menu="produto">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Produto</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link clickMenulateral" data-menu="titleuniversogeek">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Titulo Universo Geek</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link clickMenulateral" data-menu="universogeek">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Universo Geek</p>
                             </a>
                         </li>
                     </ul>
