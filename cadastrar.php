@@ -22,5 +22,9 @@ if ($resultado === "Cadastrado") {
 } else {
     echo "Erro ao cadastrar os dados: " . $resultado;
 }
+session_start();
+$_SESSION['mensagem'] = "Cadastro realizado com sucesso";
 
 
+header("Location: index.php");
+exit;

@@ -138,7 +138,6 @@
             <input type="date" name="dataNasc" placeholder="Data de nascimento" required> -->
 
             <input type="submit" value="Cadastrar">
-            <input type="button" value="Limpar" onclick="limparFormulario()">
 
         </form>
     </div>

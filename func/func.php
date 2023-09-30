@@ -266,3 +266,21 @@ function insertquatro($tabela, $camposTabela, $valor1, $valor2, $value3, $value4
         $conn = null;
     }
 }
+
+
+function conectarAoBanco() {
+    $host = "localhost";
+    $usuario = "root";
+    $senha = "";
+    $banco = "actionheroesdb";
+
+    // Estabelece a conexão
+    $conn = mysqli_connect($host, $usuario, $senha, $banco);
+
+    // Verifica se a conexão foi estabelecida com sucesso
+    if (!$conn) {
+        die("Erro na conexão com o banco de dados: " . mysqli_connect_error());
+    }
+
+    return $conn;
+}

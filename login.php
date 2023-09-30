@@ -1,3 +1,7 @@
+<?php
+// Inicie a sessão
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -100,10 +104,10 @@
 
         .fundoimage {
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    background-color: gray; /* Cor de fundo cinza */
-    padding: 30px; /* Espaçamento interno de 30px para a borda */
+    justify-content: center; 
+    align-items: center;
+    background-color: gray; 
+    padding: 30px; 
     margin-left: 150px;
     width: 70%;
     height: 100vh;
@@ -121,10 +125,6 @@ main{
     width: 95%; /* Torna a imagem 5% menor que a largura do contêiner pai */
 }
 
-
-
-
-
     </style>
 </head>
 
@@ -134,17 +134,22 @@ main{
             <img src="./img/logotipo/logoActionHeroesSemFundo.png" class="logo">
         </div>
         <div class="login-section-wrapper">
+            <h2>Formulário de Login</h2>
+
+            <!--mensagem de erro -->
+            <?php if (isset($_SESSION['login_error'])) : ?>
+                <p style="color: red;"><?php echo $_SESSION['login_error']; ?></p>
+                <?php unset($_SESSION['login_error']); ?>
+            <?php endif; ?>
             <h1 class="login-title">Log in</h1>
-            <form>
-                <div class="form-group">
-                    <label for="name">User Name</label>
-                    <input type="text" name="name" id="name" class="form-control" placeholder="User name">
-                </div>
-                <div class="form-group mb-4">
-                    <label for="pass">Password</label>
-                    <input type="password" name="password" id="pass" class="form-control" placeholder="Enter your password">
-                </div>
-                <button id="login" class="btn btn-block login-btn">Login</button>
+            <form action="logar.php" method="post">
+                <label for="email">Email:</label>
+                <input type="email" name="email"  class="form-control"required><br><br>
+
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" class="form-control" required><br><br>
+
+                <input type="submit" name="submit" value="Entrar" id="login" class="btn btn-block login-btn">
             </form>
             <a href="#!" class="forgot-password-link">Forgot password?</a>
             <p class="login-wrapper-footer-text">Don't have an account? <a href="#!" class="text-reset">Register here</a></p>
@@ -152,9 +157,13 @@ main{
     </main>
     <div class="fundoimage">
         <div class="login-img-wrapper">
-            <img src="./img/imagensDoWiderson/Estatua Iron man2.png" alt="login image" class="login-img">
+            <img src="./img/colection.jpg" alt="login image" class="login-img">
         </div>
     </div>
 </body>
 
 </html>
+
+
+
+
