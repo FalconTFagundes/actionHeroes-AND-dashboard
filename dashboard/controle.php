@@ -6,4 +6,7 @@ switch($acao){
     case 'banner';
         include_once 'empresa/banner.php';
         break;
+    case 'comentarios';
+        include_once 'empresa/comentarios.php';
+        break;
 }

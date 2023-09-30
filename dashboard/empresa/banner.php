@@ -12,8 +12,8 @@ include_once 'config/constantes.php';
     <tr>
       <th scope="col" width="20%">ID</th>
       <th scope="col" width="20%">Img</th>
-      <th scope="col" width="20%">Arquivo</th>
-      <th scope="col" width="40%">Ação</th>
+      <th scope="col" width="35%">Arquivo</th>
+      <th scope="col" width="25%">Ação</th>
 
     </tr>
   </thead>
