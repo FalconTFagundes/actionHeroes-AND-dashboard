@@ -1,3 +1,15 @@
+/* 
+
+By: Rafael Fagundes
+30/09/2023
+
+
+*/
+
+
+
+/* INICIO FUNÇÃO DE UPLOAD - BANNER */
+
 var redimensionar = $('#previewUploadBanner').croppie({
     enableExif: true,
     enableOrientation: true,
@@ -28,14 +40,13 @@ $('#arquivoBanner').on('change', function () {
 });
 
 $('#bntUploadArquivoBanner').on('click', function (retorno) {
-
     redimensionar.croppie('result', {
         type: 'canvas', // Tipo de arquivos permitidos - base64, html, blob
         size: 'viewport' // O tamanho da imagem cortada
     }).then(function (img){
         // Enviar os dados para um arquivo PHP
         $.ajax({
-            url: "upload.php", // Enviar os dados para o arquivo upload.php
+            url: "uploadBanner.php", // Enviar os dados para o arquivo upload.php
             type: "POST", // Método utilizado para enviar os dados
             data: { // Dados que deve ser enviado
                 "imagem": img
@@ -55,9 +66,19 @@ $('#bntUploadArquivoBanner').on('click', function (retorno) {
 });
 
 
+/* FIM FUNÇÃO UPLOAD DE IMAGE - BANNER */
 
 
-/* FIM FUNÇÃO UPLOAD DE IMAGE */
+
+
+
+
+
+/* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+
+
+
+
 
 
 

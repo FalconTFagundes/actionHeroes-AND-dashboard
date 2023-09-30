@@ -15,8 +15,8 @@ $imagem = base64_decode($imagem);
 $imagem_nome = time() . '.png';
 
 // Realizar o upload da imagem
-$uploadDir = '../img/banner';
-file_put_contents($uploadDir . $imagem_nome, $imagem);
+
+file_put_contents("../img/banner/" . $imagem_nome, $imagem);
 
 echo "Imagem enviada com sucesso!";
 
