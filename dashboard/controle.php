@@ -18,4 +18,10 @@ switch ($acao) {
     case 'produto';
         include_once 'empresa/produtoDashboard.php';
         break;
+    case 'titleuniversogeek';
+        include_once 'empresa/titleUniversoGeekDashboard.php';
+        break;
+    case 'universogeek';
+        include_once 'empresa/universoGeekDashboard.php';
+        break;
 }
