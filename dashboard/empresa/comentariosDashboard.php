@@ -22,15 +22,15 @@ include_once 'config/constantes.php';
   </thead>
   <tbody>
     <?php
-    $listarComentario = listarTodosRegistros('comentarios', 'idcomentarios, img, comentario, nome, profissao, cadastro, alteracao, ativo', 'A');
-    foreach ($listarComentario as $itemComentario) {
-        $idComentario = $itemComentario -> idcomentarios;
-        $imgComentario = $itemComentario -> img;
-        $comentario = $itemComentario -> comentario;
-        $nomeComentario = $itemComentario -> nome;
-        $profissaoComentario = $itemComentario -> profissao;
-        $cadastroComentario = $itemComentario -> cadastro;
-        $ativoComentario = $itemComentario -> ativo;
+    $listarComentarioDash = listarTodosRegistros('comentarios', 'idcomentarios, img, comentario, nome, profissao, cadastro, alteracao, ativo', 'A');
+    foreach ($listarComentarioDash as $itemComentarioDash) {
+        $idComentario = $itemComentarioDash -> idcomentarios;
+        $imgComentario = $itemComentarioDash -> img;
+        $comentario = $itemComentarioDash -> comentario;
+        $nomeComentario = $itemComentarioDash -> nome;
+        $profissaoComentario = $itemComentarioDash -> profissao;
+        $cadastroComentario = $itemComentarioDash -> cadastro;
+        $ativoComentario = $itemComentarioDash -> ativo;
 
     ?>
 

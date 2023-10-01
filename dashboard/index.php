@@ -76,14 +76,7 @@ include_once 'config/constantes.php';
 
 
   </div>
-  <script>
-    $(document).ready(function () {
-        $('.detalhes-btn').click(function () {
-            var targetModal = $(this).data('target');
-            $(targetModal).modal('show');
-        });
-    });
-</script>
+  
 
   <!-- jQuery -->
   <script src="plugins/jquery/jquery.min.js"></script>
@@ -120,8 +113,7 @@ include_once 'config/constantes.php';
 
   <script src="dist/js/pages/dashboard.js"></script>
 
-  
- 
+
 </body>
 
 </html>
