@@ -284,3 +284,25 @@ function conectarAoBanco() {
 
     return $conn;
 }
+function listarProdutosDestaqueFreteGratis($ativo, $destaque, $freteGratis)
+{
+    $conn = conectar();
+    try {
+        $sqlLista = $conn->prepare("SELECT nome, img1, valor, ativo, desconto, destaque, freteGratis FROM produto WHERE ativo = ? AND destaque = ? AND freteGratis = ?");
+        $sqlLista->bindValue(1, $ativo, PDO::PARAM_STR);
+        $sqlLista->bindValue(2, $destaque, PDO::PARAM_STR);
+        $sqlLista->bindValue(3, $freteGratis, PDO::PARAM_STR);
+        $sqlLista->execute();
+        if ($sqlLista->rowCount() > 0) {
+            return $sqlLista->fetchAll(PDO::FETCH_OBJ);
+        } else {
+            return []; // Retorna um array vazio quando nenhum registro é encontrado
+        }
+    } catch (PDOException $e) {
+        echo 'Exception -> ';
+        return $e->getMessage();
+    } finally {
+        $conn = null;
+    }
+}
+

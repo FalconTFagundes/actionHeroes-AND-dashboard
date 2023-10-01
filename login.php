@@ -1,7 +1,4 @@
-<?php
-// Inicie a sessão
-session_start();
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,17 +24,18 @@ session_start();
             text-align: center;
             flex-grow: 1;
           margin: auto; 
+
             
         }
 
         .logo {
             max-width: 100%;
             height: auto;
-            
+           
         }
 
         .login-section-wrapper {
-            padding: 10px 0px 0px 40px;
+            padding: 0px 0px 0px 40px;
             background-color: #fff;
             border: none;
             border-radius: 0;
@@ -119,7 +117,7 @@ session_start();
     height: 80vh;
 }
 main{
-    height: 80vh;
+    height: 100vh;
 }
 .login-img {
     width: 95%; /* Torna a imagem 5% menor que a largura do contêiner pai */
@@ -134,8 +132,6 @@ main{
             <img src="./img/logotipo/logoActionHeroesSemFundo.png" class="logo">
         </div>
         <div class="login-section-wrapper">
-            <h2>Formulário de Login</h2>
-
             <!--mensagem de erro -->
             <?php if (isset($_SESSION['login_error'])) : ?>
                 <p style="color: red;"><?php echo $_SESSION['login_error']; ?></p>

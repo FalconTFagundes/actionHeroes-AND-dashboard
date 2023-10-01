@@ -1,1 +1,0 @@
-Importe o arquivo .sql para o seu banco de dados
