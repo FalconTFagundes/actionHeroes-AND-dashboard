@@ -80,9 +80,8 @@ include_once 'config/constantes.php';
 
 
                 <td>
-                    <button type="button" class="btn btn-primary">Veja</button>
+                    <button type="button" class="btn btn-primary">Ativar</button>
                     <button type="button" class="btn btn-danger">Excluir</button>
-                    <button type="button" class="btn btn-success">Editar</button>
                 </td>
 
 

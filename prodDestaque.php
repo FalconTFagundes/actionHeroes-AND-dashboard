@@ -1,7 +1,5 @@
-
-
 <div class="container-fluid">
-<p class="fs-5" style="color: black;"> Produtos Destaque</p>
+  <p class="fs-5" style="color: black;"> Produtos Destaque</p>
   <div class="slider js-slider">
     <?php
 
@@ -15,28 +13,29 @@
 
     ?>
       <div class="cardCarousel">
+        <a href="detalheProduto.php?idproduto=<?php echo $idPageFrete; ?>">
+          <img class="product" src="./img/produtos/<?php echo $imgPageDestaque; ?>">
+          <h4><?php echo $nomePageDestaque; ?></h4>
+          <div class="rating"></div>
+          <div class="price">
+            <?php
+            $alertDesconto = False;
+            if (!empty($descontoPageDestaque)) {
+              $alertDesconto = "Desconto $descontoPageDestaque";
+            }
+            ?>
+            <h5><?php echo $valorPageDestaque; ?><span style="color:LimeGreen; font-size: 11pt;"> <?php echo $alertDesconto; ?></span></h5>
 
-        <img class="product" src="./img/produtos/<?php echo $imgPageDestaque; ?>">
-        <h4><?php echo $nomePageDestaque; ?></h4>
-        <div class="rating"></div>
-        <div class="price">
+          </div>
           <?php
-          $alertDesconto = False;
-          if (!empty($descontoPageDestaque)) {
-            $alertDesconto = "Desconto $descontoPageDestaque";
+          $alertFrete = False;
+          if ($fretePageDestaque == 'S') {
+            $alertFrete = "Frete Gratis";
           }
           ?>
-          <h5><?php echo $valorPageDestaque; ?><span style="color:LimeGreen; font-size: 11pt;"> <?php echo $alertDesconto; ?></span></h5>
-
-        </div>
-        <?php
-        $alertFrete = False;
-        if ($fretePageDestaque == 'S') {
-          $alertFrete = "Frete Gratis";
-        }
-        ?>
-        <div class="frete"><span style="color: green ;"><?php echo $alertFrete; ?></span></div>
-        <br>
+          <div class="frete"><span style="color: green ;"><?php echo $alertFrete; ?></span></div>
+        </a>
+          <br>
       </div>
     <?php } ?>
   </div>

@@ -18,8 +18,8 @@ include_once 'config/constantes.php';
     <tr>
       <th scope="col" width="20%">ID</th>
       <th scope="col" width="20%">Img</th>
-      <th scope="col" width="35%">Arquivo</th>
-      <th scope="col" width="25%">Ação</th>
+      <th scope="col" width="40%">Arquivo</th>
+      <th scope="col" width="20%">Ação</th>
 
     </tr>
   </thead>
@@ -45,8 +45,9 @@ include_once 'config/constantes.php';
         <td><?php echo $imgBanner; ?></td>
 
         <td>
+       
+          <button type="button" class="btn btn-primary">Ativar</button>
           <button type="button" class="btn btn-danger">Excluir</button>
-          <button type="button" class="btn btn-success">Ativar</button>
         </td>
 
 
