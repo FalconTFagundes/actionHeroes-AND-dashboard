@@ -21,7 +21,7 @@ include_once 'config/constantes.php';
   </thead>
   <tbody>
     <?php
-    $listarInitDash = listarTodosRegistros('init', 'idinit, icon, text, cadastro, alteracao, ativo', 'A');
+    $listarInitDash = listarDashboard('init', 'idinit, icon, text, cadastro, alteracao, ativo');
     foreach ($listarInitDash as $itemInitDash) {
       $idInit = $itemInitDash->idinit;
       $iconInitDashboard = $itemInitDash->icon;

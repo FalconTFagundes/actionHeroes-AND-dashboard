@@ -56,7 +56,7 @@ $('#bntUploadArquivoBanner').on('click', function (retorno) {
                 Swal.fire({
                     position: 'center',
                     icon: 'success',
-                    title: 'Your work has been saved',
+                    title: 'Salvo com Sucesso',
                     showConfirmButton: false,
                     timer: 1500
                   })

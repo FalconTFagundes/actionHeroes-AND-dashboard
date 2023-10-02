@@ -25,7 +25,7 @@ include_once 'config/constantes.php';
   </thead>
   <tbody>
     <?php
-    $listarBannerDash = listarTodosRegistros('banner', 'idbanner, img, cadastro, alteracao, ativo', 'A');
+    $listarBannerDash = listarDashboard('banner', 'idbanner, img, cadastro, alteracao, ativo');
     foreach ($listarBannerDash as $itemBannerDash) {
       $idBanner = $itemBannerDash->idbanner;
       $imgBanner = $itemBannerDash->img;

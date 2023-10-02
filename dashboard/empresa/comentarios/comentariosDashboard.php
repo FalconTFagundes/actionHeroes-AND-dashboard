@@ -22,7 +22,7 @@ include_once 'config/constantes.php';
   </thead>
   <tbody>
     <?php
-    $listarComentarioDash = listarTodosRegistros('comentarios', 'idcomentarios, img, comentario, nome, profissao, cadastro, alteracao, ativo', 'A');
+    $listarComentarioDash = listarDashboard('comentarios', 'idcomentarios, img, comentario, nome, profissao, cadastro, alteracao, ativo');
     foreach ($listarComentarioDash as $itemComentarioDash) {
         $idComentario = $itemComentarioDash -> idcomentarios;
         $imgComentario = $itemComentarioDash -> img;

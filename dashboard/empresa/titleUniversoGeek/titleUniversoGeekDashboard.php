@@ -17,7 +17,7 @@ include_once 'config/constantes.php';
   </thead>
   <tbody>
     <?php
-    $listarTituloGeek = listarTodosRegistros('titleuniversogeek', 'idtitleUniversoGeek, title, cadastro, alteracao, ativo', 'A');
+    $listarTituloGeek = listarDashboard('titleuniversogeek', 'idtitleUniversoGeek, title, cadastro, alteracao, ativo');
     foreach ($listarTituloGeek as $itemTitleGeekDash) {
       $idTitleGeekDash = $itemTitleGeekDash->idtitleUniversoGeek;
       $titleGeekDash = $itemTitleGeekDash->title;

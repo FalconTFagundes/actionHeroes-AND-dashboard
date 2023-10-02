@@ -29,7 +29,7 @@ include_once 'config/constantes.php';
     </thead>
     <tbody>
         <?php
-        $listarProdutoDash = listarTodosRegistros('produto', 'idproduto, nome, img1, img2, img3, descricao, material, dimensoes, peso, valor, cadastro, alteracao, ativo, desconto, destaque, freteGratis', 'A');
+        $listarProdutoDash = listarDashboard('produto', 'idproduto, nome, img1, img2, img3, descricao, material, dimensoes, peso, valor, cadastro, alteracao, ativo, desconto, destaque, freteGratis');
         foreach ($listarProdutoDash as $itemProdutoDash) {
             $idProduto = $itemProdutoDash->idproduto;
             $nomeProduto = $itemProdutoDash->nome;

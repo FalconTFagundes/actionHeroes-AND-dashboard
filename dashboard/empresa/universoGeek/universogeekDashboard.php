@@ -19,7 +19,7 @@ include_once 'config/constantes.php';
     </thead>
     <tbody>
         <?php
-        $listarUniversoGeekDash = listarTodosRegistros('universogeek', 'iduniversoGeek, img, cadastro, alteracao, ativo', 'A');
+        $listarUniversoGeekDash = listarDashboard('universogeek', 'iduniversoGeek, img, cadastro, alteracao, ativo');
         foreach ($listarUniversoGeekDash as $itemGeekDash) {
             $idGeekDash = $itemGeekDash->iduniversoGeek;
             $imgGeekDash = $itemGeekDash->img;

@@ -30,7 +30,7 @@ include_once 'config/constantes.php';
     </thead>
     <tbody>
         <?php
-        $listarInfo = listarTodosRegistros('info', 'idinfo, titulo1, titulo2, descricao, imagem1, imagem2, titulo1info, descricao1info, titulo2info, descricao2info, titulo3info, descricao3info, titulo4info, descricao4info, cadastro, alteracao, ativo', 'A');
+        $listarInfo = listarDashboard('info', 'idinfo, titulo1, titulo2, descricao, imagem1, imagem2, titulo1info, descricao1info, titulo2info, descricao2info, titulo3info, descricao3info, titulo4info, descricao4info, cadastro, alteracao, ativo');
         foreach ($listarInfo as $itemInfo) {
             $idInfo = $itemInfo->idinfo;
             $title1_info = $itemInfo->titulo1;

@@ -143,7 +143,7 @@ function cadastroContato($nome_contato, $email_contato, $assunto_contato, $mensa
 
 
 /* dashboard 17/07/2023 */
-function listarDashboard($campo, $tabela)
+function listarDashboard($tabela, $campo)
 {
     $conn = conectar();
     $queryListar = $conn->prepare("SELECT $campo FROM $tabela");
@@ -221,4 +221,26 @@ function insertTres($tabela, $camposTabela, $valor1, $valor2, $value3)
 }
 
 
-/* UPDATE */
+function insertUm($tabela, $camposTabela, $valor1)
+{
+   
+    $conn = conectar();
+    try {
+        $sqlInsert = $conn->prepare("INSERT INTO $tabela($camposTabela) VALUES (?)");
+        $sqlInsert->bindValue(1, $valor1, PDO::PARAM_STR);
+       
+        $sqlInsert->execute();
+
+        if ($sqlInsert->rowCount() > 0) {
+            return "Cadastrado";
+        } else {
+            return "Vazio";
+        }
+    } catch (PDOException $e) {
+        echo 'Exception -> ';
+        return $e->getMessage();
+    } finally {
+        $conn = null;
+    }
+}
+
