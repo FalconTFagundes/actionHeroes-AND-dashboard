@@ -25,8 +25,7 @@ file_put_contents("../img/banner/" . $imagem_nome, $imagem);
 echo "Imagem enviada com sucesso!";
 
 $retornoUploadBanner = insertUm('banner', 'img', "$imagem_nome");
-
-if($retornoUploadBanner == 'Gravado'){
+if($retornoUploadBanner ==='Gravado'){
     echo True;
 } else {
     echo False;
