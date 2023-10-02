@@ -5,7 +5,7 @@
                 <img src="../img/imgDash/user.png" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">User Admin</a>
+                <a href="#" class="d-block"><?php echo $_SESSION['nome_usuario'];  ?></a>
             </div>
         </div>
         <nav class="mt-2">

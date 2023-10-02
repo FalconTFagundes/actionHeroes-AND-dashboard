@@ -24,7 +24,7 @@
                 if (isset($_SESSION['nome_usuario'])) {
                     echo '<span class="nav-item nav-link">Bem-vindo, ' . $_SESSION['nome_usuario'] . '</span>';
                     if ($_SESSION['papel'] == 'administrador') {
-                        echo '<a href="painel_controle.php" class="nav-item nav-link">Painel de Controle</a>';
+                        echo '<a href="dashboard/index.php" class="nav-item nav-link">Painel de Controle</a>';
                     }
                     echo '<a href="Sair.php" class="nav-item nav-link">Sair</a>'; // Link de logout
                 } else {
