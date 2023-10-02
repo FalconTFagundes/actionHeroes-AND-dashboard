@@ -168,6 +168,30 @@ function excluirDashboardYummy($tabela, $campoid, $id)
     }
 }
 
+function insertUm($tabela, $camposTabela, $valor1)
+{
+   
+    $conn = conectar();
+    try {
+        $sqlInsert = $conn->prepare("INSERT INTO $tabela($camposTabela) VALUES (?)");
+        $sqlInsert->bindValue(1, $valor1, PDO::PARAM_STR);
+       
+        $sqlInsert->execute();
+
+        if ($sqlInsert->rowCount() > 0) {
+            return "Cadastrado";
+        } else {
+            return "Vazio";
+        }
+    } catch (PDOException $e) {
+        echo 'Exception -> ';
+        return $e->getMessage();
+    } finally {
+        $conn = null;
+    }
+}
+
+
 function insertDois($tabela, $camposTabela, $valor1, $valor2)
 {
    
