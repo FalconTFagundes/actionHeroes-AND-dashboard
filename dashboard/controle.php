@@ -4,25 +4,30 @@ $acao = filter_input(INPUT_POST, 'acao', FILTER_SANITIZE_STRING);
 
 
 switch ($acao) {
-    case 'banner';
+    case 'bannerDashboard';
         include_once 'empresa/banner/bannerDashboard.php';
         break;
-    case 'comentarios';
+    case 'excBanner';
+        include_once 'empresa/banner/excBanner.php'; 
+        break;
+
+
+    case 'comentariosDashboard';
         include_once 'empresa/comentarios/comentariosDashboard.php';
         break;
-    case 'caracteristicas';
+    case 'caracteristicasDashboard';
         include_once 'empresa/caracteristicas/caracteristicasDashboard.php';
         break;
-    case 'init';
+    case 'initDashboard';
         include_once 'empresa/init/initDashboard.php';
         break;
-    case 'produto';
+    case 'produtoDashboard';
         include_once 'empresa/produto/produtoDashboard.php';
         break;
-    case 'titleuniversogeek';
+    case 'titleuniversogeekDashboard';
         include_once 'empresa/titleUniversoGeek/titleUniversoGeekDashboard.php';
         break;
-    case 'universogeek';
+    case 'universogeekDashboard';
         include_once 'empresa/universoGeek/universoGeekDashboard.php';
         break;
 }

@@ -157,7 +157,7 @@ function listarDashboard($tabela, $campo)
 
 /* EXCLUIR */
 
-function excluirDashboardYummy($tabela, $campoid, $id)
+function excluirDashboard($tabela, $campoid, $id)
 {
     $conn = conectar();
     $queryListar = $conn->prepare("DELETE FROM $tabela WHERE $campoid = $id");

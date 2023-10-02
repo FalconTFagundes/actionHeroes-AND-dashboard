@@ -21,45 +21,45 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a class="nav-link clickMenulateral" data-menu="banner">
+                            <a class="nav-link clickMenulateral" data-menu="bannerDashboard">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Banner</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link clickMenulateral" data-menu="comentarios">
+                            <a class="nav-link clickMenulateral" data-menu="comentariosDashboard">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Comentarios</p>
                             </a>
                         </li>
                     
                         <li class="nav-item">
-                            <a class="nav-link clickMenulateral" data-menu="caracteristicas">
+                            <a class="nav-link clickMenulateral" data-menu="caracteristicasDashboard">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Caracteristicas</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link clickMenulateral" data-menu="init">
+                            <a class="nav-link clickMenulateral" data-menu="initDashboard">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Init</p>
                             </a>
                         </li>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link clickMenulateral" data-menu="produto">
+                            <a class="nav-link clickMenulateral" data-menu="produtoDashboard">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Produto</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link clickMenulateral" data-menu="titleuniversogeek">
+                            <a class="nav-link clickMenulateral" data-menu="titleuniversogeekDashboard">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Titulo Universo Geek</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link clickMenulateral" data-menu="universogeek">
+                            <a class="nav-link clickMenulateral" data-menu="universogeekDashboard">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Universo Geek</p>
                             </a>
