@@ -1,23 +1,24 @@
-
 <?php
-
 include_once './funcDashboard/funcdashboard.php';
 include_once 'config/conexao.php';
 include_once 'config/constantes.php';
-
-
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
-
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Action heroes | Dashboard</title>
 
-  <!-- Google Font: Source Sans Pro -->
+  <!-- icons LCP hahahahah -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+  <!-- CORTE IMAGEM UPLOAD HAHAHAH -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.css" integrity="sha512-2eMmukTZtvwlfQoG8ztapwAH5fXaQBzaMqdljLopRSA0i6YKM8kBAOrSSykxu9NN9HrtD45lIqfONLII2AFL/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- SWEET ALERT -->
+  <link rel="stylesheet" href="sweetalert2.min.css">
+
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
@@ -53,11 +54,9 @@ include_once 'config/constantes.php';
 
 
 
+    <!-- tabelas aparecem aqui -->
+    <div id="conteudo" class="content-wrapper"> </div>
 
-    <div id="conteudo" class="content-wrapper">
-      <!-- AQUI VIRÁ AS TABELAS -->
-
-    </div>
 
 
 
@@ -76,18 +75,23 @@ include_once 'config/constantes.php';
 
 
   </div>
-  
 
-  <!-- jQuery -->
-  <script src="plugins/jquery/jquery.min.js"></script>
-  <!-- jQuery UI 1.11.4 -->
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js"></script>
+  <script src="./js/painel.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.all.min.js"></script>
+
+
+
   <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
   <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
   <script>
     $.widget.bridge('uibutton', $.ui.button)
   </script>
-  <!-- Bootstrap 4 -->
-  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <!-- ChartJS -->
   <script src="plugins/chart.js/Chart.min.js"></script>
   <!-- Sparkline -->
@@ -106,12 +110,15 @@ include_once 'config/constantes.php';
   <script src="plugins/summernote/summernote-bs4.min.js"></script>
   <!-- overlayScrollbars -->
   <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-  <script src="js/painel.js"></script>
+
+
+
+
+
   <script src="dist/js/adminlte.js"></script>
-
   <script src="dist/js/demo.js"></script>
-
   <script src="dist/js/pages/dashboard.js"></script>
+
 
 
 </body>
