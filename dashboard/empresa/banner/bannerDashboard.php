@@ -2,14 +2,14 @@
 
 include_once 'config/conexao.php';
 include_once 'config/constantes.php';
-include_once './funcDashboard/funcdashboard.php'; 
+include_once './funcDashboard/funcdashboard.php';
 
 
 
 ?>
 
 <!-- BTN CADASTRAR BANNER -->
-<button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCadastrarBanner">
+<button type="submit" class="btn btn-warning mdi mdi-layers" style="width: 10%;" data-bs-toggle="modal" data-bs-target="#modalCadastrarBanner">
   Cadastrar
 </button>
 
@@ -46,11 +46,23 @@ include_once './funcDashboard/funcdashboard.php';
         <td><?php echo $imgBanner; ?></td>
 
         <td>
-       
-          <button type="button" class="btn btn-primary">Ativar</button>       
-          
-          
-          <button type="button" class="btn btn-danger" onclick="excGeral(<?php echo $idBanner ?>, 'excBanner','bannerDashboard', 'Tem certeza que deseja excluir este dado?')">Excluir</button>
+
+          <?php
+          if ($ativoBanner == 'A') {
+          ?>                                                                                
+            <button type='button' class='btn btn-success' onclick="ativarGeral(<?php echo $idBanner; ?>, 'desativar', 'ativarBanner', 'bannerDashboard');"> <i class='mdi mdi-lock-open'></i> Desativar</button>
+          <?php
+          } else {
+          ?>
+            <button type='button' class='btn btn-dark' onclick="ativarGeral(<?php echo $idBanner; ?>, 'ativar', 'ativarBanner', 'bannerDashboard');"><i class='mdi mdi-lock-check'></i> Ativar</button>
+
+          <?php
+          }
+          ?>
+          <!--  <button type="button" class="btn btn-primary mdi mdi-lock-open-check"> Ativado</button>   -->
+
+
+          <button type="button" class="btn btn-danger mdi mdi-close-thick" onclick="excGeral(<?php echo $idBanner; ?>, 'excBanner','bannerDashboard', 'Tem certeza que deseja excluir este dado?')">Excluir</button>
         </td>
 
 
@@ -65,7 +77,7 @@ include_once './funcDashboard/funcdashboard.php';
 
 
 <!-- MODAL CADASTRAR BANNER -->
-<div class="modal fade" id="modalCadastrarBanner" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalCadastrarBanner" tabindex="-1  " aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-xl">
     <div class="modal-content">
       <div class="modal-header bg-dark">
@@ -84,7 +96,7 @@ include_once './funcDashboard/funcdashboard.php';
         <button type="submit" class="btn btn-info" id="bntUploadArquivoBanner"><i class="mdi mdi-content-save-move"></i> Salvar</button>
         <button type="button" class="btn btn-warning" data-bs-dismiss="modal"><i class="mdi mdi-close"></i> Cancelar</button>
         </form>
-        
+
       </div>
     </div>
   </div>

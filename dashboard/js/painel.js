@@ -174,4 +174,50 @@ function excGeral(idvar, acaopage, pageretorno, m1, m2) {
 }
 
 
-f
+
+function ativarGeral(e, f,  acaopage, pageretorno) {
+    if (f == 'ativar') {
+        var ativo = 'A';
+    } else {
+
+        var ativo = 'D';
+    }
+        var dados = {
+            acao: acaopage,
+            id: e,
+            a: ativo
+        }
+        $.ajax({
+            type: 'POST',
+            dataType: 'JSON',
+            url: 'controle.php', /* envio de 'acao' para a página controle */
+            data: dados,
+            beforeSend: function (retorno) {
+            }, success: function (retorno) {
+                if (retorno == 'Atualizado') {
+                    if (ativo == 'D') {
+                      msgGeral('Desativado!');
+                    } else {
+                        msgGeral('Ativado!');
+                    }
+                    atualizarPagina(pageretorno);
+                    setTimeout(function () {
+                    }, 3000)
+                }
+                console.log(retorno);
+            }
+        });
+
+
+}
+
+
+function msgGeral(mensagem) {
+    Swal.fire({
+        position: 'top-center',
+        icon: 'success',
+        title: mensagem,
+        showConfirmButton: false,
+        timer: 1500
+    })
+}

@@ -244,3 +244,27 @@ function insertUm($tabela, $camposTabela, $valor1)
     }
 }
 
+
+function upUm($tabela, $campo1, $campoId, $valeu1, $valeuId)
+{
+    $conn = conectar();
+    try {
+        $conn->beginTransaction();
+        $sqUpdate = $conn->prepare("UPDATE $tabela SET $campo1 = ? WHERE $campoId = ? ");
+        $sqUpdate->bindValue(1, $valeu1, PDO::PARAM_STR);
+        $sqUpdate->bindValue(2, $valeuId, PDO::PARAM_INT);
+        $sqUpdate->execute();
+        $conn->commit();
+        if ($sqUpdate->rowCount() > 0) {
+            return 'Atualizado';
+        } else {
+            return 'nAtualizado';
+        };
+    } catch
+    (PDOExecption $e) {
+        echo 'Exception -> ';
+        return ($e->getMessage());
+        $conn->rollback();
+    };
+    $conn = null;
+}

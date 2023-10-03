@@ -8,7 +8,10 @@ switch ($acao) {
         include_once 'empresa/banner/bannerDashboard.php';
         break;
     case 'excBanner';
-        include_once 'empresa/banner/excBanner.php'; 
+        include_once 'empresa/banner/excBanner.php';
+        break;
+    case 'ativarBanner';
+        include_once 'empresa/banner/ativarBanner.php';
         break;
 
 
