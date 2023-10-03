@@ -1,7 +1,8 @@
 <?php
-include_once './funcDashboard/funcdashboard.php';
+
 include_once 'config/conexao.php';
 include_once 'config/constantes.php';
+include_once './funcDashboard/funcdashboard.php'; 
 
 
 
@@ -46,7 +47,9 @@ include_once 'config/constantes.php';
 
         <td>
        
-          <button type="button" class="btn btn-primary">Ativar</button>             
+          <button type="button" class="btn btn-primary">Ativar</button>       
+          
+          
           <button type="button" class="btn btn-danger" onclick="excGeral(<?php echo $idBanner ?>, 'excBanner','bannerDashboard', 'Tem certeza que deseja excluir este dado?')">Excluir</button>
         </td>
 
@@ -63,7 +66,7 @@ include_once 'config/constantes.php';
 
 <!-- MODAL CADASTRAR BANNER -->
 <div class="modal fade" id="modalCadastrarBanner" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
     <div class="modal-content">
       <div class="modal-header bg-dark">
         <h5 class="modal-title align-items-center" id="exampleModalLabel">Cadastrar Banner</h5>

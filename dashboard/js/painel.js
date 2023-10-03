@@ -14,16 +14,8 @@ var redimensionar = $('#previewUploadBanner').croppie({
     enableExif: true,
     enableOrientation: true,
 
-    viewport: {
-        width: 200,
-        height: 200,
-        type: 'square'
-    },
-
-    boundary: {
-        width: 300,
-        height: 300
-    }
+    viewport: { width: 900, height: 300 },
+    boundary: { width: 900, height: 700 },
 
 });
 

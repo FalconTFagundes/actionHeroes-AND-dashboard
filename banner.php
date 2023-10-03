@@ -2,7 +2,7 @@
     <div id="banner" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <?php
-            $retornoBanner = listarTodosRegistros('banner','idbanner, img, cadastro, alteracao, ativo','');
+            $retornoBanner = listarTodosRegistros('banner','idbanner, img, cadastro, alteracao, ativo','A');
             $primeiraImagem = true;
 
             foreach ($retornoBanner as $itemBanner) {
