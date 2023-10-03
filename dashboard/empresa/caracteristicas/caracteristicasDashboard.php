@@ -83,8 +83,23 @@ include_once 'config/constantes.php';
 
 
                 <td>
-                    <button type="button" class="btn btn-primary">Ativar</button>
-                    <button type="button" class="btn btn-danger">Excluir</button>
+                    <?php
+                    if ($ativoInfo == 'A') {
+                    ?>
+                        <button type='submit' class='btn btn-success' onclick="ativarGeral(<?php echo $idInfo; ?>, 'desativar', 'ativarCaracteristicas', 'caracteristicasDashboard');"> <i class='mdi mdi-lock-open'></i> Desativar</button>
+                    <?php
+                    } else {
+                    ?>
+                        <button type='submit' class='btn btn-dark' onclick="ativarGeral(<?php echo $idInfo; ?>, 'ativar', 'ativarCaracteristicas', 'caracteristicasDashboard');"><i class='mdi mdi-lock-check'></i> Ativar</button>
+
+                    <?php
+                    }
+                    ?>
+                    <!--  <button type="button" class="btn btn-primary mdi mdi-lock-open-check"> Ativado</button>   -->
+
+
+                    <button type="submit" class="btn btn-danger mdi mdi-close-thick" onclick="excGeral(<?php echo $idInfo; ?>, 'excCaracteristicas','caracteristicasDashboard', 'Tem certeza que deseja excluir este dado?')">Excluir</button>
+
                 </td>
 
 
@@ -102,17 +117,17 @@ include_once 'config/constantes.php';
                 <h5 class="modal-title align-items-center" id="exampleModalLabel">Cadastrar Caracteristicas</h5>
             </div>
             <div class="modal-body">
-                <form>
+                <form id="frmAddCaracteristicas">
                     <div class="mb-3">
                         <label for="titulo1" class="form-label">Primeiro titulo</label>
                         <input type="text" name="titulo1" class="" id="" size="50%" required>
-                        <label for="titulo1" class="form-label">Segundo titulo</label>
-                        <input type="text" name="titulo1" class="" id="" size="50%" required><br>
+                        <label for="titulo2" class="form-label">Segundo titulo</label>
+                        <input type="text" name="titulo2" class="" id="" size="50%" required><br>
 
                         <div class="form-floating">
-                        <label for="descricao">Descrição</label>
-                            <textarea class="form-control" placeholder="Digite a Descrição" id="descricao" style="height: 70px"></textarea><br>
-                        
+                            <label for="descricao">Descrição</label>
+                            <textarea class="form-control" placeholder="Digite a Descrição" name="descricaoCC" id="descricaoCC" style="height: 70px"></textarea><br>
+
                         </div>
 
                         <label for="box1" class="form-label">Box 1</label>
@@ -136,7 +151,7 @@ include_once 'config/constantes.php';
                         <label for="Desc4" class="form-label">Desc 4</label>
                         <input type="text" name="Desc4" class="" id="" size="50%" required><br>
 
-                        
+
 
 
                         <label for="arquivoCaracteristicas1" class="form-label">Selecione a Primeira Imagem:</label>
@@ -153,8 +168,8 @@ include_once 'config/constantes.php';
                     </div>
             </div>
 
-            <div class="modal-footer">
-                <button type="submit" class="btn btn-info" id="btnUploadCaracteristicas"><i class="mdi mdi-content-save-move"></i> Salvar</button>
+            <div class="modal-footer">                                                                                             <!-- formId, modalId, pageAcao, pageRetorno -->
+                <button type="submit" class="btn btn-info" id="btnUploadCaracteristicas"><i class="mdi mdi-content-save-move" onclick="cadGeral('frmAddCaracteristicas','modalCadastrarCaracteristicas','addCaracteristicas','caracteristicasDashboard');"></i> Salvar</button>
                 <button type="button" class="btn btn-warning" data-bs-dismiss="modal"><i class="mdi mdi-close"></i> Cancelar</button>
                 </form>
 

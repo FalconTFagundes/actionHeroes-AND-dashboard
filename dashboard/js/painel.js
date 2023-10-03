@@ -142,15 +142,15 @@ var redimensionarC2 = $('#previewUploadCaracteristicas2').croppie({
 });
 
 $('#arquivoCaracteristicas2').on('change', function () {
-    var ler = new FileReader();
+    var ler2 = new FileReader();
 
-    ler.onload = function (e) {
+    ler2.onload = function (e) {
         redimensionarC2.croppie('bind', {
             url: e.target.result
         });
     }
 
-    ler.readAsDataURL(this.files[0]);
+    ler2.readAsDataURL(this.files[0]);
 });
 
 $('#bntUploadArquivoCaracteristicas').on('click', function (retorno) {
@@ -160,10 +160,11 @@ $('#bntUploadArquivoCaracteristicas').on('click', function (retorno) {
     }).then(function (img){
         // Enviar os dados para um arquivo PHP
         $.ajax({
-            url: "uploadCaracteristicas.php", // Enviar os dados para o arquivo upload.php
+            
+            url: "uploadCaracteristicas2.php", // Enviar os dados para o arquivo upload.php
             type: "POST", // Método utilizado para enviar os dados
             data: { // Dados que deve ser enviado
-                "imagem": img
+                "imagem2": img
             },
             success: function(){
                 $('#modalCadastrarCaracteristicas').modal('hide')
@@ -259,6 +260,43 @@ $('.clickMenulateral').on('click', function () {
 }) 
 
 
+/* FUNCTION CADASTRAR */
+function cadGeral(formId, modalId, pageAcao, pageRetorno){
+    $('#'+formId).on('submit', function (k){
+        k.preventDefault();
+       
+        var formdata = $(this).serializeArray();
+        formdata.push(
+            {name: "acao", value: pageAcao },
+        );
+
+        $.ajax({
+            type: "POST",
+            dataType: 'html',
+            url: 'controle.php',
+            data: formdata,
+            beforeSend: function (retorno) {
+
+            }, success: function (retorno) {
+                console.log(retorno);
+                $('#'+modalId).modal('hide');
+                setTimeout(function(){
+                    atualizarPagina(pageRetorno);
+               },1000);
+
+               
+            }
+        });
+    })
+}
+
+
+
+
+
+
+
+
 /* FUNCTION EXCLUIR */
 
 
@@ -303,7 +341,7 @@ function excGeral(idvar, acaopage, pageretorno, m1, m2) {
                 )
                 setTimeout(function () {
                     atualizarPagina(pageretorno);
-                }, 3000)
+                }, 1000)
             }
 
 
@@ -340,7 +378,7 @@ function ativarGeral(e, f,  acaopage, pageretorno) {
                     }
                     atualizarPagina(pageretorno);
                     setTimeout(function () {
-                    }, 3000)
+                    }, 1000)
                 }
                 console.log(retorno);
             }

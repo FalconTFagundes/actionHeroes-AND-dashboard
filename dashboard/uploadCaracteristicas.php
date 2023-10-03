@@ -12,18 +12,18 @@ list($type, $imagem) = explode(';', $imagem);
 list(, $imagem) = explode(',', $imagem);
 
 
-$imagem = base64_decode($imagem);
 
+$imagem = base64_decode($imagem);
 
 $imagem_nome = time() . '.png';
 
 
-
 file_put_contents("../img/caracteristicas/" . $imagem_nome, $imagem);
+
 
 echo "Imagem enviada com sucesso!";
 
-$retornoUploadCaracteristicas1 = insertDois('info','imagem1, imagem2', "$imagem_nome", "$imagem_nome");
+$retornoUploadCaracteristicas = insertUm('info','imagem1', "$imagem_nome");
 
 
 if($retornoUploadCaracteristicas == 'Gravado'){  

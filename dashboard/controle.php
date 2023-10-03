@@ -15,12 +15,27 @@ switch ($acao) {
         break;
 
 
-    case 'comentariosDashboard';
-        include_once 'empresa/comentarios/comentariosDashboard.php';
-        break;
     case 'caracteristicasDashboard';
         include_once 'empresa/caracteristicas/caracteristicasDashboard.php';
         break;
+
+    case 'excCaracteristicas';
+        include_once 'empresa/caracteristicas/excCaracteristicas.php';
+        break;
+    case 'ativarCaracteristicas';
+        include_once 'empresa/caracteristicas/ativarCaracteristicas.php';
+        break;
+    case 'addCaracteristicas';
+        include_once 'empresa/caracteristicas/addCaracteristicas.php';
+        break;
+
+
+    case 'comentariosDashboard';
+        include_once 'empresa/comentarios/comentariosDashboard.php';
+        break;
+
+
+
     case 'initDashboard';
         include_once 'empresa/init/initDashboard.php';
         break;
