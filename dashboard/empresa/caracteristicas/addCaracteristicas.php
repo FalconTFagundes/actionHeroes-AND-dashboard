@@ -26,7 +26,7 @@ $desc4CC = $dados_cadastrar['desc4'];
 
 $retornoInsert =  insertOnze('info', 'titulo1, titulo2, descricao, imagem1, imagem2, titulo1info, descricao1info, titulo2info, descricao2info, titulo3info, descricao3info, titulo4info, descricao4info', "$titulo1CC","$titulo2CC","$descricaoCC","$box1CC","$desc1CC","$box2CC","$desc2CC","$box3CC","$desc3CC","$box4CC","$desc4CC");
 
-if ($retornoInsert == 'Cadastrado') {
+if ($retornoInsert == 'Gravado') {
     echo true;
 } else {
     echo false;
