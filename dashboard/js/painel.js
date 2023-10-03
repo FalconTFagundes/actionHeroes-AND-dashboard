@@ -10,12 +10,12 @@ By: Rafael Fagundes
 
 /* INICIO FUNÇÃO DE UPLOAD - BANNER */
 
-var redimensionar = $('#previewUploadBanner').croppie({
+var redimensionarBanner = $('.previewUploadBanner').croppie({
     enableExif: true,
     enableOrientation: true,
 
-    viewport: { width: 900, height: 300 },
-    boundary: { width: 900, height: 700 },
+    viewport: { width: 300, height: 300 },
+    boundary: { width: 500, height: 400 },
 
 });
 
@@ -23,7 +23,7 @@ $('#arquivoBanner').on('change', function () {
     var ler = new FileReader();
 
     ler.onload = function (e) {
-        redimensionar.croppie('bind', {
+        redimensionarBanner.croppie('bind', {
             url: e.target.result
         });
     }
@@ -32,13 +32,13 @@ $('#arquivoBanner').on('change', function () {
 });
 
 $('#bntUploadArquivoBanner').on('click', function (retorno) {
-    redimensionar.croppie('result', {
+    redimensionarBanner.croppie('result', {
         type: 'canvas', // Tipo de arquivos permitidos - base64, html, blob
         size: 'viewport' // O tamanho da imagem cortada
     }).then(function (img){
         // Enviar os dados para um arquivo PHP
         $.ajax({
-            url: "uploadBanner.php", // Enviar os dados para o arquivo upload.php
+            url: "uploadbanner.php", // Enviar os dados para o arquivo upload.php
             type: "POST", // Método utilizado para enviar os dados
             data: { // Dados que deve ser enviado
                 "imagem": img
@@ -68,7 +68,145 @@ $('#bntUploadArquivoBanner').on('click', function (retorno) {
 
 
 
+/* INICIO FUNÇÃO DE UPLOAD - CARACTERISTICAS - IMG1 */
+
+var redimensionarC1 = $('#previewUploadCaracteristicas1').croppie({
+    enableExif: true,
+    enableOrientation: true,
+
+    viewport: { width: 300, height: 300 },
+    boundary: { width: 500, height: 400 },
+
+});
+
+$('#arquivoCaracteristicas1').on('change', function () {
+    var ler = new FileReader();
+
+    ler.onload = function (e) {
+        redimensionarC1.croppie('bind', {
+            url: e.target.result
+        });
+    }
+
+    ler.readAsDataURL(this.files[0]);
+});
+
+$('#btnUploadCaracteristicas').on('click', function (retorno) {
+    redimensionarC1.croppie('result', {
+        type: 'canvas', // Tipo de arquivos permitidos - base64, html, blob
+        size: 'viewport' // O tamanho da imagem cortada
+    }).then(function (img){
+        // Enviar os dados para um arquivo PHP
+        $.ajax({
+            url: "uploadCaracteristicas.php", // Enviar os dados para o arquivo upload.php
+            type: "POST", // Método utilizado para enviar os dados
+            data: { // Dados que deve ser enviado
+                "imagem": img
+            },
+            success: function(){
+                $('#modalCadastrarCaracteristicas').modal('hide')
+                setTimeout(function (){
+                    atualizarPagina('caracteristicasDashboard');
+                }, 1000);
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Salvo com Sucesso',
+                    showConfirmButton: false,
+                    timer: 1500
+                    
+                  })
+                
+            }
+        });
+    });
+});
+
+
+/* FIM FUNÇÃO UPLOAD DE IMAGE - CARACTERISTICAS IMG 1 */
+
+
+
 /* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+
+
+/* INICIO FUNÇÃO DE UPLOAD - CARACTERISTICAS 2*/
+
+var redimensionarC2 = $('#previewUploadCaracteristicas2').croppie({
+    enableExif: true,
+    enableOrientation: true,
+    
+    viewport: { width: 300, height: 300 },
+    boundary: { width: 500, height: 400 },
+
+});
+
+$('#arquivoCaracteristicas2').on('change', function () {
+    var ler = new FileReader();
+
+    ler.onload = function (e) {
+        redimensionarC2.croppie('bind', {
+            url: e.target.result
+        });
+    }
+
+    ler.readAsDataURL(this.files[0]);
+});
+
+$('#bntUploadArquivoCaracteristicas').on('click', function (retorno) {
+    redimensionarC2.croppie('result', {
+        type: 'canvas', // Tipo de arquivos permitidos - base64, html, blob
+        size: 'viewport' // O tamanho da imagem cortada
+    }).then(function (img){
+        // Enviar os dados para um arquivo PHP
+        $.ajax({
+            url: "uploadCaracteristicas.php", // Enviar os dados para o arquivo upload.php
+            type: "POST", // Método utilizado para enviar os dados
+            data: { // Dados que deve ser enviado
+                "imagem": img
+            },
+            success: function(){
+                $('#modalCadastrarCaracteristicas').modal('hide')
+                setTimeout(function (){
+                    atualizarPagina('caracteristicasDashboard');
+                }, 1000);
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Salvo com Sucesso',
+                    showConfirmButton: false,
+                    timer: 1500
+                    
+                  })
+                
+            }
+        });
+    });
+});
+
+
+/* FIM FUNÇÃO UPLOAD DE IMAGE - CARACTERISTICAS 2 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* FUNCTION ATUALIZAR PÁGINA */
 

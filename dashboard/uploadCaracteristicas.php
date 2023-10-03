@@ -19,12 +19,14 @@ $imagem_nome = time() . '.png';
 
 
 
-file_put_contents("../img/banner/" . $imagem_nome, $imagem);
+file_put_contents("../img/caracteristicas/" . $imagem_nome, $imagem);
 
 echo "Imagem enviada com sucesso!";
 
-$retornoUploadBanner = insertUm('banner','img', "$imagem_nome");
-if($retornoUploadBanner == 'Gravado'){  
+$retornoUploadCaracteristicas1 = insertDois('info','imagem1, imagem2', "$imagem_nome", "$imagem_nome");
+
+
+if($retornoUploadCaracteristicas == 'Gravado'){  
     echo True;
 } else {
     echo False;
