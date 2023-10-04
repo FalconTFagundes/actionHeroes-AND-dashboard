@@ -48,9 +48,24 @@ switch ($acao) {
     case 'initDashboard';
         include_once 'empresa/init/initDashboard.php';
         break;
+    case 'addInit';
+        include_once 'empresa/init/addInit.php';
+        break;
+    case 'excInit';
+        include_once 'empresa/init/excInit.php';
+        break;
+    case 'ativarInit';
+        include_once 'empresa/init/ativarInit.php';
+        break;
+
+
+
+
+
     case 'produtoDashboard';
         include_once 'empresa/produto/produtoDashboard.php';
         break;
+
 
 
 

@@ -80,7 +80,7 @@ include_once './funcDashboard/funcdashboard.php';
                 <h5 class="modal-title align-items-center" id="exampleModalLabel">Cadastrar Título Geek</h5>
             </div>
             <div class="modal-body">
-                <form method="post">
+                <form>
                     <div class="mb-3">
                         <label for="arquivoUniversoGeek" class="form-label">Enviar Arquivo</label>
                         <input type="file" name="arquivoUniversoGeek" class="form-control" id="arquivoUniversoGeek" aria-describedby="arquivoUniversoGeek">
