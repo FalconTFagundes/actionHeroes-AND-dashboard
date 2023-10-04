@@ -70,7 +70,7 @@ include_once './funcDashboard/funcdashboard.php';
         <h5 class="modal-title align-items-center" id="exampleModalLabel">Cadastrar Título Geek</h5>
       </div>
       <div class="modal-body">
-        <form id="frmAddTitleGeek" name="frmAddTitleGeek" method="POST">
+        <form id="frmAddTitleGeek" name="frmAddTitleGeek">
           <div class="mb-3">
             <label for="titulo" class="form-label">Título</label>
             <input type="text" name="titulo" class="" id="titulo" required>

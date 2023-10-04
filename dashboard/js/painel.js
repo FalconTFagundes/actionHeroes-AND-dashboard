@@ -65,8 +65,13 @@ $('#btnUploadArquivoBanner').on('click', function (retorno) {
 
 /* FIM FUNÇÃO UPLOAD DE IMAGE - BANNER */
 
-/* FUNÇÃO UPLOAD DE IMAGE - COMENTARIOS */
-var redimensionarBanner = $('#previewUploadBanner').croppie({
+
+
+
+
+
+/* FUNÇÃO UPLOAD DE IMAGE - UNIVERSO GEEK */
+var redimensionarGeek = $('#previewUploadUniversoGeek').croppie({
     enableExif: true,
     enableOrientation: true,
 
@@ -75,34 +80,35 @@ var redimensionarBanner = $('#previewUploadBanner').croppie({
 
 });
 
-$('#arquivoBanner').on('change', function () {
-    var ler = new FileReader();
+$('#arquivoUniversoGeek').on('change', function () {
+    var lerGeek = new FileReader();
 
-    ler.onload = function (e) {
-        redimensionarBanner.croppie('bind', {
+    lerGeek.onload = function (e) {
+        redimensionarGeek.croppie('bind', {
             url: e.target.result
         });
     }
 
-    ler.readAsDataURL(this.files[0]);
+    lerGeek.readAsDataURL(this.files[0]);
 });
 
-$('#btnUploadArquivoBanner').on('click', function (retorno) {
-    redimensionarBanner.croppie('result', {
+$('#btnUploadArquivoUniversoGeek').on('click', function (retorno) {
+    retorno.preventDefault();
+    redimensionarGeek.croppie('result', {
         type: 'canvas', // Tipo de arquivos permitidos - base64, html, blob
         size: 'viewport' // O tamanho da imagem cortada
     }).then(function (img){
         // Enviar os dados para um arquivo PHP
         $.ajax({
-            url: "uploadbanner.php", // Enviar os dados para o arquivo upload.php
+            url: "uploadUniversoGeek.php", // Enviar os dados para o arquivo upload.php
             type: "POST", // Método utilizado para enviar os dados
             data: { // Dados que deve ser enviado
                 "imagem": img
             },
             success: function(){
-                $('#modalCadastrarBanner').modal('hide')
+                $('#modalUniversoGeek').modal('hide')
                 setTimeout(function (){
-                    atualizarPagina('bannerDashboard');
+                    atualizarPagina('universogeekDashboard');
                 }, 1000);
                 Swal.fire({
                     position: 'center',
@@ -118,7 +124,8 @@ $('#btnUploadArquivoBanner').on('click', function (retorno) {
     });
 });
 
-/* FIM FUNÇÃO UPLOAD DE IMAGE - COMENTARIOS */
+
+/* FIM FUNÇÃO UPLOAD DE IMAGE - UNIVERSO GEEK */
 
 
 

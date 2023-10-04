@@ -70,13 +70,13 @@ switch ($acao) {
 
 
 
-
-
-
-
-
-
     case 'universogeekDashboard';
         include_once 'empresa/universoGeek/universoGeekDashboard.php';
+        break;
+    case 'ativarUniversoGeek';
+        include_once 'empresa/universoGeek/ativarUniversoGeek.php';
+        break;
+    case 'excUniversoGeek';
+        include_once 'empresa/universoGeek/excUniversoGeek.php';
         break;
 }

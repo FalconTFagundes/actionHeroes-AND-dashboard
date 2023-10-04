@@ -19,17 +19,20 @@ $imagem_nome = time() . '.png';
 
 
 
-file_put_contents("../img/banner/" . $imagem_nome, $imagem);
+file_put_contents("../img/marcas/" . $imagem_nome, $imagem);
 
 echo "Imagem enviada com sucesso!";
 
 $dataehoraAtual = date("Y-m-d H:i:s");
 
-$retornoUploadBanner = insertDois('banner','img, cadastro', "$imagem_nome", "$dataehoraAtual");
-if($retornoUploadBanner == 'Cadastrado'){  
+$retornoUploadUniversoGeek = insertDois('universogeek','img, cadastro', "$imagem_nome", "$dataehoraAtual");
+
+if($retornoUploadUniversoGeek == 'Cadastrado'){  
     echo True;
 } else {
     echo False;
 }
 
 ?>
+
+

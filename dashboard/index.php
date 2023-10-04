@@ -18,7 +18,7 @@ include_once './funcDashboard/funcdashboard.php';
   <!-- CORTE IMAGEM UPLOAD HAHAHAH -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.css" integrity="sha512-2eMmukTZtvwlfQoG8ztapwAH5fXaQBzaMqdljLopRSA0i6YKM8kBAOrSSykxu9NN9HrtD45lIqfONLII2AFL/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- SWEET ALERT -->
-  <link rel="stylesheet" href="sweetalert2.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.min.css">
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -81,11 +81,11 @@ include_once './funcDashboard/funcdashboard.php';
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.all.min.js"></script>
-  <script src="./js/painel.js"></script>
+
   <script src="dist/js/adminlte.js"></script>
   <script src="dist/js/demo.js"></script>
   <script src="dist/js/pages/dashboard.js"></script>
-
+  <script src="./js/painel.js"></script>
 
 
   <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
