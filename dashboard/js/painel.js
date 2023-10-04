@@ -129,6 +129,65 @@ $('#btnUploadArquivoUniversoGeek').on('click', function (retorno) {
 
 
 
+/* FUNÇÃO UPLOAD DE IMAGE - COMENTÁRIOS */
+var redimensionarImgComentario = $('#previewUploadComentario').croppie({
+    enableExif: true,
+    enableOrientation: true,
+
+    viewport: { width: 300, height: 300 },
+    boundary: { width: 500, height: 400 },
+
+});
+
+$('#arquivoComentario').on('change', function () {
+    var lerImgComentario = new FileReader();
+
+    lerImgComentario.onload = function (e) {
+        redimensionarImgComentario.croppie('bind', {
+            url: e.target.result
+        });
+    }
+
+    lerImgComentario.readAsDataURL(this.files[0]);
+});
+
+$('#btnCadastrarComentario').on('click', function (retorno) {
+    retorno.preventDefault();
+    redimensionarImgComentario.croppie('result', {
+        type: 'canvas', // Tipo de arquivos permitidos - base64, html, blob
+        size: 'viewport' // O tamanho da imagem cortada
+    }).then(function (img){
+        // Enviar os dados para um arquivo PHP
+        $.ajax({
+            url: "uploadComentarios.php", // Enviar os dados para o arquivo upload.php
+            type: "POST", // Método utilizado para enviar os dados
+            data: { // Dados que deve ser enviado
+                "imagem": img
+    
+            },
+            success: function(){
+                $('#modalCadastrarComentario').modal('hide')
+                setTimeout(function (){
+                    atualizarPagina('comentariosDashboard');
+                }, 1000);
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Salvo com Sucesso',
+                    showConfirmButton: false,
+                    timer: 1500
+                    
+                  })
+                
+            }
+        });
+    });
+});
+
+
+/* FIM FUNÇÃO UPLOAD DE IMAGE - COMENTÁRIOS */
+
+
 
 
 /* FUNCTION ATUALIZAR PÁGINA */
@@ -220,6 +279,28 @@ function cadGeral(formId, modalId, pageAcao, pageRetorno){
 
 
 
+function capturarId(idCap) {
+    var dados = {
+        id: idCap
+    };
+
+    // Enviar o ID para o servidor usando AJAX
+    $.ajax({
+        url: 'uploadComentarios.php', // Substitua pela URL correta do seu servidor
+        type: 'POST',
+        data: dados,
+        success: function(response) {
+            // Lógica a ser executada após o sucesso da requisição AJAX
+            console.log('ID enviado com sucesso para o servidor.');
+            // Você pode adicionar mais lógica aqui, se necessário
+        },
+        error: function(error) {
+            // Lógica a ser executada em caso de erro na requisição AJAX
+            console.error('Erro ao enviar ID para o servidor:', error);
+            // Você pode adicionar mais lógica aqui, se necessário
+        }
+    });
+}
 
 
 

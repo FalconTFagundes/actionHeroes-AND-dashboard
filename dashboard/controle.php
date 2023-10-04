@@ -40,6 +40,9 @@ switch ($acao) {
         break;
     case 'addComentario';
         include_once 'empresa/comentarios/addComentario.php';
+        break;   
+        case 'uploadComentarios';
+        include_once 'empresa/uploadComentarios.php';
         break;
 
 

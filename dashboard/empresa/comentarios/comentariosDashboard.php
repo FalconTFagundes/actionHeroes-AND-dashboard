@@ -91,12 +91,16 @@ include_once './funcDashboard/funcdashboard.php';
             <label for="profissao" class="form-label">Profissão</label>
             <input type="text" name="profissao" class="" id="" required> <br>
             <label for="comentario" class="form-label">Comentario</label>
-            <input type="text" name="comentario" class="" id="" style="width: 50%;" required> <br>
-          </div>
+            <input type="text" name="comentario" class="" id="" style="width: 50%;" required> <br><br>
 
+            <label for="uploadImgComentario" class="form-label">Selecione uma Imagem</label><br>
+            <input type="file" name="uploadImgComentario" class="" id="arquivoComentario" required> <br>
+
+          </div>
+          <div id="previewUploadComentario"></div>
 
           <div class="modal-footer">
-            <button type="submit" class="btn btn-info" id="btnCadastrarComentario" onclick="cadGeral('frmAddComentario','modalCadastrarComentario','addComentario','comentariosDashboard');"><i class="mdi mdi-content-save-move"></i> Salvar</button>
+            <button type="submit" class="btn btn-info" id="btnCadastrarComentario" onclick="cadGeral('frmAddComentario','modalCadastrarComentario','uploadComentarios','comentariosDashboard');"><i class="mdi mdi-content-save-move"></i> Salvar</button>
             <button type="button" class="btn btn-warning" data-bs-dismiss="modal"><i class="mdi mdi-close"></i> Cancelar</button>
           </div>
         </form>
@@ -104,3 +108,5 @@ include_once './funcDashboard/funcdashboard.php';
     </div>
   </div>
 </div>
+
+<script src="./js/painel.js"></script>
