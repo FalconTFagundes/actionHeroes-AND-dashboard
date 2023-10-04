@@ -65,6 +65,15 @@ switch ($acao) {
     case 'produtoDashboard';
         include_once 'empresa/produto/produtoDashboard.php';
         break;
+    case 'addProduto';
+        include_once 'empresa/produto/addProduto.php';
+        break;
+    case 'excProduto';
+        include_once 'empresa/produto/excProduto.php';
+        break;
+    case 'ativarProduto';
+        include_once 'empresa/produto/ativarProduto.php';
+        break;
 
 
 

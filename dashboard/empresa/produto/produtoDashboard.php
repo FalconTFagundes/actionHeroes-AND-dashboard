@@ -7,6 +7,12 @@ include_once 'config/constantes.php';
 
 ?>
 
+
+<!-- BTN CADASTRAR PRODUTO -->
+<button type="submit" class="btn btn-warning mdi mdi-layers" style="width: 10%;" data-bs-toggle="modal" data-bs-target="#modalProduto">
+    Cadastrar
+</button>
+
 <table class="table table-striped">
     <thead>
         <tr>
@@ -79,8 +85,22 @@ include_once 'config/constantes.php';
                 <td><?php echo $fretegratisProduto; ?></td>
 
                 <td>
-                    <button type="button" class="btn btn-primary">Ativar</button>
-                    <button type="button" class="btn btn-danger">Excluir</button>
+                    <?php
+                    if ($ativoProduto == 'A') {
+                    ?>
+                        <button type='button' class='btn btn-success' onclick="ativarGeral(<?php echo $idProduto; ?>, 'desativar', 'ativarProduto', 'produtoDashboard');"> <i class='mdi mdi-lock-open'></i> Desativar</button>
+                    <?php
+                    } else {
+                    ?>
+                        <button type='button' class='btn btn-dark' onclick="ativarGeral(<?php echo $idProduto; ?>, 'ativar', 'ativarProduto', 'produtoDashboard');"><i class='mdi mdi-lock-check'></i> Ativar</button>
+
+                    <?php
+                    }
+                    ?>
+                    <!--  <button type="button" class="btn btn-primary mdi mdi-lock-open-check"> Ativado</button>   -->
+
+
+                    <button type="button" class="btn btn-danger mdi mdi-close-thick" onclick="excGeral(<?php echo $idProduto; ?>, 'excProduto','produtoDashboard', 'Tem certeza que deseja excluir este dado?')">Excluir</button>
                 </td>
 
 
@@ -89,3 +109,44 @@ include_once 'config/constantes.php';
         <?php    } ?>
     </tbody>
 </table>
+
+
+
+<!-- MODAL CADASTRAR PRODUTO -->
+<div class="modal fade" id="modalProduto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-dark">
+                <h5 class="modal-title align-items-center" id="exampleModalLabel">Cadastrar Banner</h5>
+            </div>
+            <div class="modal-body">
+                <form id="frmCadProd">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" name="nome" class="" id="" required>
+                    <label for="descricao" class="form-label">Descrição</label>
+                    <input type="text" name="descricao" class="" id="" required>
+                    <label for="material" class="form-label">Material</label>
+                    <input type="text" name="material" class="" id="" required> <br>
+                    <label for="dimensoes" class="form-label">Dimensões</label>
+                    <input type="text" name="dimensoes" class="" id="" required>
+                    <label for="peso" class="form-label">Peso</label>
+                    <input type="text" name="peso" class="" id="" required>
+                    <label for="valor" class="form-label">Valor</label>
+                    <input type="text" name="valor" class="" id="" required>
+                    <label for="desconto" class="form-label">Desconto</label>
+                    <input type="text" name="desconto" class="" id="" required> <br>
+
+
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-info" onclick="cadGeral('frmCadProd','modalProduto','addProduto','produtoDashboard');"><i class="mdi mdi-content-save-move"></i> Salvar</button>
+                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal"><i class="mdi mdi-close"></i> Cancelar</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<script src="./js/painel.js"></script>

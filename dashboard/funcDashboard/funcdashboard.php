@@ -301,6 +301,39 @@ function insertquatro($tabela, $camposTabela, $valor1, $valor2, $value3, $value4
     }
 }
 
+function insertOito($tabela, $camposTabela, $valor1, $valor2, $valor3, $valor4, $valor5, $valor6, $valor7, $valor8)
+{
+   
+    $conn = conectar();
+    try {
+        $sqlInsert = $conn->prepare("INSERT INTO $tabela($camposTabela) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+        $sqlInsert->bindValue(1, $valor1, PDO::PARAM_STR);
+        $sqlInsert->bindValue(2, $valor2, PDO::PARAM_STR);
+        $sqlInsert->bindValue(3, $valor3, PDO::PARAM_STR);
+        $sqlInsert->bindValue(4, $valor4, PDO::PARAM_STR);  
+        $sqlInsert->bindValue(5, $valor5, PDO::PARAM_STR);
+        $sqlInsert->bindValue(6, $valor6, PDO::PARAM_STR);
+        $sqlInsert->bindValue(7, $valor7, PDO::PARAM_STR);
+        $sqlInsert->bindValue(8, $valor8, PDO::PARAM_STR);
+       
+        $sqlInsert->execute();
+
+        if ($sqlInsert->rowCount() > 0) {
+            return "Cadastrado";
+        } else {
+            return "Vazio";
+        }
+    } catch (PDOException $e) {
+        echo 'Exception -> ';
+        return $e->getMessage();
+    } finally {
+        $conn = null;
+    }
+}
+
+
+
+
 
 function insertOnze($tabela, $campos, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9, $value10, $value11)
 {
