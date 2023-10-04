@@ -110,7 +110,7 @@ include_once 'config/constantes.php';
 </table>
 
 <!-- MODAL CADASTRAR CARACTERISTICAS -->
-<div class="modal fade" id="modalCadastrarCaracteristicas" tabindex="-1  " aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalCadastrarCaracteristicas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl">
         <div class="modal-content">
             <div class="modal-header bg-dark">
@@ -133,50 +133,30 @@ include_once 'config/constantes.php';
                         <label for="box1" class="form-label">Box 1</label>
                         <input type="text" name="box1" class="" id="" size="50%" required>
                         <label for="Desc1" class="form-label">Desc 1</label>
-                        <input type="text" name="Desc1" class="" id="" size="50%" required><br>
+                        <input type="text" name="desc1" class="" id="" size="50%" required><br>
 
                         <label for="box2" class="form-label">Box 2</label>
                         <input type="text" name="box2" class="" id="" size="50%" required>
                         <label for="Desc2" class="form-label">Desc 2</label>
-                        <input type="text" name="Desc2" class="" id="" size="50%" required><br>
+                        <input type="text" name="desc2" class="" id="" size="50%" required><br>
 
 
                         <label for="box3" class="form-label">Box 3</label>
                         <input type="text" name="box3" class="" id="" size="50%" required>
                         <label for="Desc3" class="frm-label">Desc 3</label>
-                        <input type="text" name="Desc3" class="" id="" size="50%" required><br>
+                        <input type="text" name="desc3" class="" id="" size="50%" required><br>
 
                         <label for="box4" class="form-label">Box 4</label>
                         <input type="text" name="box4" class="" id="" size="50%" required>
                         <label for="Desc4" class="form-label">Desc 4</label>
-                        <input type="text" name="Desc4" class="" id="" size="50%" required><br>
-
-
-
-
-                        <label for="arquivoCaracteristicas1" class="form-label">Selecione a Primeira Imagem:</label>
-                        <input type="file" name="arquivoCaracteristicas1" class="form-control" id="arquivoCaracteristicas1" aria-describedby="arquivoBanner" required> <br>
-                        <div id="previewUploadCaracteristicas1"> </div> <br>
-
-
-                        <label for="arquivoCaracteristicas2" class="form-label">Selecione a Segunda Imagem:</label>
-                        <input type="file" name="arquivoCaracteristicas2" class="form-control" id="arquivoCaracteristicas2" aria-describedby="arquivoBanner" required> <br>
-                        <div id="previewUploadCaracteristicas2"> </div> <br>
-
-
-
+                        <input type="text" name="desc4" class="" id="" size="50%" required><br>
                     </div>
-            </div>
-
-            <div class="modal-footer">                                                                                             <!-- formId, modalId, pageAcao, pageRetorno -->
-                <button type="submit" class="btn btn-info" id="btnUploadCaracteristicas"><i class="mdi mdi-content-save-move" onclick="cadGeral('frmAddCaracteristicas','modalCadastrarCaracteristicas','addCaracteristicas','caracteristicasDashboard');"></i> Salvar</button>
-                <button type="button" class="btn btn-warning" data-bs-dismiss="modal"><i class="mdi mdi-close"></i> Cancelar</button>
+                    <div class="modal-footer"> <!-- formId, modalId, pageAcao, pageRetorno -->
+                        <button type="submit" class="btn btn-info" id="btnUploadCaracteristicas" onclick="cadGeral('frmAddCaracteristicas','modalCadastrarCaracteristicas','addCaracteristicas','caracteristicasDashboard');"><i class="mdi mdi-content-save-move"></i> Salvar</button>
+                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal"><i class="mdi mdi-close"></i> Cancelar</button>
+                    </div>
                 </form>
-
             </div>
         </div>
     </div>
 </div>
-
-
-<script src="./js/painel.js"></script>
