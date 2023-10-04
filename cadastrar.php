@@ -12,9 +12,10 @@ $nome = filter_input(INPUT_POST, 'nomeCliente', FILTER_SANITIZE_STRING);
 $sobrenome = filter_input(INPUT_POST, 'sobrenomeCliente', FILTER_SANITIZE_STRING);
 $email = filter_input(INPUT_POST, 'emailCliente', FILTER_SANITIZE_STRING);
 $senha = filter_input(INPUT_POST, 'senhaCliente', FILTER_SANITIZE_STRING);
+$dataehoraAtual = date("Y-m-d H:i:s");
 
 // Chame a função insertquatro para inserir os dados
-$resultado = insertquatro('usuario', 'nome, sobrenome, email, senha', $nome, $sobrenome, $email, $senha);
+$resultado = insertCinco('usuario', 'nome, sobrenome, email, senha, cadastro', $nome, $sobrenome, $email, $senha, $dataehoraAtual);
 
 // Verifique o resultado da inserção
 if ($resultado === "Cadastrado") {

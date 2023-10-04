@@ -5,13 +5,15 @@ include_once './funcDashboard/funcdashboard.php';
 
 $dados_cadastrar = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
-// Escapar os dados do formulário para evitar injeções de SQL
-$titleUniversoGeekInsert = mysqli_real_escape_string($conn, $dados_cadastrar['titulo']);
+$comentario = $dados_cadastrar['comentario'];
+$nomeComentario = $dados_cadastrar['nome'];
+$profissaoComentario = $dados_cadastrar['profissao'];
+$dataehoraAtual = date("Y-m-d H:i:s");
 
-$retornoInsert = insertUm('titleuniversogeek', 'title', "$titleUniversoGeekInsert");
-
+$retornoInsert = insertquatro('comentarios', 'comentario, nome, profissao, cadastro', "$comentario", "$nomeComentario", "$profissaoComentario", "$dataehoraAtual");
 if ($retornoInsert == 'Cadastrado') {
     echo true;
 } else {
     echo false;
 }
+?>

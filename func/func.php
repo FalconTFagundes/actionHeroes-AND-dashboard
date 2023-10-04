@@ -291,6 +291,32 @@ function insertquatro($tabela, $camposTabela, $valor1, $valor2, $value3, $value4
     }
 }
 
+function insertCinco($tabela, $camposTabela, $valor1, $valor2, $value3, $value4, $value5)
+{
+   
+    $conn = conectar();
+    try {
+        $sqlInsert = $conn->prepare("INSERT INTO $tabela($camposTabela) VALUES (?, ?, ?, ?, ?)");
+        $sqlInsert->bindValue(1, $valor1, PDO::PARAM_STR);
+        $sqlInsert->bindValue(2, $valor2, PDO::PARAM_STR);
+        $sqlInsert->bindValue(3, $value3, PDO::PARAM_STR);
+        $sqlInsert->bindValue(4, $value4, PDO::PARAM_STR); 
+        $sqlInsert->bindValue(5, $value5, PDO::PARAM_STR);
+       
+        $sqlInsert->execute();
+
+        if ($sqlInsert->rowCount() > 0) {
+            return "Cadastrado";
+        } else {
+            return "Vazio";
+        }
+    } catch (PDOException $e) {
+        echo 'Exception -> ';
+        return $e->getMessage();
+    } finally {
+        $conn = null;
+    }
+}
 
 function conectarAoBanco() {
     $host = "localhost";

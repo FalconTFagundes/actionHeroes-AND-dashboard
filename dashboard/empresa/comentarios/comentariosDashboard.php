@@ -69,42 +69,38 @@ include_once './funcDashboard/funcdashboard.php';
 
           <button type="button" class="btn btn-danger mdi mdi-close-thick" onclick="excGeral(<?php echo $idComentario; ?>, 'excComentario','comentariosDashboard', 'Tem certeza que deseja excluir este dado?')">Excluir</button>
         </td>
-
-        <!-- MODAL CADASTRAR COMENTARIOS -->
-        <div class="modal fade" id="modalCadastrarComentario" tabindex="-1  " aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-              <div class="modal-header bg-dark">
-                <h5 class="modal-title align-items-center" id="exampleModalLabel">Cadastrar Comentario</h5>
-              </div>
-              <div class="modal-body">
-                <form id="frmAddComentario">
-                  <div class="mb-3">
-                    <label for="nome" class="form-label">Nome</label>
-                    <input type="text" name="nome" class="" id="" required>
-                    <label for="profissao" class="form-label">Profissão</label>
-                    <input type="text" name="profissao" class="" id="" required> <br>
-                    <label for="comentario" class="form-label">Comentario</label>
-                    <input type="text" name="comentario" class="" id="" style="width: 50%;" required> <br>
-                  </div>
-
-
-                  <div class="modal-footer"> <!-- formId, modalId, pageAcao, pageRetorno -->
-                    <button type="submit" class="btn btn-info" id="btnCadastrarComentario" onclick="cadGeral('frmAddComentario','modalCadastrarComentario','addComentario','comentariosDashboard');"><i class="mdi mdi-content-save-move"></i> Salvar</button>
-                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal"><i class="mdi mdi-close"></i> Cancelar</button>
-
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <script src="./js/painel.js"></script>
-
-
       </tr>
     <?php    } ?>
   </tbody>
 </table>
+
+
+
+<!-- MODAL CADASTRAR COMENTARIOS -->
+<div class="modal fade" id="modalCadastrarComentario" tabindex="-1  " aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title align-items-center" id="exampleModalLabel">Cadastrar Comentario</h5>
+      </div>
+      <div class="modal-body">
+        <form id="frmAddComentario">
+          <div class="mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" name="nome" class="" id="" required>
+            <label for="profissao" class="form-label">Profissão</label>
+            <input type="text" name="profissao" class="" id="" required> <br>
+            <label for="comentario" class="form-label">Comentario</label>
+            <input type="text" name="comentario" class="" id="" style="width: 50%;" required> <br>
+          </div>
+
+
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-info" id="btnCadastrarComentario" onclick="cadGeral('frmAddComentario','modalCadastrarComentario','addComentario','comentariosDashboard');"><i class="mdi mdi-content-save-move"></i> Salvar</button>
+            <button type="button" class="btn btn-warning" data-bs-dismiss="modal"><i class="mdi mdi-close"></i> Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

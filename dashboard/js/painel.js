@@ -140,8 +140,14 @@ function cadGeral(formId, modalId, pageAcao, pageRetorno){
                 setTimeout(function(){
                     atualizarPagina(pageRetorno);
                },1000);
-
-               
+               Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Salvo com Sucesso',
+                showConfirmButton: false,
+                timer: 1500
+                
+              })
             }
         });
     })

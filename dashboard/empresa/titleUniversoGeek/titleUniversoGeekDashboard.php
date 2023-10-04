@@ -57,9 +57,12 @@ include_once './funcDashboard/funcdashboard.php';
           <button type="button" class="btn btn-danger mdi mdi-close-thick" onclick="excGeral(<?php echo $idTitleGeekDash; ?>, 'excTitleUniversoGeek','titleUniversoGeekDashboard', 'Tem certeza que deseja excluir este dado?')">Excluir</button>
         </td>
 
+      </tr>
+    <?php    } ?>
+  </tbody>
+</table>
 
-
-       <!-- MODAL CADASTRAR TITLE GEEK -->
+<!-- MODAL CADASTRAR TITLE GEEK -->
 <div class="modal fade" id="modalTitleGeek" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
@@ -67,30 +70,17 @@ include_once './funcDashboard/funcdashboard.php';
         <h5 class="modal-title align-items-center" id="exampleModalLabel">Cadastrar Título Geek</h5>
       </div>
       <div class="modal-body">
-        <!-- Inicie o formulário aqui -->
         <form id="frmAddTitleGeek" name="frmAddTitleGeek" method="POST">
           <div class="mb-3">
             <label for="titulo" class="form-label">Título</label>
             <input type="text" name="titulo" class="" id="titulo" required>
           </div>
-          <!-- Coloque o botão de submit dentro do formulário -->
           <div class="modal-footer">
-            <button type="submit" class="btn btn-info"><i class="mdi mdi-content-save-move" onclick="cadGeral('frmAddTitleGeek', 'modalTitleGeek', 'AddTitleUniversoGeek', 'titleUniversoGeekDashboard');"></i> Salvar</button>
+            <button type="submit" class="btn btn-info" onclick="cadGeral('frmAddTitleGeek', 'modalTitleGeek', 'addTitleUniversoGeek', 'titleUniversoGeekDashboard');"><i class="mdi mdi-content-save-move"></i> Salvar</button>
             <button type="button" class="btn btn-warning" data-bs-dismiss="modal"><i class="mdi mdi-close"></i> Cancelar</button>
           </div>
-        </form> <!-- Feche o formulário aqui -->
+        </form>
       </div>
     </div>
   </div>
 </div>
-
-
-
-          <script src="./js/painel.js"></script>
-
-
-
-      </tr>
-    <?php    } ?>
-  </tbody>
-</table>
