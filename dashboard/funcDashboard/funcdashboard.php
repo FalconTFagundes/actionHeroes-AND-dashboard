@@ -247,6 +247,8 @@ function insertDois($tabela, $camposTabela, $valor1, $valor2)
         $conn = null;
     }
 }
+
+
 function insertTres($tabela, $camposTabela, $valor1, $valor2, $value3)
 {
    
@@ -272,6 +274,34 @@ function insertTres($tabela, $camposTabela, $valor1, $valor2, $value3)
     }
 }
 
+
+function insertquatro($tabela, $camposTabela, $valor1, $valor2, $value3, $value4)
+{
+   
+    $conn = conectar();
+    try {
+        $sqlInsert = $conn->prepare("INSERT INTO $tabela($camposTabela) VALUES (?, ?, ?,?)");
+        $sqlInsert->bindValue(1, $valor1, PDO::PARAM_STR);
+        $sqlInsert->bindValue(2, $valor2, PDO::PARAM_STR);
+        $sqlInsert->bindValue(3, $value3, PDO::PARAM_STR);
+        $sqlInsert->bindValue(4, $value4, PDO::PARAM_STR);
+       
+        $sqlInsert->execute();
+
+        if ($sqlInsert->rowCount() > 0) {
+            return "Cadastrado";
+        } else {
+            return "Vazio";
+        }
+    } catch (PDOException $e) {
+        echo 'Exception -> ';
+        return $e->getMessage();
+    } finally {
+        $conn = null;
+    }
+}
+
+
 function insertOnze($tabela, $campos, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9, $value10, $value11)
 {
     $conn = conectar();
@@ -296,19 +326,13 @@ function insertOnze($tabela, $campos, $value1, $value2, $value3, $value4, $value
         } else {
             return 'nGravado';
         };
-    } catch
-    (PDOExecption $e) {
+    } catch (PDOException $e) {
         echo 'Exception -> ';
-        return ($e->getMessage());
-        $conn->rollback();
-    };
-    $conn = null;
+        return $e->getMessage();
+    } finally {
+        $conn = null;
+    }
 }
-
-
-
-
-
 
 
 
@@ -327,11 +351,10 @@ function upUm($tabela, $campo1, $campoId, $valeu1, $valeuId)
         } else {
             return 'nAtualizado';
         };
-    } catch
-    (PDOExecption $e) {
+    } catch (PDOException $e) {
         echo 'Exception -> ';
-        return ($e->getMessage());
-        $conn->rollback();
-    };
-    $conn = null;
+        return $e->getMessage();
+    } finally {
+        $conn = null;
+    }
 }

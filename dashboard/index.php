@@ -77,10 +77,13 @@ include_once 'config/constantes.php';
   </div>
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js"></script>
-  <script src="./js/painel.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.all.min.js"></script>
+  <script src="./js/painel.js"></script>
+  <script src="dist/js/adminlte.js"></script>
+  <script src="dist/js/demo.js"></script>
+  <script src="dist/js/pages/dashboard.js"></script>
 
 
 
@@ -114,9 +117,7 @@ include_once 'config/constantes.php';
 
 
 
-  <script src="dist/js/adminlte.js"></script>
-  <script src="dist/js/demo.js"></script>
-  <script src="dist/js/pages/dashboard.js"></script>
+
 
 
 

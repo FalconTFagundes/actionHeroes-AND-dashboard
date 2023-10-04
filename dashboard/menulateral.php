@@ -53,7 +53,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link clickMenulateral" data-menu="titleuniversogeekDashboard">
+                            <a class="nav-link clickMenulateral" data-menu="titleUniversoGeekDashboard">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Titulo Universo Geek</p>
                             </a>

@@ -93,7 +93,7 @@ include_once './funcDashboard/funcdashboard.php';
       </div>
 
       <div class="modal-footer">
-        <button type="submit" class="btn btn-info" id="bntUploadArquivoBanner"><i class="mdi mdi-content-save-move"></i> Salvar</button>
+        <button type="submit" class="btn btn-info" id="btnUploadArquivoBanner"><i class="mdi mdi-content-save-move"></i> Salvar</button>
         <button type="button" class="btn btn-warning" data-bs-dismiss="modal"><i class="mdi mdi-close"></i> Cancelar</button>
         </form>
 

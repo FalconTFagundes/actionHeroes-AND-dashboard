@@ -1,11 +1,16 @@
 <?php
-include_once './funcDashboard/funcdashboard.php';
+
 include_once 'config/conexao.php';
 include_once 'config/constantes.php';
+include_once './funcDashboard/funcdashboard.php';
 
 
 
 ?>
+<!-- BTN CADASTRAR COMENTARIO -->
+<button type="submit" class="btn btn-warning mdi mdi-layers" style="width: 10%;" data-bs-toggle="modal" data-bs-target="#modalCadastrarComentario">
+  Cadastrar
+</button>
 
 <table class="table table-striped">
   <thead>
@@ -24,13 +29,13 @@ include_once 'config/constantes.php';
     <?php
     $listarComentarioDash = listarDashboard('comentarios', 'idcomentarios, img, comentario, nome, profissao, cadastro, alteracao, ativo');
     foreach ($listarComentarioDash as $itemComentarioDash) {
-        $idComentario = $itemComentarioDash -> idcomentarios;
-        $imgComentario = $itemComentarioDash -> img;
-        $comentario = $itemComentarioDash -> comentario;
-        $nomeComentario = $itemComentarioDash -> nome;
-        $profissaoComentario = $itemComentarioDash -> profissao;
-        $cadastroComentario = $itemComentarioDash -> cadastro;
-        $ativoComentario = $itemComentarioDash -> ativo;
+      $idComentario = $itemComentarioDash->idcomentarios;
+      $imgComentario = $itemComentarioDash->img;
+      $comentario = $itemComentarioDash->comentario;
+      $nomeComentario = $itemComentarioDash->nome;
+      $profissaoComentario = $itemComentarioDash->profissao;
+      $cadastroComentario = $itemComentarioDash->cadastro;
+      $ativoComentario = $itemComentarioDash->ativo;
 
     ?>
 
@@ -47,11 +52,57 @@ include_once 'config/constantes.php';
         <td><?php echo $profissaoComentario; ?></td>
 
         <td>
-          <button type="button" class="btn btn-primary">Ativar</button>
-          <button type="button" class="btn btn-danger">Excluir</button>
+          <?php
+          if ($ativoComentario == 'A') {
+          ?>
+            <button type='button' class='btn btn-success' onclick="ativarGeral(<?php echo $idComentario; ?>, 'desativar', 'ativarComentario', 'comentariosDashboard');"> <i class='mdi mdi-lock-open'></i> Desativar</button>
+          <?php
+          } else {
+          ?>
+            <button type='button' class='btn btn-dark' onclick="ativarGeral(<?php echo $idComentario; ?>, 'ativar', 'ativarComentario', 'comentariosDashboard');"><i class='mdi mdi-lock-check'></i> Ativar</button>
+
+          <?php
+          }
+          ?>
+          <!--  <button type="button" class="btn btn-primary mdi mdi-lock-open-check"> Ativado</button>   -->
+
+
+          <button type="button" class="btn btn-danger mdi mdi-close-thick" onclick="excGeral(<?php echo $idComentario; ?>, 'excComentario','comentariosDashboard', 'Tem certeza que deseja excluir este dado?')">Excluir</button>
         </td>
 
-      
+        <!-- MODAL CADASTRAR COMENTARIOS -->
+        <div class="modal fade" id="modalCadastrarComentario" tabindex="-1  " aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+              <div class="modal-header bg-dark">
+                <h5 class="modal-title align-items-center" id="exampleModalLabel">Cadastrar Comentario</h5>
+              </div>
+              <div class="modal-body">
+                <form id="frmAddComentario">
+                  <div class="mb-3">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" name="nome" class="" id="" required>
+                    <label for="profissao" class="form-label">Profissão</label>
+                    <input type="text" name="profissao" class="" id="" required> <br>
+                    <label for="comentario" class="form-label">Comentario</label>
+                    <input type="text" name="comentario" class="" id="" style="width: 50%;" required> <br>
+                  </div>
+
+
+                  <div class="modal-footer"> <!-- formId, modalId, pageAcao, pageRetorno -->
+                    <button type="submit" class="btn btn-info" id="btnCadastrarComentario" onclick="cadGeral('frmAddComentario','modalCadastrarComentario','addComentario','comentariosDashboard');"><i class="mdi mdi-content-save-move"></i> Salvar</button>
+                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal"><i class="mdi mdi-close"></i> Cancelar</button>
+
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <script src="./js/painel.js"></script>
+
 
       </tr>
     <?php    } ?>

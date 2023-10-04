@@ -1,10 +1,15 @@
 <?php
-include_once './funcDashboard/funcdashboard.php';
+
 include_once 'config/conexao.php';
 include_once 'config/constantes.php';
+include_once './funcDashboard/funcdashboard.php';
 
 
 ?>
+<button type="submit" class="btn btn-warning mdi mdi-layers" style="width: 10%;" data-bs-toggle="modal" data-bs-target="#modalTitleGeek">
+  Cadastrar
+</button>
+
 
 <table class="table table-striped">
   <thead>
@@ -22,8 +27,7 @@ include_once 'config/constantes.php';
       $idTitleGeekDash = $itemTitleGeekDash->idtitleUniversoGeek;
       $titleGeekDash = $itemTitleGeekDash->title;
 
-
-      $cadastroTitleGeek = $itemTitleGeekDash ->cadastro;
+      $cadastroTitleGeek = $itemTitleGeekDash->cadastro;
       $ativoTitleGeek = $itemTitleGeekDash->ativo;
 
     ?>
@@ -35,11 +39,56 @@ include_once 'config/constantes.php';
         <td><?php echo $titleGeekDash; ?></td>
 
         <td>
-          <button type="button" class="btn btn-primary">Ativar</button>
-          <button type="button" class="btn btn-danger">Excluir</button>
+          <?php
+          if ($ativoTitleGeek == 'A') {
+          ?>
+            <button type='button' class='btn btn-success' onclick="ativarGeral(<?php echo $idTitleGeekDash; ?>, 'desativar', 'ativarTitleUniversoGeek', 'titleUniversoGeekDashboard');"> <i class='mdi mdi-lock-open'></i> Desativar</button>
+          <?php
+          } else {
+          ?>
+            <button type='button' class='btn btn-dark' onclick="ativarGeral(<?php echo $idTitleGeekDash; ?>, 'ativar', 'ativarTitleUniversoGeek', 'titleUniversoGeekDashboard');"><i class='mdi mdi-lock-check'></i> Ativar</button>
+
+          <?php
+          }
+          ?>
+          <!--  <button type="button" class="btn btn-primary mdi mdi-lock-open-check"> Ativado</button>   -->
+
+
+          <button type="button" class="btn btn-danger mdi mdi-close-thick" onclick="excGeral(<?php echo $idTitleGeekDash; ?>, 'excTitleUniversoGeek','titleUniversoGeekDashboard', 'Tem certeza que deseja excluir este dado?')">Excluir</button>
         </td>
 
-      
+
+
+       <!-- MODAL CADASTRAR TITLE GEEK -->
+<div class="modal fade" id="modalTitleGeek" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title align-items-center" id="exampleModalLabel">Cadastrar Título Geek</h5>
+      </div>
+      <div class="modal-body">
+        <!-- Inicie o formulário aqui -->
+        <form id="frmAddTitleGeek" name="frmAddTitleGeek" method="POST">
+          <div class="mb-3">
+            <label for="titulo" class="form-label">Título</label>
+            <input type="text" name="titulo" class="" id="titulo" required>
+          </div>
+          <!-- Coloque o botão de submit dentro do formulário -->
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-info"><i class="mdi mdi-content-save-move" onclick="cadGeral('frmAddTitleGeek', 'modalTitleGeek', 'AddTitleUniversoGeek', 'titleUniversoGeekDashboard');"></i> Salvar</button>
+            <button type="button" class="btn btn-warning" data-bs-dismiss="modal"><i class="mdi mdi-close"></i> Cancelar</button>
+          </div>
+        </form> <!-- Feche o formulário aqui -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+          <script src="./js/painel.js"></script>
+
+
 
       </tr>
     <?php    } ?>

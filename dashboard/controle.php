@@ -18,7 +18,6 @@ switch ($acao) {
     case 'caracteristicasDashboard';
         include_once 'empresa/caracteristicas/caracteristicasDashboard.php';
         break;
-
     case 'excCaracteristicas';
         include_once 'empresa/caracteristicas/excCaracteristicas.php';
         break;
@@ -33,6 +32,16 @@ switch ($acao) {
     case 'comentariosDashboard';
         include_once 'empresa/comentarios/comentariosDashboard.php';
         break;
+    case 'excComentario';
+        include_once 'empresa/comentarios/excComentario.php';
+        break;
+    case 'ativarComentario';
+        include_once 'empresa/comentarios/ativarComentario.php';
+        break;
+    case 'addComentario';
+        include_once 'empresa/comentarios/addComentario.php';
+        break;
+
 
 
 
@@ -42,9 +51,31 @@ switch ($acao) {
     case 'produtoDashboard';
         include_once 'empresa/produto/produtoDashboard.php';
         break;
-    case 'titleuniversogeekDashboard';
+
+
+
+    case 'addTitleUniversoGeek';
+        include_once 'addTitleUniversoGeek.php';
+        break;
+    case 'titleUniversoGeekDashboard';
         include_once 'empresa/titleUniversoGeek/titleUniversoGeekDashboard.php';
         break;
+
+    case 'excTitleUniversoGeek';
+        include_once 'empresa/titleUniversoGeek/excTitleUniversoGeek.php';
+        break;
+    case 'ativarTitleUniversoGeek';
+        include_once 'empresa/titleUniversoGeek/ativarTitleUniversoGeek.php';
+        break;
+
+
+
+
+
+
+
+
+
     case 'universogeekDashboard';
         include_once 'empresa/universoGeek/universoGeekDashboard.php';
         break;

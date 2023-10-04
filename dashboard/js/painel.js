@@ -10,7 +10,7 @@ By: Rafael Fagundes
 
 /* INICIO FUNÇÃO DE UPLOAD - BANNER */
 
-var redimensionarBanner = $('.previewUploadBanner').croppie({
+var redimensionarBanner = $('#previewUploadBanner').croppie({
     enableExif: true,
     enableOrientation: true,
 
@@ -31,7 +31,7 @@ $('#arquivoBanner').on('change', function () {
     ler.readAsDataURL(this.files[0]);
 });
 
-$('#bntUploadArquivoBanner').on('click', function (retorno) {
+$('#btnUploadArquivoBanner').on('click', function (retorno) {
     redimensionarBanner.croppie('result', {
         type: 'canvas', // Tipo de arquivos permitidos - base64, html, blob
         size: 'viewport' // O tamanho da imagem cortada
@@ -64,149 +64,6 @@ $('#bntUploadArquivoBanner').on('click', function (retorno) {
 
 
 /* FIM FUNÇÃO UPLOAD DE IMAGE - BANNER */
-
-
-
-
-/* INICIO FUNÇÃO DE UPLOAD - CARACTERISTICAS - IMG1 */
-
-var redimensionarC1 = $('#previewUploadCaracteristicas1').croppie({
-    enableExif: true,
-    enableOrientation: true,
-
-    viewport: { width: 300, height: 300 },
-    boundary: { width: 500, height: 400 },
-
-});
-
-$('#arquivoCaracteristicas1').on('change', function () {
-    var ler = new FileReader();
-
-    ler.onload = function (e) {
-        redimensionarC1.croppie('bind', {
-            url: e.target.result
-        });
-    }
-
-    ler.readAsDataURL(this.files[0]);
-});
-
-$('#btnUploadCaracteristicas').on('click', function (retorno) {
-    redimensionarC1.croppie('result', {
-        type: 'canvas', // Tipo de arquivos permitidos - base64, html, blob
-        size: 'viewport' // O tamanho da imagem cortada
-    }).then(function (img){
-        // Enviar os dados para um arquivo PHP
-        $.ajax({
-            url: "uploadCaracteristicas.php", // Enviar os dados para o arquivo upload.php
-            type: "POST", // Método utilizado para enviar os dados
-            data: { // Dados que deve ser enviado
-                "imagem": img
-            },
-            success: function(){
-                $('#modalCadastrarCaracteristicas').modal('hide')
-                setTimeout(function (){
-                    atualizarPagina('caracteristicasDashboard');
-                }, 1000);
-                Swal.fire({
-                    position: 'center',
-                    icon: 'success',
-                    title: 'Salvo com Sucesso',
-                    showConfirmButton: false,
-                    timer: 1500
-                    
-                  })
-                
-            }
-        });
-    });
-});
-
-
-/* FIM FUNÇÃO UPLOAD DE IMAGE - CARACTERISTICAS IMG 1 */
-
-
-
-/* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
-
-
-/* INICIO FUNÇÃO DE UPLOAD - CARACTERISTICAS 2*/
-
-var redimensionarC2 = $('#previewUploadCaracteristicas2').croppie({
-    enableExif: true,
-    enableOrientation: true,
-    
-    viewport: { width: 300, height: 300 },
-    boundary: { width: 500, height: 400 },
-
-});
-
-$('#arquivoCaracteristicas2').on('change', function () {
-    var ler2 = new FileReader();
-
-    ler2.onload = function (e) {
-        redimensionarC2.croppie('bind', {
-            url: e.target.result
-        });
-    }
-
-    ler2.readAsDataURL(this.files[0]);
-});
-
-$('#bntUploadArquivoCaracteristicas').on('click', function (retorno) {
-    redimensionarC2.croppie('result', {
-        type: 'canvas', // Tipo de arquivos permitidos - base64, html, blob
-        size: 'viewport' // O tamanho da imagem cortada
-    }).then(function (img){
-        // Enviar os dados para um arquivo PHP
-        $.ajax({
-            
-            url: "uploadCaracteristicas2.php", // Enviar os dados para o arquivo upload.php
-            type: "POST", // Método utilizado para enviar os dados
-            data: { // Dados que deve ser enviado
-                "imagem2": img
-            },
-            success: function(){
-                $('#modalCadastrarCaracteristicas').modal('hide')
-                setTimeout(function (){
-                    atualizarPagina('caracteristicasDashboard');
-                }, 1000);
-                Swal.fire({
-                    position: 'center',
-                    icon: 'success',
-                    title: 'Salvo com Sucesso',
-                    showConfirmButton: false,
-                    timer: 1500
-                    
-                  })
-                
-            }
-        });
-    });
-});
-
-
-/* FIM FUNÇÃO UPLOAD DE IMAGE - CARACTERISTICAS 2 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* FUNCTION ATUALIZAR PÁGINA */
