@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
+    
     <meta charset="UTF-8">
-
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
     <style>
@@ -101,15 +100,17 @@
             /* Estilo opcional para a mensagem de sucesso */
         }
     </style>
+     
 </head>
 
-<body>
-    <br>
 
+<body>
+    
+    <br>
 
     <div class="form-container ">
         <div class="header">
-            <h1>Registration Form</h1>
+            <h1>REGISTRO</h1>
         </div>
         <br>
         <br>

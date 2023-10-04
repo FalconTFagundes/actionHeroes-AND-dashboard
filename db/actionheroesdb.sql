@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 05/10/2023 às 00:12
+-- Tempo de geração: 05/10/2023 às 00:23
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -42,8 +42,7 @@ CREATE TABLE `banner` (
 INSERT INTO `banner` (`idbanner`, `img`, `cadastro`, `alteracao`, `ativo`) VALUES
 (2, 'deadpool.jpg', '2023-10-02 21:09:00', '2023-10-04 21:34:41', 'A'),
 (3, 'off.jpg', '2023-10-02 21:09:00', '2023-10-03 01:19:29', 'A'),
-(4, 'batman.jpg', '2023-10-02 21:09:00', '2023-10-03 01:19:31', 'A'),
-(11, '1696456065.png', '2023-10-04 18:47:45', '2023-10-04 21:47:45', 'A');
+(4, 'batman.jpg', '2023-10-02 21:09:00', '2023-10-03 01:19:31', 'A');
 
 -- --------------------------------------------------------
 
@@ -352,7 +351,7 @@ ALTER TABLE `banner`
 -- AUTO_INCREMENT de tabela `comentarios`
 --
 ALTER TABLE `comentarios`
-  MODIFY `idcomentarios` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `idcomentarios` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de tabela `info`

@@ -19,21 +19,21 @@ session_start(); // Inicie a sessão
             margin: 0;
             display: flex;
             align-items: center;
-           
+
         }
 
         .brand-wrapper {
             text-align: center;
             flex-grow: 1;
-          margin: auto; 
+            margin: auto;
 
-            
+
         }
 
         .logo {
             max-width: 100%;
             height: auto;
-           
+
         }
 
         .login-section-wrapper {
@@ -103,28 +103,30 @@ session_start(); // Inicie a sessão
         }
 
         .fundoimage {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    background-color: gray; 
-    padding: 30px; 
-    margin-left: 150px;
-    width: 70%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.2);
-}
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: gray;
+            padding: 30px;
+            margin-left: 150px;
+            width: 70%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
 
-.login-img-wrapper {
-    
-    height: 80vh;
-}
-main{
-    height: 100vh;
-}
-.login-img {
-    width: 95%; /* Torna a imagem 5% menor que a largura do contêiner pai */
-}
+        .login-img-wrapper {
 
+            height: 80vh;
+        }
+
+        main {
+            height: 100vh;
+        }
+
+        .login-img {
+            width: 95%;
+            /* Torna a imagem 5% menor que a largura do contêiner pai */
+        }
     </style>
 </head>
 
@@ -142,26 +144,22 @@ main{
             <h1 class="login-title">Log in</h1>
             <form action="logar.php" method="post">
                 <label for="email">Email:</label>
-                <input type="email" name="email"  class="form-control"required><br><br>
+                <input type="email" name="email" class="form-control" required><br><br>
 
                 <label for="senha">Senha:</label>
                 <input type="password" name="senha" class="form-control" required><br><br>
 
                 <input type="submit" name="submit" value="Entrar" id="login" class="btn btn-block login-btn">
             </form>
-            <a href="#!" class="forgot-password-link">Forgot password?</a>
-            <p class="login-wrapper-footer-text">Don't have an account? <a href="#!" class="text-reset">Register here</a></p>
+            <a href="#!" class="forgot-password-link">Esqueceu a senha?</a>
+            <p class="login-wrapper-footer-text">Não possui uma conta? <a href="cadastro.php" class="text-reset">Registre aqui</a></p>
         </div>
     </main>
     <div class="fundoimage">
         <div class="login-img-wrapper">
-            <img src="./img/colection.jpg" alt="login image" class="login-img">
+            <img src="./img/pageLogin.jpg" alt="login image" class="login-img">
         </div>
     </div>
 </body>
 
 </html>
-
-
-
-
