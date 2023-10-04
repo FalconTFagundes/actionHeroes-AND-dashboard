@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 03/10/2023 às 03:20
+-- Tempo de geração: 05/10/2023 às 00:12
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -40,9 +40,10 @@ CREATE TABLE `banner` (
 --
 
 INSERT INTO `banner` (`idbanner`, `img`, `cadastro`, `alteracao`, `ativo`) VALUES
-(2, 'deadpool.jpg', '2023-10-02 21:09:00', '2023-10-03 01:19:28', 'A'),
+(2, 'deadpool.jpg', '2023-10-02 21:09:00', '2023-10-04 21:34:41', 'A'),
 (3, 'off.jpg', '2023-10-02 21:09:00', '2023-10-03 01:19:29', 'A'),
-(4, 'batman.jpg', '2023-10-02 21:09:00', '2023-10-03 01:19:31', 'A');
+(4, 'batman.jpg', '2023-10-02 21:09:00', '2023-10-03 01:19:31', 'A'),
+(11, '1696456065.png', '2023-10-04 18:47:45', '2023-10-04 21:47:45', 'A');
 
 -- --------------------------------------------------------
 
@@ -53,8 +54,8 @@ INSERT INTO `banner` (`idbanner`, `img`, `cadastro`, `alteracao`, `ativo`) VALUE
 CREATE TABLE `comentarios` (
   `idcomentarios` int(10) UNSIGNED NOT NULL,
   `img` varchar(45) NOT NULL DEFAULT '',
-  `comentario` varchar(45) NOT NULL DEFAULT '',
-  `nome` varchar(45) NOT NULL DEFAULT '',
+  `comentario` varchar(225) NOT NULL,
+  `nome` varchar(70) NOT NULL,
   `profissao` varchar(45) NOT NULL,
   `cadastro` datetime DEFAULT NULL,
   `alteracao` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
@@ -66,9 +67,9 @@ CREATE TABLE `comentarios` (
 --
 
 INSERT INTO `comentarios` (`idcomentarios`, `img`, `comentario`, `nome`, `profissao`, `cadastro`, `alteracao`, `ativo`) VALUES
-(1, 'diegao.png', 'teste comentario card cliente 1', 'teste nome cliente 1', 'teste profissao 1', '2023-09-29 22:31:00', '2023-09-30 01:31:18', 'A'),
-(2, 'gabigol.jpg', 'teste comentario card cliente 2', 'teste nome cliente 2', 'teste profissao 2', '2023-09-29 22:31:00', '2023-09-30 01:31:18', 'A'),
-(3, 'lcp.jpg', 'teste comentario card cliente 3', 'teste nome cliente 3', 'teste profissao 3', '2023-09-29 22:31:00', '2023-09-30 01:31:18', 'A');
+(1, 'diegao.png', 'Comprei meu primeiro action figure do Kratos  aqui, amo muito, lembro como se fosse ontem', 'Cleiton do SAAE', 'Assassino de Deuses', '2023-09-29 22:31:00', '2023-10-04 22:06:01', 'A'),
+(2, 'gabigol.jpg', 'Amo comprar com a Action, melhores action figures do mundo', 'Gabriel Gabigol', 'Jogador de Profissional de Futebol Masculino', '2023-09-29 22:31:00', '2023-10-04 22:02:46', 'A'),
+(3, 'lcp.jpg', 'Amo a Action Figures, a minha coleção ficou show com a ajuda da Action', 'Luciano Pettersen', 'Instrutor Desenvolvimento de Sistemas ', '2023-09-29 22:31:00', '2023-10-04 22:03:23', 'A');
 
 -- --------------------------------------------------------
 
@@ -80,17 +81,17 @@ CREATE TABLE `info` (
   `idinfo` int(10) UNSIGNED NOT NULL,
   `titulo1` varchar(45) NOT NULL,
   `titulo2` varchar(45) NOT NULL,
-  `descricao` varchar(45) NOT NULL,
+  `descricao` varchar(70) NOT NULL,
   `imagem1` longtext NOT NULL,
   `imagem2` longtext NOT NULL,
   `titulo1info` varchar(45) NOT NULL,
-  `descricao1info` varchar(45) NOT NULL,
+  `descricao1info` varchar(70) NOT NULL,
   `titulo2info` varchar(45) NOT NULL,
-  `descricao2info` varchar(45) NOT NULL,
+  `descricao2info` varchar(70) NOT NULL,
   `titulo3info` varchar(45) NOT NULL,
-  `descricao3info` varchar(45) NOT NULL,
+  `descricao3info` varchar(70) NOT NULL,
   `titulo4info` varchar(45) NOT NULL,
-  `descricao4info` varchar(45) NOT NULL,
+  `descricao4info` varchar(70) NOT NULL,
   `cadastro` datetime DEFAULT NULL,
   `alteracao` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `ativo` char(1) NOT NULL DEFAULT 'A'
@@ -101,7 +102,7 @@ CREATE TABLE `info` (
 --
 
 INSERT INTO `info` (`idinfo`, `titulo1`, `titulo2`, `descricao`, `imagem1`, `imagem2`, `titulo1info`, `descricao1info`, `titulo2info`, `descricao2info`, `titulo3info`, `descricao3info`, `titulo4info`, `descricao4info`, `cadastro`, `alteracao`, `ativo`) VALUES
-(1, 'teste', 'teste de escrita', 'teste de escrita descricao', 'kr.jpg', 'luffy.jpg', 'teste titulo 1 info', 'teste descricao 1 ', 'teste titulo 2', 'teste descricao 2', 'teste titulo 3 ', 'teste descricao 3', 'teste titulo 4', 'teste descricao 4', '2023-09-27 00:00:00', '2023-09-30 02:52:10', 'A');
+(1, 'Nossa loja', 'Informações', 'Confira um pouco de nossos fundamentos destaques', 'kr.jpg', 'luffy.jpg', 'Rápida Entrega', 'Entrega rápida no endereço em que solicitar!', 'Qualidade', 'Nossos produtos possuem o selo certificado de qualidade', 'Fiel ao Solicitado', 'Buscamos desenvolver figuras de ação 100% fieis aos personagens', 'Praticidade', 'Fácil acesso ao site e aos nossos produtos', '2023-09-27 00:00:00', '2023-10-04 22:11:54', 'A');
 
 -- --------------------------------------------------------
 
@@ -126,7 +127,7 @@ INSERT INTO `init` (`idinit`, `icon`, `text`, `cadastro`, `alteracao`, `ativo`) 
 (1, 'mdi mdi-account-lock-open', 'Segurança nas Suas Compras', '2023-09-24 16:10:00', '2023-09-26 22:20:51', 'A'),
 (2, 'mdi mdi-account-cash', 'Cabe no seu Bolso', '2023-09-24 16:10:00', '2023-09-24 19:12:52', 'A'),
 (3, 'mdi mdi-thumb-up', 'Produtos de Qualidade', '2023-09-24 16:12:00', '2023-09-24 19:12:52', 'A'),
-(4, 'mdi mdi-bike-fast', 'Entrega Rápida', '2023-09-24 16:12:00', '2023-09-24 19:12:52', 'A');
+(4, 'mdi mdi-bike-fast', 'Entrega Rápida', '2023-09-24 16:12:00', '2023-10-04 21:13:12', 'A');
 
 -- --------------------------------------------------------
 
@@ -158,7 +159,7 @@ CREATE TABLE `produto` (
 --
 
 INSERT INTO `produto` (`idproduto`, `nome`, `img1`, `img2`, `img3`, `descricao`, `material`, `dimensoes`, `peso`, `valor`, `cadastro`, `alteracao`, `ativo`, `desconto`, `destaque`, `freteGratis`) VALUES
-(1, 'Kratos', 'kratos1.jpg', 'kratos2.jpg', 'kratos3.jpg', 'Kratos é um guerreiro grego a serviço dos deuses Gregos do Olimpo. Enganado por Ares, o Deus da Guerra, que queria transformá-lo num guerreiro perfeito, Kratos acidentalmente mata sua esposa e sua filha, mas, depois disso, Kratos decide não servir mais a Ares e é amaldiçoado com as cinzas de sua família morta pelo Oráculo da cidade que foi destruída. Kratos é atormentado com memórias de seus atos e faz um trato de servir aos outros deuses do Olimpo por dez anos. Cansado de servir, convoca Atena e, ela afirma que o perdoará por seus atos se ele realizar uma última tarefa: matar Ares. Para isso ele deve encontrar e usar a Caixa de Pandora. Ao recuperar a Caixa de Pandora de Ares, Kratos a abre e usa o seu poder para tomar os poderes de um deus. Apesar dos esforços de Ares para acabar com Kratos, tanto física quanto mentalmente, incluindo ser despojado das Lâminas do Caos, perder os Poderes Divinos, e lutar contra uma Horda de Clones e perder sua família novamente, Kratos sobrevive e mata seu inimigo com a lendária Lâmina dos Deuses. Atenas é salva, e apesar de Atena dizer que seus pecados foram perdoados, seus pesadelos não poderão ser parados. Kratos, então, tenta cometer suicídio lançando-se no Mar Egeu, mas Atena intervém dizendo que não cabe a ele tirar sua própria vida, pois teria matado um deus, e leva-o de volta para o Monte Olimpo. Como recompensa por seus serviços aos deuses, Atena lhe concede as Lâminas de Atena e Kratos se torna o novo Deus da Guerra.', 'Boneco de PVC, ABS', '20x15x8 cm', '	700g', 300.00, '2023-09-11 20:47:00', '2023-10-02 12:11:46', 'A', '60%', 'N', 'S'),
+(1, 'Kratos', 'kratos1.jpg', 'kratos2.jpg', 'kratos3.jpg', 'Kratos é um guerreiro grego a serviço dos deuses Gregos do Olimpo. Enganado por Ares, o Deus da Guerra, que queria transformá-lo num guerreiro perfeito, Kratos acidentalmente mata sua esposa e sua filha, mas, depois disso, Kratos decide não servir mais a Ares e é amaldiçoado com as cinzas de sua família morta pelo Oráculo da cidade que foi destruída. Kratos é atormentado com memórias de seus atos e faz um trato de servir aos outros deuses do Olimpo por dez anos. Cansado de servir, convoca Atena e, ela afirma que o perdoará por seus atos se ele realizar uma última tarefa: matar Ares. Para isso ele deve encontrar e usar a Caixa de Pandora. Ao recuperar a Caixa de Pandora de Ares, Kratos a abre e usa o seu poder para tomar os poderes de um deus. Apesar dos esforços de Ares para acabar com Kratos, tanto física quanto mentalmente, incluindo ser despojado das Lâminas do Caos, perder os Poderes Divinos, e lutar contra uma Horda de Clones e perder sua família novamente, Kratos sobrevive e mata seu inimigo com a lendária Lâmina dos Deuses. Atenas é salva, e apesar de Atena dizer que seus pecados foram perdoados, seus pesadelos não poderão ser parados. Kratos, então, tenta cometer suicídio lançando-se no Mar Egeu, mas Atena intervém dizendo que não cabe a ele tirar sua própria vida, pois teria matado um deus, e leva-o de volta para o Monte Olimpo. Como recompensa por seus serviços aos deuses, Atena lhe concede as Lâminas de Atena e Kratos se torna o novo Deus da Guerra.', 'Boneco de PVC, ABS', '20x15x8 cm', '	700g', 300.00, '2023-09-11 20:47:00', '2023-10-04 21:13:24', 'A', '60%', 'N', 'S'),
 (2, 'Atreus', 'atreus1.jpg', 'atreus2.jpg', 'atreus3.jpg', 'Atreus foi concebido entre o grego espartano Kratos e uma giganta nativa de Jötunheim chamada Laufey, a quem ele e seu pai chamam de \"Faye\". Ele era uma criança enfermiça e só recentemente ficou saudável o suficiente para a sua jornada. Seu passado não foi extensivamente revelado, no entanto, está implícito que ele e sua mãe viveram sem Kratos por um tempo, pois o próprio Kratos não tem certeza da capacidade de caça do menino e, respeitando os desejos de Faye, não ensinou ele próprio. Algum tempo depois, Kratos retorna. É mostrado que a mãe, aparentemente, havia falecido por razões não esclarecidas.\r\n\r\nAlgum tempo depois da morte de sua mãe, Atreus começa a aprender a caçar e matar com seu pai, Kratos. Kratos também o ensina a lutar e o garoto assume o papel de assistente, usando suas flechas eletrificadas. Ao contrário de Kratos, Atreus não é um assassino nato e parece hesitar diante da perspectiva de acabar com uma vida, até mesmo a de um monstro que está atacando seu pai. Ele está, no entanto, disposto a lutar.', 'Boneco de PVC, ABS', ' 18 cm', '600g', 270.00, '2023-09-11 21:03:00', '2023-10-03 01:06:15', 'A', '', 'N', 'S'),
 (3, 'Joel', 'joel1.jpg', 'joel2.jpg', 'joel3.jpg', 'Joel Miller é o protagonista jogável de The Last of Us, e um personagem coadjuvante em The Last of Us: Left Behind e The Last of Us Part II, no qual ele é brevemente jogável.\r\n\r\nJoel era um sobrevivente na América pós-apocalíptica que havia sido devastada pela infecção cerebral por Cordyceps .  Depois de perder sua única filha Sarah nos estágios iniciais do surto,  Joel tornou-se um contrabandista implacável e cínico eventualmente encarregado de contrabandear e proteger Ellie Williams, uma jovem que era a chave para a sobrevivência da humanidade. Joel eventualmente formou um forte vínculo com ela.', 'Boneco de PVC, ABS', 'Peça em escala 1/8 com 23cm contando a base', '800g', 450.00, '2023-09-11 21:24:00', '2023-09-15 00:38:49', 'A', '', 'N', 'N'),
 (4, 'Ellie', 'ellie1.jpg', 'ellie2.jpg', 'ellie3.jpg', 'Ellie Williams é a personagem central da série The Last of Us. Ela atua como a protagonista de The Last of Us: American Dreams,\r\n\r\nsta jogável de The Last of Us, e a protagonista jogável de The Last of Us: Left Behind e The Last of Us Part II.\r\n\r\nEllie cresceu órfã na zona de quarentena de Boston e frequentou uma escola militar preparatória, onde conheceu e fez amizade com Riley Abel. Quando Ellie tinha quatorze anos, a dupla foi infectada com a infecção cerebral por Cordyceps, onde Ellie descobriu que era imune. Uma amiga de sua mãe e líder dos Vaga-lumes, Marlene, acreditava que ela era a chave para a engenharia reversa de uma vacina. Marlene encarregou Joel Miller, um contrabandista, de escoltar Ellie para fora do QZ. O simples desembarque se transformou em uma jornada de um ano pela América, e os dois eventualmente formaram um vínculo estreito.', 'PVC', '30x25x25 cm\r\n \r\n ', '1200g', 999.99, '2023-09-11 21:35:00', '2023-10-02 12:11:46', 'A', '', 'S', 'N'),
@@ -213,7 +214,8 @@ CREATE TABLE `titleuniversogeek` (
 --
 
 INSERT INTO `titleuniversogeek` (`idtitleUniversoGeek`, `title`, `cadastro`, `alteracao`, `ativo`) VALUES
-(1, 'SEU MUNDO GEEK CHEGOU', '2023-09-24 16:23:00', '2023-09-24 19:25:20', 'A');
+(1, 'SEU MUNDO GEEK CHEGOU', '2023-09-24 16:23:00', '2023-10-04 21:08:46', 'A'),
+(2, 'UNIVERSO GEEK ', '2023-10-04 18:09:22', '2023-10-04 21:09:34', 'D');
 
 -- --------------------------------------------------------
 
@@ -281,7 +283,8 @@ CREATE TABLE `usuario` (
 INSERT INTO `usuario` (`idusuario`, `nome`, `sobrenome`, `email`, `senha`, `papel`, `cadastro`, `alteracao`, `ativo`) VALUES
 (1, 'Rafael', 'Fagundes', 'rafaelfagundes762@gmail.com', 'glock123', 'administrador', '0000-00-00 00:00:00', '2023-10-02 21:34:20', 'A'),
 (2, 'Fernando', 'Bulim', 'fernandin@gmail.com', 'flamengo123', 'usuario_comum', '0000-00-00 00:00:00', '2023-10-02 21:39:30', 'A'),
-(3, 'erilaine', 'rodrigues', 'erilainerodrigues@gmail.com', 'pedrin', 'administrador', '0000-00-00 00:00:00', '2023-10-03 00:49:04', 'A');
+(3, 'erilaine', 'rodrigues', 'erilainerodrigues@gmail.com', 'pedrin', 'administrador', '0000-00-00 00:00:00', '2023-10-03 00:49:04', 'A'),
+(4, 'rafael', 'rafaelfaugndes', 'rafaelfagundes762@gmail.com', 'rafae', 'administrador', '2023-10-04 18:33:04', '2023-10-04 21:33:44', 'A');
 
 --
 -- Índices para tabelas despejadas
@@ -343,13 +346,13 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `banner`
 --
 ALTER TABLE `banner`
-  MODIFY `idbanner` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `idbanner` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de tabela `comentarios`
 --
 ALTER TABLE `comentarios`
-  MODIFY `idcomentarios` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idcomentarios` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de tabela `info`
@@ -373,19 +376,19 @@ ALTER TABLE `produto`
 -- AUTO_INCREMENT de tabela `titleuniversogeek`
 --
 ALTER TABLE `titleuniversogeek`
-  MODIFY `idtitleUniversoGeek` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idtitleUniversoGeek` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de tabela `universogeek`
 --
 ALTER TABLE `universogeek`
-  MODIFY `iduniversoGeek` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `iduniversoGeek` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `idusuario` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idusuario` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

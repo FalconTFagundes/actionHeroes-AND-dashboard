@@ -17,19 +17,19 @@ include_once 'config/constantes.php';
     <thead>
         <tr>
             <th scope="col" width="5%">ID</th>
-            <th scope="col" width="2%">Nome</th>
+            <th scope="col" width="8%">Nome</th>
             <th scope="col" width="2%">Img 1</th>
             <th scope="col" width="2%">Img 2</th>
             <th scope="col" width="2%">img 3</th>
-            <th scope="col" width="2%">Descrição</th>
+            <th scope="col" width="10%">Descrição</th>
             <th scope="col" width="5%">Material</th>
             <th scope="col" width="5%">Dimensões</th>
             <th scope="col" width="5%">Peso</th>
             <th scope="col" width="5%">Valor</th>
             <th scope="col" width="5%">Desconto</th>
             <th scope="col" width="5%">Destaque</th>
-            <th scope="col" width="5%">Frete Gratis</th>
-            <th scope="col" width="5%">Ação</th>
+            <th scope="col" width="10%">Frete Gratis</th>
+            <th scope="col">Ação</th>
 
         </tr>
     </thead>

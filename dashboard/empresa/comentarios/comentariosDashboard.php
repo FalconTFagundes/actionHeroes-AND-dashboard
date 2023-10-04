@@ -20,8 +20,8 @@ include_once './funcDashboard/funcdashboard.php';
       <th scope="col" width="10%">Arquivo</th>
       <th scope="col" width="20%">Comentario</th>
       <th scope="col" width="15%">Nome</th>
-      <th scope="col" width="15%">Profissao</th>
-      <th scope="col" width="20%">Ação</th>
+      <th scope="col" width="20%">Profissao</th>
+      <th scope="col">Ação</th>
 
     </tr>
   </thead>
@@ -77,7 +77,7 @@ include_once './funcDashboard/funcdashboard.php';
 
 
 <!-- MODAL CADASTRAR COMENTARIOS -->
-<div class="modal fade" id="modalCadastrarComentario" tabindex="-1  " aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalCadastrarComentario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-header bg-dark">
@@ -87,14 +87,15 @@ include_once './funcDashboard/funcdashboard.php';
         <form id="frmAddComentario">
           <div class="mb-3">
             <label for="nome" class="form-label">Nome</label>
-            <input type="text" name="nome" class="" id="" required>
-            <label for="profissao" class="form-label">Profissão</label>
-            <input type="text" name="profissao" class="" id="" required> <br>
-            <label for="comentario" class="form-label">Comentario</label>
-            <input type="text" name="comentario" class="" id="" style="width: 50%;" required> <br><br>
+            <input type="text" name="nome" class="nome" id="" required>
 
-            <label for="uploadImgComentario" class="form-label">Selecione uma Imagem</label><br>
-            <input type="file" name="uploadImgComentario" class="" id="arquivoComentario" required> <br>
+            <label for="profissao" class="form-label">Profissão</label>
+            <input type="text" name="profissao" class="" id="profissao" required> <br>
+            <label for="comentario" class="form-label">Comentario</label>
+            <input type="text" name="comentario" class="" id="comentario" style="width: 50%;" required> <br><br>
+
+            <label for="arquivoComentario" class="form-label">Selecione uma Imagem</label><br>
+            <input type="file" name="arquivoComentario" class="" id="arquivoComentario" required> <br>
 
           </div>
           <div id="previewUploadComentario"></div>

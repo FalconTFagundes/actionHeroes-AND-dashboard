@@ -38,11 +38,8 @@ switch ($acao) {
     case 'ativarComentario';
         include_once 'empresa/comentarios/ativarComentario.php';
         break;
-    case 'addComentario';
-        include_once 'empresa/comentarios/addComentario.php';
-        break;   
-        case 'uploadComentarios';
-        include_once 'empresa/uploadComentarios.php';
+    case 'uploadComentarios';
+        include_once 'uploadComentarios.php';
         break;
 
 

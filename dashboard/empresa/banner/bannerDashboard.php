@@ -19,7 +19,7 @@ include_once './funcDashboard/funcdashboard.php';
     <tr>
       <th scope="col" width="20%">ID</th>
       <th scope="col" width="20%">Img</th>
-      <th scope="col" width="30%">Arquivo</th>
+      <th scope="col" width="35%">Arquivo</th>
       <th scope="col" width="30%">Ação</th>
 
     </tr>

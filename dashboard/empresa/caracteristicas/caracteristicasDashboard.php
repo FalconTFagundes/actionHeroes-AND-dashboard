@@ -13,21 +13,21 @@ include_once 'config/constantes.php';
 <table class="table table-striped">
     <thead>
         <tr>
-            <th scope="col" width="4%">ID</th>
-            <th scope="col" width="6%">Titulo 1</th>
+            <th scope="col" width="2%">ID</th>
+            <th scope="col" width="2%">Titulo 1</th>
             <th scope="col" width="6%">Titulo 2</th>
             <th scope="col" width="6%">Descrição</th>
-            <th scope="col" width="6%">Img 1</th>
-            <th scope="col" width="6%">Img 2</th>
-            <th scope="col" width="6%">Box 1</th>
-            <th scope="col" width="6%">Desc 1</th>
-            <th scope="col" width="6%">Box 2</th>
-            <th scope="col" width="6%">Desc 2</th>
-            <th scope="col" width="6%">Box 3</th>
-            <th scope="col" width="6%">Desc 3</th>
-            <th scope="col" width="6%">Box 4</th>
-            <th scope="col" width="8%">Desc 4</th>
-            <th scope="col" width="8%">Ação</th>
+            <th scope="col" width="2%">Img 1</th>
+            <th scope="col">Img 2</th>
+            <th scope="col">Box 1</th>
+            <th scope="col">Desc 1</th>
+            <th scope="col">Box 2</th>
+            <th scope="col">Desc 2</th>
+            <th scope="col">Box 3</th>
+            <th scope="col">Desc 3</th>
+            <th scope="col">Box 4</th>
+            <th scope="col"  width="2%">Desc 4</th>
+            <th scope="col">Ação</th>
 
         </tr>
     </thead>
