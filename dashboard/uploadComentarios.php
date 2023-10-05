@@ -3,10 +3,10 @@ include_once 'config/conexao.php';
 include_once 'config/constantes.php';
 include_once './funcDashboard/funcdashboard.php';
 
-$dados_cadastrar = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-print_r($dados_cadastrar);
 
-$imagem = $dados_cadastrar['imagem'];
+$imagem = filter_input(INPUT_POST, 'imagem', FILTER_DEFAULT);
+$dados_cadastrar = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+
 list($type, $imagem) = explode(';', $imagem);
 list(, $imagem) = explode(',', $imagem);
 

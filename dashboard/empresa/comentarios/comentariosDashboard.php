@@ -84,7 +84,7 @@ include_once './funcDashboard/funcdashboard.php';
         <h5 class="modal-title align-items-center" id="exampleModalLabel">Cadastrar Comentario</h5>
       </div>
       <div class="modal-body">
-        <form name="frmAddComentario" id="frmAddComentario" action="#" method="POST" enctype="multipart/form-data">
+        <form name="frmAddComentario" name="frmAddComentario" id="frmAddComentario" action="#" method="POST" enctype="multipart/form-data" action="#" method="POST" enctype="multipart/form-data">
           <label for="nome" class="form-label">Nome</label>
           <div class="input-group mb-3">
             <input type="text" class="form-control" name="nome" aria-label="Nome" aria-describedby="basic-addon1" required>
