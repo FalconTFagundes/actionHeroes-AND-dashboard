@@ -311,8 +311,6 @@ function capturarId(idCap) {
 
 
 /* FUNCTION EXCLUIR */
-
-
 function excGeral(idvar, acaopage, pageretorno, m1, m2) {
 
     Swal.fire({

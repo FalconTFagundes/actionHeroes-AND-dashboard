@@ -12,7 +12,6 @@ $imagem = $dados_cadastrar['imagem'];
 list($type, $imagem) = explode(';', $imagem);
 list(, $imagem) = explode(',', $imagem);
 
-
 $imagem = base64_decode($imagem);
 
 
