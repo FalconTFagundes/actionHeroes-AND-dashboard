@@ -102,7 +102,7 @@ session_start(); // Inicie a sessão
             height: auto;
         }
 
-        .fundoimage {
+        .fundoimage {   
             display: flex;
             justify-content: center;
             align-items: center;

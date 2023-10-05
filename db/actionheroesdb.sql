@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 05/10/2023 às 00:23
+-- Tempo de geração: 05/10/2023 às 02:10
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -283,7 +283,9 @@ INSERT INTO `usuario` (`idusuario`, `nome`, `sobrenome`, `email`, `senha`, `pape
 (1, 'Rafael', 'Fagundes', 'rafaelfagundes762@gmail.com', 'glock123', 'administrador', '0000-00-00 00:00:00', '2023-10-02 21:34:20', 'A'),
 (2, 'Fernando', 'Bulim', 'fernandin@gmail.com', 'flamengo123', 'usuario_comum', '0000-00-00 00:00:00', '2023-10-02 21:39:30', 'A'),
 (3, 'erilaine', 'rodrigues', 'erilainerodrigues@gmail.com', 'pedrin', 'administrador', '0000-00-00 00:00:00', '2023-10-03 00:49:04', 'A'),
-(4, 'rafael', 'rafaelfaugndes', 'rafaelfagundes762@gmail.com', 'rafae', 'administrador', '2023-10-04 18:33:04', '2023-10-04 21:33:44', 'A');
+(4, 'rafael', 'rafaelfaugndes', 'rafaelfagundes762@gmail.com', 'rafae', 'administrador', '2023-10-04 18:33:04', '2023-10-04 21:33:44', 'A'),
+(5, 'rafael', 'Fagundes', 'rafaelfagundes762@gmail.com', 'teste', 'usuario_comum', '2023-10-04 20:51:46', '2023-10-04 23:51:46', 'A'),
+(6, 'teste', 'Bulim', 'rafaelfagundes762@gmail.com', 'rafae', 'usuario_comum', '2023-10-04 21:09:41', '2023-10-05 00:09:41', 'A');
 
 --
 -- Índices para tabelas despejadas
@@ -387,7 +389,7 @@ ALTER TABLE `universogeek`
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `idusuario` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idusuario` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
