@@ -84,30 +84,37 @@ include_once './funcDashboard/funcdashboard.php';
         <h5 class="modal-title align-items-center" id="exampleModalLabel">Cadastrar Comentario</h5>
       </div>
       <div class="modal-body">
-        <form id="frmAddComentario">
-          <div class="mb-3">
-            <label for="nome" class="form-label">Nome</label>
-            <input type="text" name="nome" class="nome" id="" required>
-
-            <label for="profissao" class="form-label">Profissão</label>
-            <input type="text" name="profissao" class="" id="profissao" required> <br>
-            <label for="comentario" class="form-label">Comentario</label>
-            <input type="text" name="comentario" class="" id="comentario" style="width: 50%;" required> <br><br>
-
-            <label for="arquivoComentario" class="form-label">Selecione uma Imagem</label><br>
-            <input type="file" name="arquivoComentario" class="" id="arquivoComentario" required> <br>
-
+        <form name="frmAddComentario" id="frmAddComentario" action="#" method="POST" enctype="multipart/form-data">
+          <label for="nome" class="form-label">Nome</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" name="nome" aria-label="Nome" aria-describedby="basic-addon1" required>
           </div>
+
+          <label class="form-label">Profissão</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" name="profissao" aria-label="profissao" aria-describedby="basic-addon2" required>
+          </div>
+
+          <label for="comentario" class="form-label">Comentario</label>
+          <div class="input-group">
+            <textarea class="form-control" name="comentario" aria-label="comentario" required></textarea>
+          </div><br><br>
+
+          <label for="arquivoComentario" class="form-label">Selecione uma Imagem</label><br>
+          <input type="file" name="arquivoComentario" class="" id="arquivoComentario" required> <br>
+
+
           <div id="previewUploadComentario"></div>
 
           <div class="modal-footer">
-            <button type="submit" class="btn btn-info" id="btnCadastrarComentario" onclick="cadGeral('frmAddComentario','modalCadastrarComentario','uploadComentarios','comentariosDashboard');"><i class="mdi mdi-content-save-move"></i> Salvar</button>
+            <button type="submit" class="btn btn-info" id="btnCadastrarComentario" onclick="cadGeralUpload('frmAddComentario','uploadComentarios');"><i class="mdi mdi-content-save-move"></i> Salvar</button>
             <button type="button" class="btn btn-warning" data-bs-dismiss="modal"><i class="mdi mdi-close"></i> Cancelar</button>
           </div>
         </form>
       </div>
     </div>
   </div>
+</div>
 </div>
 
 <script src="./js/painel.js"></script>
