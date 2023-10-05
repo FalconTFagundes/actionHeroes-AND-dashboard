@@ -4,9 +4,11 @@ include_once 'config/constantes.php';
 include_once './funcDashboard/funcdashboard.php';
 
 
-$imagem = filter_input(INPUT_POST, 'imagem', FILTER_DEFAULT);
+// $imagem = filter_input(INPUT_POST, 'imagem', FILTER_DEFAULT);
 $dados_cadastrar = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-
+// $nomeComentario = $dados_cadastrar['nome'];
+// echo $nomeComentario;
+$imagem = $dados_cadastrar['imagem'];
 list($type, $imagem) = explode(';', $imagem);
 list(, $imagem) = explode(',', $imagem);
 
