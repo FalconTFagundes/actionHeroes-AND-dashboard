@@ -84,7 +84,7 @@ include_once './funcDashboard/funcdashboard.php';
         <h5 class="modal-title align-items-center" id="exampleModalLabel">Cadastrar Comentario</h5>
       </div>
       <div class="modal-body">
-        <form id="frmAddComentario">
+        <form name="frmAddComentario" id="frmAddComentario" action="#" method="POST" enctype="multipart/form-data">
           <div class="mb-3">
             <label for="nome" class="form-label">Nome</label>
             <input type="text" name="nome" class="nome" id="" required>
@@ -101,7 +101,7 @@ include_once './funcDashboard/funcdashboard.php';
           <div id="previewUploadComentario"></div>
 
           <div class="modal-footer">
-            <button type="submit" class="btn btn-info" id="btnCadastrarComentario" onclick="cadGeral('frmAddComentario','modalCadastrarComentario','uploadComentarios','comentariosDashboard');"><i class="mdi mdi-content-save-move"></i> Salvar</button>
+            <button type="submit" class="btn btn-info" id="btnCadastrarComentario" onclick="cadGeralUpload('frmAddComentario','modalCadastrarComentario','uploadComentarios','comentariosDashboard');"><i class="mdi mdi-content-save-move"></i> Salvar</button>
             <button type="button" class="btn btn-warning" data-bs-dismiss="modal"><i class="mdi mdi-close"></i> Cancelar</button>
           </div>
         </form>
