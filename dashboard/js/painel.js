@@ -129,31 +129,7 @@ $('#btnUploadArquivoUniversoGeek').on('click', function (retorno) {
 
 
 
-/* FUNÇÃO UPLOAD DE IMAGE - COMENTÁRIOS */
-var redimensionarImgComentario = $('#previewUploadComentario').croppie({
-    enableExif: true,
-    enableOrientation: true,
 
-    viewport: { width: 300, height: 300 },
-    boundary: { width: 500, height: 400 },
-
-});
-
-$('#arquivoComentario').on('change', function () {
-    var lerImgComentario = new FileReader();
-
-    lerImgComentario.onload = function (e) {
-        redimensionarImgComentario.croppie('bind', {
-            url: e.target.result
-        });
-    }
-
-    lerImgComentario.readAsDataURL(this.files[0]);
-});
-
-
-
-/* FIM FUNÇÃO UPLOAD DE IMAGE - COMENTÁRIOS */
 
 
 
@@ -184,6 +160,8 @@ function atualizarPagina(dataMenu) {
 
 
 
+
+
 /* FUNCTION CLICK MENU DASHBOARD */
 
 $('.clickMenulateral').on('click', function () {
@@ -209,14 +187,81 @@ $('.clickMenulateral').on('click', function () {
 })
 
 
-/* FUNCTION CADASTRAR */
-function cadGeralUpload(formId, modalId, pageAcao, pageRetorno) {
+/* FUNCTION CADASTRAR GERAL */
+
+function cadGeral(formId, modalId, pageAcao, pageRetorno){
+    $('#'+formId).on('submit', function (k){
+        k.preventDefault();
+       
+        var formdata = $(this).serializeArray();
+        formdata.push(
+            {name: "acao", value: pageAcao },
+        );
+
+        $.ajax({
+            type: "POST",
+            dataType: 'html',
+            url: 'controle.php',
+            data: formdata,
+            beforeSend: function (retorno) {
+
+            }, success: function (retorno) {
+                console.log(retorno);
+                $('#'+modalId).modal('hide');
+                setTimeout(function(){
+                    atualizarPagina(pageRetorno);
+               },1000);
+               Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Salvo com Sucesso',
+                showConfirmButton: false,
+                timer: 1500
+
+            })
+
+               
+            }
+        });
+    })
+}
+
+
+
+
+/* FIM FUNCTION CADASTRAR GERAL */
+
+
+
+/* FUNCTION CADASTRAR E UPLOAD IMAGE */
+var redimensionarImgComentario = $('#previewUploadComentario').croppie({
+    enableExif: true,
+    enableOrientation: true,
+
+    viewport: { width: 300, height: 300 },
+    boundary: { width: 500, height: 400 },
+
+});
+
+$('#arquivoComentario').on('change', function () {
+    var lerImgComentario = new FileReader();
+
+    lerImgComentario.onload = function (e) {
+        redimensionarImgComentario.croppie('bind', {
+            url: e.target.result
+        });
+    }
+
+    lerImgComentario.readAsDataURL(this.files[0]);
+});
+
+function cadGeralUpload(formId, pageAcao) {
     $('#' + formId).on('submit', function (k) {
         k.preventDefault();
         var formdata = $(this).serializeArray();
         redimensionarImgComentario.croppie('result', {
-            type: 'canvas', // Tipo de arquivos permitidos - base64, html, blob
-            size: 'viewport' // O tamanho da imagem cortada
+            type: 'canvas', 
+            size: 'viewport' 
         }).then(function (img) {
             
             formdata.push(
@@ -226,8 +271,8 @@ function cadGeralUpload(formId, modalId, pageAcao, pageRetorno) {
                 },
             );
             $.ajax({
-                url: "uploadComentarios.php", // Enviar os dados para o arquivo upload.php
-                type: "POST", // Método utilizado para enviar os dados
+                url: "uploadComentarios.php", 
+                type: "POST", 
                 data: formdata,
                 success: function (retorna) {
                     console.log(retorna);
@@ -251,62 +296,7 @@ function cadGeralUpload(formId, modalId, pageAcao, pageRetorno) {
     })
 }
 
-function addUPComentario() {
-    redimensionarImgComentario.croppie('result', {
-        type: 'canvas', // Tipo de arquivos permitidos - base64, html, blob
-        size: 'viewport' // O tamanho da imagem cortada
-    }).then(function (img) {
-        // Enviar os dados para um arquivo PHP
-        $.ajax({
-            url: "uploadComentarios.php", // Enviar os dados para o arquivo upload.php
-            type: "POST", // Método utilizado para enviar os dados
-            data: { // Dados que deve ser enviado
-                "imagem": img
-            },
-            success: function (retorna) {
-                console.log(retorna);
-                // $('#modalCadastrarComentario').modal('hide')
-                // setTimeout(function () {
-                //     atualizarPagina('comentariosDashboard');
-                // }, 1000);
-                // Swal.fire({
-                //     position: 'center',
-                //     icon: 'success',
-                //     title: 'Salvo com Sucesso',
-                //     showConfirmButton: false,
-                //     timer: 1500
-
-                // })
-
-            }
-        });
-    });
-}
-
-function capturarId(idCap) {
-    var dados = {
-        id: idCap
-    };
-
-    // Enviar o ID para o servidor usando AJAX
-    $.ajax({
-        url: 'uploadComentarios.php', // Substitua pela URL correta do seu servidor
-        type: 'POST',
-        data: dados,
-        success: function (response) {
-            // Lógica a ser executada após o sucesso da requisição AJAX
-            console.log('ID enviado com sucesso para o servidor.');
-            // Você pode adicionar mais lógica aqui, se necessário
-        },
-        error: function (error) {
-            // Lógica a ser executada em caso de erro na requisição AJAX
-            console.error('Erro ao enviar ID para o servidor:', error);
-            // Você pode adicionar mais lógica aqui, se necessário
-        }
-    });
-}
-
-
+/* FIM FUNCTION CADASTRAR E UPLOAD DE IMAGEM */
 
 
 
