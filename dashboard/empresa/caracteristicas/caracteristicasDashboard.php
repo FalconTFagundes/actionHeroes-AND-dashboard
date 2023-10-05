@@ -26,7 +26,7 @@ include_once 'config/constantes.php';
             <th scope="col">Box 3</th>
             <th scope="col">Desc 3</th>
             <th scope="col">Box 4</th>
-            <th scope="col"  width="2%">Desc 4</th>
+            <th scope="col" width="2%">Desc 4</th>
             <th scope="col">Ação</th>
 
         </tr>
@@ -117,7 +117,7 @@ include_once 'config/constantes.php';
                 <h5 class="modal-title align-items-center" id="exampleModalLabel">Cadastrar Caracteristicas</h5>
             </div>
             <div class="modal-body">
-                <form id="frmAddCaracteristicas">
+                <form id="frmAddCaracteristicas" action="#" method="POST" enctype="multipart/form-data">
                     <div class="mb-3">
                         <label for="titulo1" class="form-label">Primeiro titulo</label>
                         <input type="text" name="titulo1" class="" id="" size="50%" required>
@@ -151,8 +151,20 @@ include_once 'config/constantes.php';
                         <label for="Desc4" class="form-label">Desc 4</label>
                         <input type="text" name="desc4" class="" id="" size="50%" required><br>
                     </div>
-                    <div class="modal-footer"> <!-- formId, modalId, pageAcao, pageRetorno -->
-                        <button type="submit" class="btn btn-info" id="btnUploadCaracteristicas" onclick="cadGeral('frmAddCaracteristicas','modalCadastrarCaracteristicas','addCaracteristicas','caracteristicasDashboard');"><i class="mdi mdi-content-save-move"></i> Salvar</button>
+                    <div class="mb-3">
+                        <label for="arquivoCaracteristicas1" class="form-label">Enviar Arquivo</label>
+                        <input type="file" name="arquivoCaracteristicas1" class="form-control" id="arquivoCaracteristicas1" aria-describedby="arquivoCaracteristicas1">
+                    </div>
+                    <div id="previewUploadCaracteristicas1"> </div>  
+                    <br><br>
+                    <div class="mb-3">
+                        <label for="arquivoCaracteristicas2" class="form-label">Enviar Arquivo</label>
+                        <input type="file" name="arquivoCaracteristicas2" class="form-control" id="arquivoCaracteristicas2" aria-describedby="arquivoCaracteristicas2">
+                    </div>
+                    <div id="previewUploadCaracteristicas2"> </div>
+
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-info" id="btnUploadCaracteristicas" onclick="cadCaracteristicasUpload('frmAddCaracteristicas','uploadCaracteristicas');"><i class="mdi mdi-content-save-move"></i> Salvar</button>
                         <button type="button" class="btn btn-warning" data-bs-dismiss="modal"><i class="mdi mdi-close"></i> Cancelar</button>
                     </div>
                 </form>
@@ -160,3 +172,6 @@ include_once 'config/constantes.php';
         </div>
     </div>
 </div>
+
+
+<script src="./js/painel.js"></script>

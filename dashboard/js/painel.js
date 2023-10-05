@@ -233,7 +233,7 @@ function cadGeral(formId, modalId, pageAcao, pageRetorno){
 
 
 
-/* FUNCTION CADASTRAR E UPLOAD IMAGE */
+/* FUNCTION CADASTRAR E UPLOAD IMAGE - COMENTARIO*/
 var redimensionarImgComentario = $('#previewUploadComentario').croppie({
     enableExif: true,
     enableOrientation: true,
@@ -296,7 +296,93 @@ function cadGeralUpload(formId, pageAcao) {
     })
 }
 
-/* FIM FUNCTION CADASTRAR E UPLOAD DE IMAGEM */
+/* FIM FUNCTION CADASTRAR E UPLOAD DE IMAGEM - COMENTÁRIO*/
+
+/* FUNCTION CADASTRAR E UPLOAD DE IMAGEM - CARACTERISTICAS */
+var redimensionarImgC1 = $('#previewUploadCaracteristicas1').croppie({
+    enableExif: true,
+    enableOrientation: true,
+    viewport: { width: 300, height: 300 },
+    boundary: { width: 500, height: 400 },
+});
+
+var redimensionarImgC2 = $('#previewUploadCaracteristicas2').croppie({
+    enableExif: true,
+    enableOrientation: true,
+    viewport: { width: 300, height: 300 },
+    boundary: { width: 500, height: 400 },
+});
+
+$('#arquivoCaracteristicas1').on('change', function () {
+    var lerImgC1 = new FileReader();
+
+    lerImgC1.onload = function (e) {
+        redimensionarImgC1.croppie('bind', {
+            url: e.target.result
+        });
+    }
+
+    lerImgC1.readAsDataURL(this.files[0]);
+});
+
+$('#arquivoCaracteristicas2').on('change', function () {
+    var lerImgC2 = new FileReader();
+
+    lerImgC2.onload = function (e) {
+        redimensionarImgC2.croppie('bind', {
+            url: e.target.result
+        });
+    }
+
+    lerImgC2.readAsDataURL(this.files[0]); // Corrigido para ler a segunda imagem
+});
+
+function cadCaracteristicasUpload(formId, pageAcao) {
+    $('#' + formId).on('submit', function (k) {
+        k.preventDefault();
+        
+        var formdata = new FormData();
+        formdata.append('acao', pageAcao);
+
+        redimensionarImgC1.croppie('result', {
+            type: 'canvas', 
+            size: 'viewport' 
+        }).then(function (img1) {
+            formdata.append('imagem1', img1);
+
+            redimensionarImgC2.croppie('result', {
+                type: 'canvas', 
+                size: 'viewport' 
+            }).then(function (img2) {
+                formdata.append('imagem2', img2);
+
+                $.ajax({
+                    url: "uploadCaracteristicas.php", 
+                    type: "POST", 
+                    data: formdata,
+                    processData: false,
+                    contentType: false,
+                    success: function (retorna) {
+                        console.log(retorna);
+                        $('#modalCadastrarCaracteristicas').modal('hide')
+                        setTimeout(function () {
+                            atualizarPagina('caracteristicasDashboard');
+                        }, 1000);
+                        Swal.fire({
+                            position: 'center',
+                            icon: 'success',
+                            title: 'Salvo com Sucesso',
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                    }
+                });
+            });
+        });
+    });
+}
+
+/* FIM FUNCTION CADASTRAR E UPLOAD DE IMAGEM - CARACTERISTICAS*/
 
 
 

@@ -8,6 +8,7 @@ include_once './funcDashboard/funcdashboard.php';
 $dados_cadastrar = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 // $nomeComentario = $dados_cadastrar['nome'];
 // echo $nomeComentario;
+
 $imagem = $dados_cadastrar['imagem'];
 list($type, $imagem) = explode(';', $imagem);
 list(, $imagem) = explode(',', $imagem);

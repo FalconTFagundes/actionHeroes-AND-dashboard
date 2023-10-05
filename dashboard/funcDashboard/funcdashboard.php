@@ -431,6 +431,43 @@ function insertDoze($tabela, $campos, $value1, $value2, $value3, $value4, $value
 
 
 
+function insertQuatorze($tabela, $campos, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9, $value10, $value11, $value12, $value13, $value14)
+{
+    $conn = conectar();
+    try {
+        $conn->beginTransaction();
+        $sqInsert = $conn->prepare("INSERT INTO $tabela($campos)VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+        $sqInsert->bindValue(1, $value1, PDO::PARAM_STR);
+        $sqInsert->bindValue(2, $value2, PDO::PARAM_STR);
+        $sqInsert->bindValue(3, $value3, PDO::PARAM_STR);
+        $sqInsert->bindValue(4, $value4, PDO::PARAM_STR);
+        $sqInsert->bindValue(5, $value5, PDO::PARAM_STR);
+        $sqInsert->bindValue(6, $value6, PDO::PARAM_STR);
+        $sqInsert->bindValue(7, $value7, PDO::PARAM_STR);
+        $sqInsert->bindValue(8, $value8, PDO::PARAM_STR);
+        $sqInsert->bindValue(9, $value9, PDO::PARAM_STR);
+        $sqInsert->bindValue(10, $value10, PDO::PARAM_STR);
+        $sqInsert->bindValue(11, $value11, PDO::PARAM_STR);
+        $sqInsert->bindValue(12, $value12, PDO::PARAM_STR); 
+        $sqInsert->bindValue(13, $value13, PDO::PARAM_STR);
+        $sqInsert->bindValue(14, $value14, PDO::PARAM_STR);
+
+        $sqInsert->execute();
+        $conn->commit();
+        if ($sqInsert->rowCount() > 0) {
+            return 'Gravado';
+        } else {
+            return 'nGravado';
+        };
+    } catch (PDOException $e) {
+        echo 'Exception -> ';
+        return $e->getMessage();
+    } finally {
+        $conn = null;
+    }
+}
+
+
 function upUm($tabela, $campo1, $campoId, $valeu1, $valeuId)
 {
     $conn = conectar();
