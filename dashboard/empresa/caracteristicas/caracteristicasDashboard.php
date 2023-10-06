@@ -118,44 +118,61 @@ include_once 'config/constantes.php';
             </div>
             <div class="modal-body">
                 <form id="frmAddCaracteristicas" action="#" method="POST" enctype="multipart/form-data">
-                    <div class="mb-3">
-                        <label for="titulo1" class="form-label">Primeiro titulo</label>
-                        <input type="text" name="titulo1" class="" id="" size="50%" required>
-                        <label for="titulo2" class="form-label">Segundo titulo</label>
-                        <input type="text" name="titulo2" class="" id="" size="50%" required><br>
-
-                        <div class="form-floating">
-                            <label for="descricao">Descrição</label>
-                            <textarea class="form-control" placeholder="Digite a Descrição" name="descricaoCC" id="descricaoCC" style="height: 70px"></textarea><br>
-
-                        </div>
-
-                        <label for="box1" class="form-label">Box 1</label>
-                        <input type="text" name="box1" class="" id="" size="50%" required>
-                        <label for="Desc1" class="form-label">Desc 1</label>
-                        <input type="text" name="desc1" class="" id="" size="50%" required><br>
-
-                        <label for="box2" class="form-label">Box 2</label>
-                        <input type="text" name="box2" class="" id="" size="50%" required>
-                        <label for="Desc2" class="form-label">Desc 2</label>
-                        <input type="text" name="desc2" class="" id="" size="50%" required><br>
-
-
-                        <label for="box3" class="form-label">Box 3</label>
-                        <input type="text" name="box3" class="" id="" size="50%" required>
-                        <label for="Desc3" class="frm-label">Desc 3</label>
-                        <input type="text" name="desc3" class="" id="" size="50%" required><br>
-
-                        <label for="box4" class="form-label">Box 4</label>
-                        <input type="text" name="box4" class="" id="" size="50%" required>
-                        <label for="Desc4" class="form-label">Desc 4</label>
-                        <input type="text" name="desc4" class="" id="" size="50%" required><br>
+                    <label for="titulo1" class="form-label">Título 1</label>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" name="titulo1" aria-label="titulo1" aria-describedby="basic-addon1" required>
                     </div>
+                    <label for="titulo2" class="form-label">Título 2</label>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" name="titulo2" aria-label="titulo2" aria-describedby="basic-addon1" required>
+                    </div>
+                    <label for="descricaoCC" class="form-label">Descrição</label>
+                    <div class="input-group">
+                        <textarea class="form-control" name="descricaoCC" aria-label="descricaoCC" required></textarea>
+                    </div><br><br>
+
+                    <label class="form-label">Box 1</label>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" name="box1" aria-label="box1" aria-describedby="basic-addon2" required>
+                    </div>
+                    <label class="form-label">Descrição 1</label>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" name="desc1" aria-label="desc1" aria-describedby="basic-addon2" required>
+                    </div>
+
+                    <label class="form-label">Box 2</label>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" name="box2" aria-label="box2" aria-describedby="basic-addon2" required>
+                    </div>
+                    <label class="form-label">Descrição 2</label>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" name="desc2" aria-label="desc2" aria-describedby="basic-addon2" required>
+                    </div>
+
+                    <label class="form-label">Box 3</label>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" name="box3" aria-label="box3" aria-describedby="basic-addon2" required>
+                    </div>
+                    <label class="form-label">Descrição 3</label>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" name="desc3" aria-label="desc3" aria-describedby="basic-addon2" required>
+                    </div>
+
+                    <label class="form-label">Box 4</label>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" name="box4" aria-label="box4" aria-describedby="basic-addon2" required>
+                    </div>
+                    <label class="form-label">Descrição 4</label>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" name="desc4" aria-label="desc4" aria-describedby="basic-addon2" required>
+                    </div>
+
+                 
                     <div class="mb-3">
                         <label for="arquivoCaracteristicas1" class="form-label">Enviar Arquivo</label>
                         <input type="file" name="arquivoCaracteristicas1" class="form-control" id="arquivoCaracteristicas1" aria-describedby="arquivoCaracteristicas1">
                     </div>
-                    <div id="previewUploadCaracteristicas1"> </div>  
+                    <div id="previewUploadCaracteristicas1"> </div>
                     <br><br>
                     <div class="mb-3">
                         <label for="arquivoCaracteristicas2" class="form-label">Enviar Arquivo</label>

@@ -59,12 +59,6 @@ include_once './funcDashboard/funcdashboard.php';
     <div id="conteudo" class="content-wrapper"> </div>
 
 
-
-
-
-
-
-
     <footer class="main-footer">
       <strong>Copyright &copy; 2023 <a href="../index.php">Action Heroes</a>.</strong>
       Todos os Direitos Reservados.
