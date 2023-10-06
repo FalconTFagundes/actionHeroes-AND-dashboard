@@ -189,13 +189,13 @@ $('.clickMenulateral').on('click', function () {
 
 /* FUNCTION CADASTRAR GERAL */
 
-function cadGeral(formId, modalId, pageAcao, pageRetorno){
-    $('#'+formId).on('submit', function (k){
+function cadGeral(formId, modalId, pageAcao, pageRetorno) {
+    $('#' + formId).on('submit', function (k) {
         k.preventDefault();
-       
+
         var formdata = $(this).serializeArray();
         formdata.push(
-            {name: "acao", value: pageAcao },
+            { name: "acao", value: pageAcao },
         );
 
         $.ajax({
@@ -207,20 +207,20 @@ function cadGeral(formId, modalId, pageAcao, pageRetorno){
 
             }, success: function (retorno) {
                 console.log(retorno);
-                $('#'+modalId).modal('hide');
-                setTimeout(function(){
+                $('#' + modalId).modal('hide');
+                setTimeout(function () {
                     atualizarPagina(pageRetorno);
-               },1000);
-               Swal.fire({
-                position: 'center',
-                icon: 'success',
-                title: 'Salvo com Sucesso',
-                showConfirmButton: false,
-                timer: 1500
+                }, 1000);
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Salvo com Sucesso',
+                    showConfirmButton: false,
+                    timer: 1500
 
-            })
+                })
 
-               
+
             }
         });
     })
@@ -255,24 +255,23 @@ $('#arquivoComentario').on('change', function () {
     lerImgComentario.readAsDataURL(this.files[0]);
 });
 
-function cadGeralUpload(formId, pageAcao) {
+function cadComentariosUpload(formId, pageAcao) {
     $('#' + formId).on('submit', function (k) {
         k.preventDefault();
         var formdata = $(this).serializeArray();
         redimensionarImgComentario.croppie('result', {
-            type: 'canvas', 
-            size: 'viewport' 
+            type: 'canvas',
+            size: 'viewport'
         }).then(function (img) {
-            
+
             formdata.push(
                 {
                     name: "acao", value: pageAcao,
                     name: "imagem", value: img
-                },
-            );
+                },);
             $.ajax({
-                url: "uploadComentarios.php", 
-                type: "POST", 
+                url: "uploadComentarios.php",
+                type: "POST",
                 data: formdata,
                 success: function (retorna) {
                     console.log(retorna);
@@ -298,73 +297,71 @@ function cadGeralUpload(formId, pageAcao) {
 
 /* FIM FUNCTION CADASTRAR E UPLOAD DE IMAGEM - COMENTÁRIO*/
 
+
 /* FUNCTION CADASTRAR E UPLOAD DE IMAGEM - CARACTERISTICAS */
+
 var redimensionarImgC1 = $('#previewUploadCaracteristicas1').croppie({
     enableExif: true,
     enableOrientation: true,
     viewport: { width: 300, height: 300 },
-    boundary: { width: 500, height: 400 },
+    boundary: { width: 500, height: 400 }
 });
 
 var redimensionarImgC2 = $('#previewUploadCaracteristicas2').croppie({
     enableExif: true,
     enableOrientation: true,
     viewport: { width: 300, height: 300 },
-    boundary: { width: 500, height: 400 },
+    boundary: { width: 500, height: 400 }
 });
 
 $('#arquivoCaracteristicas1').on('change', function () {
     var lerImgC1 = new FileReader();
-
     lerImgC1.onload = function (e) {
         redimensionarImgC1.croppie('bind', {
             url: e.target.result
         });
     }
-
     lerImgC1.readAsDataURL(this.files[0]);
 });
 
 $('#arquivoCaracteristicas2').on('change', function () {
     var lerImgC2 = new FileReader();
-
     lerImgC2.onload = function (e) {
         redimensionarImgC2.croppie('bind', {
             url: e.target.result
         });
     }
-
-    lerImgC2.readAsDataURL(this.files[0]); // Corrigido para ler a segunda imagem
+    lerImgC2.readAsDataURL(this.files[0]);
 });
 
 function cadCaracteristicasUpload(formId, pageAcao) {
     $('#' + formId).on('submit', function (k) {
         k.preventDefault();
+        var formdata = new FormData(this);
         
-        var formdata = new FormData();
-        formdata.append('acao', pageAcao);
-
+        // Obter as imagens cortadas do Croppie
         redimensionarImgC1.croppie('result', {
-            type: 'canvas', 
-            size: 'viewport' 
+            type: 'canvas',
+            size: 'viewport'
         }).then(function (img1) {
-            formdata.append('imagem1', img1);
-
             redimensionarImgC2.croppie('result', {
-                type: 'canvas', 
-                size: 'viewport' 
+                type: 'canvas',
+                size: 'viewport'
             }).then(function (img2) {
-                formdata.append('imagem2', img2);
+                // Adicionar as imagens cortadas ao FormData
+                formdata.append("acao", pageAcao);
+                formdata.append("imagem1", img1);
+                formdata.append("imagem2", img2);
 
                 $.ajax({
-                    url: "uploadCaracteristicas.php", 
-                    type: "POST", 
+                    url: "uploadCaracteristicas.php", // Altere para o nome do seu arquivo PHP
+                    type: "POST",
                     data: formdata,
                     processData: false,
                     contentType: false,
                     success: function (retorna) {
                         console.log(retorna);
-                        $('#modalCadastrarCaracteristicas').modal('hide')
+                        $('#modalCadastrarCaracteristicas').modal('hide');
                         setTimeout(function () {
                             atualizarPagina('caracteristicasDashboard');
                         }, 1000);
@@ -382,105 +379,129 @@ function cadCaracteristicasUpload(formId, pageAcao) {
     });
 }
 
+
+
 /* FIM FUNCTION CADASTRAR E UPLOAD DE IMAGEM - CARACTERISTICAS*/
 
+/* 
+function cadCaracteristicasUpload() {
+    $(document).ready(function() {
+        $('#frmAddCaracteristicas').on('submit', function(e) {
+            e.preventDefault();
+    
+            var formData = new FormData(this);
+    
+            $.ajax({
+                url: "uploadCaracteristicas.php",
+                type: "POST",
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function(data) {
+                    console.log(data);
+                }
+            });
+        });
+    });
+}    
+ */
 
 
 /* FUNCTION EXCLUIR */
 function excGeral(idvar, acaopage, pageretorno, m1, m2) {
 
-    Swal.fire({
-        title: m1,
-        text: m2,
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Confirmar'
-    }).then((result) => {
-        if (result.isConfirmed) {
+            Swal.fire({
+                title: m1,
+                text: m2,
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Confirmar'
+            }).then((result) => {
+                if (result.isConfirmed) {
 
-            var dados = {
-                acao: acaopage,
-                id: idvar
-            }
+                    var dados = {
+                        acao: acaopage,
+                        id: idvar
+                    }
 
-        } else if (result.dismiss === Swal.DismissReason.cancel) {
-            swalWithBootstrapButtons.fire(
-                'Cancelado',
-                'Operação Cancelada',
-                'error'
-            )
+                } else if (result.dismiss === Swal.DismissReason.cancel) {
+                    swalWithBootstrapButtons.fire(
+                        'Cancelado',
+                        'Operação Cancelada',
+                        'error'
+                    )
+                }
+
+                $.ajax({
+                    type: 'POST',
+                    dataType: 'HTML',
+                    url: 'controle.php',
+                    data: dados,
+                    beforeSend: function (retorno) {
+                    }, success: function (retorno) {
+
+                        Swal.fire(
+                            'Arquivo Deletado!',
+                            'O arquivo foi deletado com sucesso',
+                            'success'
+                        )
+                        setTimeout(function () {
+                            atualizarPagina(pageretorno);
+                        }, 1000)
+                    }
+
+
+                });
+            })
         }
-
-        $.ajax({
-            type: 'POST',
-            dataType: 'HTML',
-            url: 'controle.php',
-            data: dados,
-            beforeSend: function (retorno) {
-            }, success: function (retorno) {
-
-                Swal.fire(
-                    'Arquivo Deletado!',
-                    'O arquivo foi deletado com sucesso',
-                    'success'
-                )
-                setTimeout(function () {
-                    atualizarPagina(pageretorno);
-                }, 1000)
-            }
-
-
-        });
-    })
-}
 
 
 
 function ativarGeral(e, f, acaopage, pageretorno) {
-    if (f == 'ativar') {
-        var ativo = 'A';
-    } else {
+            if (f == 'ativar') {
+                var ativo = 'A';
+            } else {
 
-        var ativo = 'D';
-    }
-    var dados = {
-        acao: acaopage,
-        id: e,
-        a: ativo
-    }
-    $.ajax({
-        type: 'POST',
-        dataType: 'JSON',
-        url: 'controle.php', /* envio de 'acao' para a página controle */
-        data: dados,
-        beforeSend: function (retorno) {
-        }, success: function (retorno) {
-            if (retorno == 'Atualizado') {
-                if (ativo == 'D') {
-                    msgGeral('Desativado!');
-                } else {
-                    msgGeral('Ativado!');
-                }
-                atualizarPagina(pageretorno);
-                setTimeout(function () {
-                }, 1000)
+                var ativo = 'D';
             }
-            console.log(retorno);
+            var dados = {
+                acao: acaopage,
+                id: e,
+                a: ativo
+            }
+            $.ajax({
+                type: 'POST',
+                dataType: 'JSON',
+                url: 'controle.php', /* envio de 'acao' para a página controle */
+                data: dados,
+                beforeSend: function (retorno) {
+                }, success: function (retorno) {
+                    if (retorno == 'Atualizado') {
+                        if (ativo == 'D') {
+                            msgGeral('Desativado!');
+                        } else {
+                            msgGeral('Ativado!');
+                        }
+                        atualizarPagina(pageretorno);
+                        setTimeout(function () {
+                        }, 1000)
+                    }
+                    console.log(retorno);
+                }
+            });
+
+
         }
-    });
-
-
-}
 
 
 function msgGeral(mensagem) {
-    Swal.fire({
-        position: 'top-center',
-        icon: 'success',
-        title: mensagem,
-        showConfirmButton: false,
-        timer: 1500
-    })
-}
+            Swal.fire({
+                position: 'top-center',
+                icon: 'success',
+                title: mensagem,
+                showConfirmButton: false,
+                timer: 1500
+            })
+        }

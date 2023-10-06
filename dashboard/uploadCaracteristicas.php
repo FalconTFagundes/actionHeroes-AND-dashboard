@@ -4,30 +4,26 @@ include_once 'config/constantes.php';
 include_once './funcDashboard/funcdashboard.php';
 
 
-$dados_cadastrar = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-
-$imagem1 = $dados_cadastrar['imagem1'];
-$imagem2 = $dados_cadastrar['imagem2'];
-
+// IMG1
+$imagem1 = filter_input(INPUT_POST, 'imagem1', FILTER_DEFAULT);
 list($type1, $imagem1) = explode(';', $imagem1);
 list(, $imagem1) = explode(',', $imagem1);
+$imagem1 = base64_decode($imagem1);
+$imagem_nome1 = time() . '_imagem1.png';
+file_put_contents("../img/caracteristicas/" . $imagem_nome1, $imagem1);
+echo "Imagem 1 enviada com sucesso!";
 
+// IMG2
+$imagem2 = filter_input(INPUT_POST, 'imagem2', FILTER_DEFAULT);
 list($type2, $imagem2) = explode(';', $imagem2);
 list(, $imagem2) = explode(',', $imagem2);
-
-$imagem1 = base64_decode($imagem1);
 $imagem2 = base64_decode($imagem2);
-
-
-$imagem_nome1 = time() . '.png';
-$imagem_nome2 = time() . '.png';
-
-
-
-file_put_contents("../img/caracteristicas/" . $imagem_nome1, $imagem1);
+$imagem_nome2 = time() . '_imagem2.png';
 file_put_contents("../img/caracteristicas/" . $imagem_nome2, $imagem2);
+echo "Imagem 2 enviada com sucesso!";
 
-echo "Imagem enviada com sucesso!";
+
+$dados_cadastrar = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
 $titulo1CC = $dados_cadastrar['titulo1'];
 $titulo2CC = $dados_cadastrar['titulo2'];
