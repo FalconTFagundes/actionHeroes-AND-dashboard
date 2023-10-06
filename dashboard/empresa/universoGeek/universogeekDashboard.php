@@ -77,7 +77,7 @@ include_once './funcDashboard/funcdashboard.php';
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
             <div class="modal-header bg-dark">
-                <h5 class="modal-title align-items-center" id="exampleModalLabel">Cadastrar Título Geek</h5>
+                <h5 class="modal-title align-items-center" id="exampleModalLabel">Cadastrar Universo Geek</h5>
             </div>
             <div class="modal-body">
                 <form>

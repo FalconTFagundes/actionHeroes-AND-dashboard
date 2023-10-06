@@ -15,6 +15,8 @@ switch ($acao) {
         break;
 
 
+        
+
     case 'caracteristicasDashboard';
         include_once 'empresa/caracteristicas/caracteristicasDashboard.php';
         break;
@@ -27,6 +29,8 @@ switch ($acao) {
     case 'addCaracteristicas';
         include_once 'empresa/caracteristicas/addCaracteristicas.php';
         break;
+
+
 
 
     case 'comentariosDashboard';
@@ -65,8 +69,8 @@ switch ($acao) {
     case 'produtoDashboard';
         include_once 'empresa/produto/produtoDashboard.php';
         break;
-    case 'addProduto';
-        include_once 'empresa/produto/addProduto.php';
+    case 'uploadProdutos';
+        include_once 'uploadProdutos.php';
         break;
     case 'excProduto';
         include_once 'empresa/produto/excProduto.php';

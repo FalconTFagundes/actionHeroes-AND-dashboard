@@ -9,7 +9,7 @@ include_once 'config/constantes.php';
 
 
 <!-- BTN CADASTRAR PRODUTO -->
-<button type="submit" class="btn btn-warning mdi mdi-layers" style="width: 10%;" data-bs-toggle="modal" data-bs-target="#modalProduto">
+<button type="submit" class="btn btn-warning mdi mdi-layers" style="width: 10%;" data-bs-toggle="modal" data-bs-target="#modalCadastrarProduto">
     Cadastrar
 </button>
 
@@ -113,38 +113,95 @@ include_once 'config/constantes.php';
 
 
 <!-- MODAL CADASTRAR PRODUTO -->
-<div class="modal fade" id="modalProduto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalCadastrarProduto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
             <div class="modal-header bg-dark">
-                <h5 class="modal-title align-items-center" id="exampleModalLabel">Cadastrar Banner</h5>
+                <h5 class="modal-title align-items-center" id="exampleModalLabel">Cadastrar Produto</h5>
             </div>
             <div class="modal-body">
-                <form id="frmCadProd">
+                <form id="frmCadProd" action="#" method="POST" enctype="multipart/form-data">
                     <label for="nome" class="form-label">Nome</label>
-                    <input type="text" name="nome" class="" id="" required>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" name="nome" aria-label="nome" aria-describedby="basic-addon1" required>
+                    </div>
+
                     <label for="descricao" class="form-label">Descrição</label>
-                    <input type="text" name="descricao" class="" id="" required>
+                    <div class="input-group">
+                        <textarea class="form-control" name="descricao" aria-label="descricao" required></textarea>
+                    </div>
+
                     <label for="material" class="form-label">Material</label>
-                    <input type="text" name="material" class="" id="" required> <br>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" name="material" aria-label="material" aria-describedby="basic-addon1" required>
+                    </div>
+
                     <label for="dimensoes" class="form-label">Dimensões</label>
-                    <input type="text" name="dimensoes" class="" id="" required>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" name="dimensoes" aria-label="dimensoes" aria-describedby="basic-addon2" required>
+                    </div>
+
                     <label for="peso" class="form-label">Peso</label>
-                    <input type="text" name="peso" class="" id="" required>
-                    <label for="valor" class="form-label">Valor</label>
-                    <input type="text" name="valor" class="" id="" required>
-                    <label for="desconto" class="form-label">Desconto</label>
-                    <input type="text" name="desconto" class="" id="" required> <br>
+                    <div class="input-group mb-3">
+                        <input type="number" class="form-control" name="peso" id="pesoProd" aria-label="peso" aria-describedby="basic-addon1" required>
+                    </div>
+
+                    <label for="valor" class="form-label">Valor R$</label>
+                    <div class="input-group mb-3">
+                        <input type="number" class="form-control" name="valor" id="valorProd" aria-label="valor" aria-describedby="basic-addon2" required>
+                    </div>
+
+                    <label for="desconto" class="form-label">Desconto %</label>
+
+                    <div class="input-group mb-3">
+                        <input type="number" class="form-control" name="desconto" id="desconto" aria-label="desconto" aria-describedby="basic-addon2">
+                    </div>
+                    <div id="descontoAviso" class="form-text">Caso não queira acrescentar um desconto, deixe o campo vazio.</div>
+                    <br><br>
+                    <label for="valor" class="form-label">Selecione a Classificação do Produto</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="classificacaoProd" value="destaque" id="prodDestaque" checked>
+                        <label class="form-check-label" for="prodDestaque">
+                            Produto Destaque
+                        </label>
+                    </div>
+                    <p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="classificacaoProd" value="fretegratis" id="prodFreteGratis">
+                        <label class="form-check-label" for="prodFreteGratis">Produto Frete Grátis</label>
+                    </div>
 
 
+                    <div class="container-fluid">
+                        <div class="mb-3">
+                            <label for="arquivoProd1" class="form-label">Enviar Arquivo</label>
+                            <input type="file" name="arquivoProd1" class="form-control" id="arquivoProd1" aria-describedby="arquivoProd1">
+                        </div>
+                        <div id="previewUploadProd1"> </div>
+
+                        <div class="mb-3">
+                            <label for="arquivoProd2" class="form-label">Enviar Arquivo</label>
+                            <input type="file" name="arquivoProd2" class="form-control" id="arquivoProd2" aria-describedby="arquivoProd2">
+                        </div>
+                        <div id="previewUploadProd2"> </div>
+
+                        <div class="mb-3">
+                            <label for="arquivoProd3" class="form-label">Enviar Arquivo</label>
+                            <input type="file" name="arquivoProd3" class="form-control" id="arquivoProd3" aria-describedby="arquivoProd3">
+                        </div>
+                        <div id="previewUploadProd3"> </div>
+
+
+                    </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-info" onclick="cadGeral('frmCadProd','modalProduto','addProduto','produtoDashboard');"><i class="mdi mdi-content-save-move"></i> Salvar</button>
+                        <button type="submit" class="btn btn-info" onclick="cadProdutosUpload('frmCadProd','addProduto');"><i class="mdi mdi-content-save-move"></i> Salvar</button>
                         <button type="button" class="btn btn-warning" data-bs-dismiss="modal"><i class="mdi mdi-close"></i> Cancelar</button>
                 </form>
-
             </div>
+
         </div>
     </div>
+</div>
 </div>
 </div>
 

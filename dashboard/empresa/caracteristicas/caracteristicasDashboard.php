@@ -111,7 +111,7 @@ include_once 'config/constantes.php';
 
 <!-- MODAL CADASTRAR CARACTERISTICAS -->
 <div class="modal fade" id="modalCadastrarCaracteristicas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
             <div class="modal-header bg-dark">
                 <h5 class="modal-title align-items-center" id="exampleModalLabel">Cadastrar Caracteristicas</h5>

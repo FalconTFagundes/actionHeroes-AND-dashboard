@@ -2,10 +2,10 @@
   <p class="fs-5" style="color: black;"> Destaque Frete Gratis</p>
   <div class="slider js-slider">
     <?php
-    $listarFrete = listarTodosRegistrosMaisUmCampo('produto', 'idproduto, nome, img1, valor, ativo, desconto, destaque, freteGratis', 'A', 'N', 'N');
+    $listarFrete = listarTodosRegistrosMaisUmCampo('produto', 'idproduto, nome, img1, valor, ativo, desconto, destaque, freteGratis', 'A', 'S', 'N');
     
 
-    if (is_array($listarFrete) && !empty($listarFrete)) {
+    if (isset($listarFrete) && !empty($listarFrete)) {
       foreach ($listarFrete as $itemFrete) {
         $idPageFrete = $itemFrete->idproduto;
         $nomePageFrete = $itemFrete->nome;

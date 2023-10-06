@@ -294,12 +294,10 @@ function cadComentariosUpload(formId, pageAcao) {
 
     })
 }
-
 /* FIM FUNCTION CADASTRAR E UPLOAD DE IMAGEM - COMENTÁRIO*/
 
 
 /* FUNCTION CADASTRAR E UPLOAD DE IMAGEM - CARACTERISTICAS */
-
 var redimensionarImgC1 = $('#previewUploadCaracteristicas1').croppie({
     enableExif: true,
     enableOrientation: true,
@@ -338,7 +336,7 @@ function cadCaracteristicasUpload(formId, pageAcao) {
     $('#' + formId).on('submit', function (k) {
         k.preventDefault();
         var formdata = new FormData(this);
-        
+
         // Obter as imagens cortadas do Croppie
         redimensionarImgC1.croppie('result', {
             type: 'canvas',
@@ -378,33 +376,128 @@ function cadCaracteristicasUpload(formId, pageAcao) {
         });
     });
 }
-
-
-
 /* FIM FUNCTION CADASTRAR E UPLOAD DE IMAGEM - CARACTERISTICAS*/
 
-/* 
-function cadCaracteristicasUpload() {
-    $(document).ready(function() {
-        $('#frmAddCaracteristicas').on('submit', function(e) {
-            e.preventDefault();
-    
-            var formData = new FormData(this);
-    
-            $.ajax({
-                url: "uploadCaracteristicas.php",
-                type: "POST",
-                data: formData,
-                processData: false,
-                contentType: false,
-                success: function(data) {
-                    console.log(data);
-                }
+
+
+
+/* FUNCTION CADASTRAR E UPLOAD DE IMAGEM - PRODUTOS */
+var redimensionarImgProd1 = $('#previewUploadProd1').croppie({
+    enableExif: true,
+    enableOrientation: true,
+    viewport: { width: 300, height: 450 },
+    boundary: { width: 400, height: 500 }
+});
+
+var redimensionarImgProd2 = $('#previewUploadProd2').croppie({
+    enableExif: true,
+    enableOrientation: true,
+    viewport: { width: 300, height: 450 },
+    boundary: { width: 400, height: 500 }
+});
+
+var redimensionarImgProd3 = $('#previewUploadProd3').croppie({
+    enableExif: true,
+    enableOrientation: true,
+    viewport: { width: 300, height: 450 },
+    boundary: { width: 400, height: 500 }
+});
+
+
+$('#arquivoProd1').on('change', function () {
+    var lerImgProd1 = new FileReader();
+    lerImgProd1.onload = function (e) {
+        redimensionarImgProd1.croppie('bind', {
+            url: e.target.result
+        });
+    }
+    lerImgProd1.readAsDataURL(this.files[0]);
+});
+
+$('#arquivoProd2').on('change', function () {
+    var lerImgProd2 = new FileReader();
+    lerImgProd2.onload = function (e) {
+        redimensionarImgProd2.croppie('bind', {
+            url: e.target.result
+        });
+    }
+    lerImgProd2.readAsDataURL(this.files[0]);
+});
+
+$('#arquivoProd3').on('change', function () {
+    var lerImgProd3 = new FileReader();
+    lerImgProd3.onload = function (e) {
+        redimensionarImgProd3.croppie('bind', {
+            url: e.target.result
+        });
+    }
+    lerImgProd3.readAsDataURL(this.files[0]);
+});
+
+
+function cadProdutosUpload(formId, pageAcao) {
+    $('#' + formId).on('submit', function (k) {
+        k.preventDefault();
+        var formdata = new FormData(this);
+
+        redimensionarImgProd1.croppie('result', {
+            type: 'canvas',
+            size: 'viewport'
+        }).then(function (img1) {
+
+            redimensionarImgProd2.croppie('result', {
+                type: 'canvas',
+                size: 'viewport'
+            }).then(function (img2) {
+
+                redimensionarImgProd3.croppie('result', {
+                    type: 'canvas',
+                    size: 'viewport'
+                }).then(function (img3) {
+
+                    formdata.append("acao", pageAcao);
+                    formdata.append("imagem1", img1);
+                    formdata.append("imagem2", img2);
+                    formdata.append("imagem3", img3);
+
+                    $.ajax({
+                        url: "uploadProdutos.php", 
+                        type: "POST",
+                        data: formdata,
+                        processData: false,
+                        contentType: false,
+                        success: function (retorna) {
+                            console.log(retorna);
+                            $('#modalCadastrarProduto').modal('hide');
+                            setTimeout(function () {
+                                atualizarPagina('produtoDashboard');
+                            }, 1000);
+                            Swal.fire({
+                                position: 'center',
+                                icon: 'success',
+                                title: 'Salvo com Sucesso',
+                                showConfirmButton: false,
+                                timer: 1500
+                            });
+                        }
+                    });
+                });
             });
         });
     });
-}    
- */
+}
+/* FIM FUNCTION CADASTRAR E UPLOAD DE IMAGEM - PRODUTOS*/
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* FUNCTION EXCLUIR */

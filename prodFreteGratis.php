@@ -5,7 +5,7 @@
     $listarFrete = listarTodosRegistrosMaisUmCampo('produto', 'idproduto, nome, img1, valor, ativo, desconto, destaque, freteGratis', 'A', 'N', 'S');
     
 
-    if (is_array($listarFrete) && !empty($listarFrete)) {
+    if (isset($listarFrete) && !empty($listarFrete)) {
       foreach ($listarFrete as $itemFrete) {
         $idPageFrete = $itemFrete->idproduto;
         $nomePageFrete = $itemFrete->nome;
