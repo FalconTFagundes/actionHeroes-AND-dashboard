@@ -385,22 +385,22 @@ function cadCaracteristicasUpload(formId, pageAcao) {
 var redimensionarImgProd1 = $('#previewUploadProd1').croppie({
     enableExif: true,
     enableOrientation: true,
-    viewport: { width: 300, height: 450 },
-    boundary: { width: 400, height: 500 }
+    viewport: { width: 500, height: 750 },
+    boundary: { width: 600, height: 850 }
 });
 
 var redimensionarImgProd2 = $('#previewUploadProd2').croppie({
     enableExif: true,
     enableOrientation: true,
-    viewport: { width: 300, height: 450 },
-    boundary: { width: 400, height: 500 }
+    viewport: { width: 500, height: 750 },
+    boundary: { width: 600, height: 850 }
 });
 
 var redimensionarImgProd3 = $('#previewUploadProd3').croppie({
     enableExif: true,
     enableOrientation: true,
-    viewport: { width: 300, height: 450 },
-    boundary: { width: 400, height: 500 }
+    viewport: { width: 500, height: 750 },
+    boundary: { width: 600, height: 850 }
 });
 
 
