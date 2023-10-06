@@ -49,6 +49,29 @@ function listarTodosRegistros($tabela, $campos, $ativo)
     }
 }
 
+
+function listarTodosRegistrosOfertas($tabela, $campos, $ativo, $campoOfertas)
+{
+    $conn = conectar();
+    try {
+        $sqlLista = $conn->prepare("SELECT $campos FROM $tabela WHERE ativo = ? AND ofertasDoDia = ?");
+        $sqlLista->bindValue(1, $ativo, PDO::PARAM_STR);
+        $sqlLista->bindValue(2, $campoOfertas, PDO::PARAM_STR);
+        $sqlLista->execute();
+        if ($sqlLista->rowCount() > 0) {
+            return $sqlLista->fetchAll(PDO::FETCH_OBJ);
+        } else {
+            return 'Vazio';
+        }
+    } catch (PDOException $e) {
+        echo 'Exception -> ';
+        return $e->getMessage();
+    } finally {
+        $conn = null;
+    }
+}
+
+
 function listarTodosRegistrosId($tabela, $campos, $ativo, $campoid, $id)
 {
     $conn = conectar();

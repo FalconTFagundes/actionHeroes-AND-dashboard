@@ -28,14 +28,15 @@ include_once 'config/constantes.php';
             <th scope="col" width="5%">Valor</th>
             <th scope="col" width="5%">Desconto</th>
             <th scope="col" width="5%">Destaque</th>
-            <th scope="col" width="10%">Frete Gratis</th>
+            <th scope="col" width="7%">Frete Gratis</th>
+            <th scope="col" width="10%">Oferta do dia</th>
             <th scope="col">Ação</th>
 
         </tr>
     </thead>
     <tbody>
         <?php
-        $listarProdutoDash = listarDashboard('produto', 'idproduto, nome, img1, img2, img3, descricao, material, dimensoes, peso, valor, cadastro, alteracao, ativo, desconto, destaque, freteGratis');
+        $listarProdutoDash = listarDashboard('produto', 'idproduto, nome, img1, img2, img3, descricao, material, dimensoes, peso, valor, cadastro, alteracao, ativo, desconto, destaque, freteGratis, ofertasDoDia');
         foreach ($listarProdutoDash as $itemProdutoDash) {
             $idProduto = $itemProdutoDash->idproduto;
             $nomeProduto = $itemProdutoDash->nome;
@@ -50,6 +51,7 @@ include_once 'config/constantes.php';
             $descontoProduto = $itemProdutoDash->desconto;
             $destaqueProduto = $itemProdutoDash->destaque;
             $fretegratisProduto = $itemProdutoDash->freteGratis;
+            $prodOferta = $itemProdutoDash->ofertasDoDia;
 
             $cadastroProduto = $itemProdutoDash->cadastro;
             $ativoProduto = $itemProdutoDash->ativo;
@@ -73,7 +75,7 @@ include_once 'config/constantes.php';
                 <td> <img src="../img/produtos/<?php echo $img3Prod; ?>" alt="" style="max-width: 40px; max-height: 40px;"></td>
 
 
-                <!-- limitando numero de caracteres -->
+
                 <td><?php echo strlen($descricaoProduto) > 100 ? substr($descricaoProduto, 0, 50) . '...' : $descricaoProduto; ?></td>
 
                 <td><?php echo $materialProduto; ?></td>
@@ -83,6 +85,7 @@ include_once 'config/constantes.php';
                 <td><?php echo $descontoProduto; ?></td>
                 <td><?php echo $destaqueProduto; ?></td>
                 <td><?php echo $fretegratisProduto; ?></td>
+                <td><?php echo $prodOferta; ?></td>
 
                 <td>
                     <?php
@@ -161,14 +164,17 @@ include_once 'config/constantes.php';
                     <label for="valor" class="form-label">Selecione a Classificação do Produto</label>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="classificacaoProd" value="destaque" id="prodDestaque" checked>
-                        <label class="form-check-label" for="prodDestaque">
-                            Produto Destaque
-                        </label>
+                        <label class="form-check-label" for="prodDestaque">Produto Destaque</label>
                     </div>
                     <p>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="classificacaoProd" value="fretegratis" id="prodFreteGratis">
                         <label class="form-check-label" for="prodFreteGratis">Produto Frete Grátis</label>
+                    </div>
+
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="ofertasDoDia" name="classificacaoProd" value="ofertas">
+                        <label class="form-check-label" for="ofertasDoDia">Produto em Ofertas do Dia?</label>
                     </div>
 
 

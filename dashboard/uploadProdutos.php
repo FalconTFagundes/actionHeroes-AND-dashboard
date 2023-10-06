@@ -62,9 +62,11 @@ if($classificacao == 'fretegratis'){
     $destaqueClassificado = 'S';
 }
 
-
-
-$retornoInsert = insertTreze('produto', 'nome, img1, img2, img3, descricao, material, dimensoes, peso, valor, cadastro, desconto, destaque, freteGratis', "$nomeProd","$imagem_nome1","$imagem_nome2","$imagem_nome3","$descricaoProd","$materialProd","$dimensoesProd","$pesoProd","$valorProd","$dataehoraAtua","$descontoProd", "$destaqueClassificado","$freteClassificado");
+if($classificacao == 'ofertas'){
+$retornoInsert = insertQuatorze('produto', 'nome, img1, img2, img3, descricao, material, dimensoes, peso, valor, cadastro, desconto, destaque, freteGratis, ofertasDoDia', "$nomeProd","$imagem_nome1","$imagem_nome2","$imagem_nome3","$descricaoProd","$materialProd","$dimensoesProd","$pesoProd","$valorProd","$dataehoraAtua","$descontoProd", "$destaqueClassificado","$freteClassificado", 'S');
+} else {
+    $retornoInsert = insertQuatorze('produto', 'nome, img1, img2, img3, descricao, material, dimensoes, peso, valor, cadastro, desconto, destaque, freteGratis, ofertasDoDia', "$nomeProd","$imagem_nome1","$imagem_nome2","$imagem_nome3","$descricaoProd","$materialProd","$dimensoesProd","$pesoProd","$valorProd","$dataehoraAtua","$descontoProd", "$destaqueClassificado","$freteClassificado", 'N');
+}
 if ($retornoInsert == 'Gravado') {
     echo true;
 } else {

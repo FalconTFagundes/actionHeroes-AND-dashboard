@@ -1,3 +1,12 @@
+<?php
+
+include_once 'config/conexao.php';
+include_once 'config/constantes.php';
+include_once 'func/func.php';
+
+
+?>
+
 <head>
 
     <meta charset="utf-8">
@@ -29,91 +38,41 @@
         <div class="card-body">
             <h5 class="card-title">Conheça as nossas especiais ofertas</h5>
             <p class="card-text">Todos os dias uma oferta diferente é adicionada.</p>
-            <a href="#prodMeio" class="btn btn-primary">Veja mais</a>
         </div>
         <div class="card-footer text-muted">
             Action Figures
         </div>
     </div>
     <br><br>
+    
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+        <?php
+    $listarOfertasDoDia = listarTodosRegistrosOfertas('produto', 'nome, img1, descricao, valor, desconto', 'A', 'S');
+    foreach ($listarOfertasDoDia as $itemOfertasDoDia) {
+        $nomeOfertas = $itemOfertasDoDia->nome;
+        $imgOfertas = $itemOfertasDoDia->img1;
+        $descricaoOfertas = $itemOfertasDoDia->descricao;
+        $valorOfertas = $itemOfertasDoDia->valor;
+        $descontoOfertas = $itemOfertasDoDia->desconto;
 
 
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-            </div>
-        </div>
-        
+    ?>
+            <div class="col">
+                <div class="card">
+                    <img src="./img/produtos/<?php echo $imgOfertas; ?>" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $nomeOfertas; ?></h5>
+                        <p class="card-text"><?php echo substr($descricaoOfertas, 0, 100); ?>...</p>
+                        <p class="card-text"><?php echo $descontoOfertas;?></p>
 
-        <div class="col" id="prodMeio">
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
                 </div>
             </div>
+            <?php  } ?>
         </div>
-        <div class="col">
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+
 </div>
+
+
 
 <?php include_once 'footer.php'; ?>
