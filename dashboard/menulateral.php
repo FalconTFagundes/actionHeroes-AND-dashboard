@@ -20,8 +20,8 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a class="nav-link clickMenulateral" data-menu="bannerDashboard">
+                        <li class="nav-item ">
+                            <a class="nav-link clickMenulateral" id="aIdBanner" data-menu="bannerDashboard">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Banner</p>
                             </a>

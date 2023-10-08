@@ -9,9 +9,13 @@ include_once './funcDashboard/funcdashboard.php';
 ?>
 
 <!-- BTN CADASTRAR BANNER -->
-<button type="submit" class="btn btn-warning mdi mdi-layers" style="width: 10%;" data-bs-toggle="modal" data-bs-target="#modalCadastrarBanner">
-  Cadastrar
+<div class="container-fluid">
+<br>
+<button type="submit" class="btn btn-warning mdi mdi-layers" style="width: 10%; padding: 8px 8px;" data-bs-toggle="modal" data-bs-target="#modalCadastrarBanner">
+    Cadastrar
 </button>
+</div>
+<br>
 
 
 <table class="table table-striped">

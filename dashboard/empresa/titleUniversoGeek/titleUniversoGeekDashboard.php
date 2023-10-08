@@ -6,9 +6,13 @@ include_once './funcDashboard/funcdashboard.php';
 
 
 ?>
-<button type="submit" class="btn btn-warning mdi mdi-layers" style="width: 10%;" data-bs-toggle="modal" data-bs-target="#modalTitleGeek">
-  Cadastrar
+<div class="container-fluid">
+<br>
+<button type="submit" class="btn btn-warning mdi mdi-layers" style="width: 10%; padding: 8px 8px;" data-bs-toggle="modal" data-bs-target="#modalTitleGeek">
+    Cadastrar
 </button>
+</div>
+<br>
 
 
 <table class="table table-striped">

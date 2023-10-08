@@ -16,7 +16,6 @@
     <meta content="" name="description">
 
 
-    <link href="img/favicon.ico" rel="icon">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
 
 

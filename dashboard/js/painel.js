@@ -163,27 +163,27 @@ function atualizarPagina(dataMenu) {
 
 
 /* FUNCTION CLICK MENU DASHBOARD */
-
 $('.clickMenulateral').on('click', function () {
-    var dataMenu = $(this).attr('data-menu');
-    $('#conteudo').html(dataMenu);
 
+    $('.clickMenulateral').removeClass("show active");
+    var dataMenu = $(this).attr('data-menu');
     var dados = {
         acao: dataMenu
     }
-
+    
+    $(this).addClass("show active");
+    
     $.ajax({
         type: "POST",
         dataType: 'html',
         url: 'controle.php',
         data: dados,
         beforeSend: function () {
-
+            msgGeral('processando');
         }, success: function (retorno) {
             $('#conteudo').html(retorno);
         }
     });
-
 })
 
 

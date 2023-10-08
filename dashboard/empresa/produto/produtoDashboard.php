@@ -9,9 +9,13 @@ include_once 'config/constantes.php';
 
 
 <!-- BTN CADASTRAR PRODUTO -->
-<button type="submit" class="btn btn-warning mdi mdi-layers" style="width: 10%;" data-bs-toggle="modal" data-bs-target="#modalCadastrarProduto">
+<div class="container-fluid">
+<br>
+<button type="submit" class="btn btn-warning mdi mdi-layers" style="width: 10%; padding: 8px 8px;" data-bs-toggle="modal" data-bs-target="#modalCadastrarProduto">
     Cadastrar
 </button>
+</div>
+<br>
 
 <table class="table table-striped">
     <thead>
@@ -174,7 +178,7 @@ include_once 'config/constantes.php';
 
                     <div class="form-check form-switch">
                         <input class="form-check-input" type="checkbox" id="ofertasDoDia" name="classificacaoProd" value="ofertas">
-                        <label class="form-check-label" for="ofertasDoDia">Produto em Ofertas do Dia?</label>
+                        <label class="form-check-label" for="ofertasDoDia">Adicionar em Ofertas do Dia</label>
                     </div>
 
 
