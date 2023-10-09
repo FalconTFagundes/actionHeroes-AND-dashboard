@@ -1,3 +1,9 @@
+<style>
+    .show.active{
+        background-color: red;
+    }
+</style>
+
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <div class="sidebar">
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">

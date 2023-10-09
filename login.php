@@ -141,7 +141,7 @@ session_start(); // Inicie a sessão
                 <p style="color: red;"><?php echo $_SESSION['login_error']; ?></p>
                 <?php unset($_SESSION['login_error']); ?>
             <?php endif; ?>
-            <h1 class="login-title">Log in</h1>
+            <h1 class="login-title">Login</h1>
             <form action="logar.php" method="post">
                 <label for="email">Email:</label>
                 <input type="email" name="email" class="form-control" required><br><br>

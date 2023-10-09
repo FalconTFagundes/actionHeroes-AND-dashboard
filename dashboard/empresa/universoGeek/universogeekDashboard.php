@@ -100,4 +100,61 @@ include_once './funcDashboard/funcdashboard.php';
 </div>
 
 
-<script src="./js/painel.js"></script>
+<script>
+/* FUNÇÃO UPLOAD DE IMAGE - UNIVERSO GEEK */
+var redimensionarGeek = $('#previewUploadUniversoGeek').croppie({
+    enableExif: true,
+    enableOrientation: true,
+
+    viewport: { width: 300, height: 300 },
+    boundary: { width: 500, height: 400 },
+
+});
+
+$('#arquivoUniversoGeek').on('change', function () {
+    var lerGeek = new FileReader();
+
+    lerGeek.onload = function (e) {
+        redimensionarGeek.croppie('bind', {
+            url: e.target.result
+        });
+    }
+
+    lerGeek.readAsDataURL(this.files[0]);
+});
+
+$('#btnUploadArquivoUniversoGeek').on('click', function (retorno) {
+    retorno.preventDefault();
+    redimensionarGeek.croppie('result', {
+        type: 'canvas', // Tipo de arquivos permitidos - base64, html, blob
+        size: 'viewport' // O tamanho da imagem cortada
+    }).then(function (img) {
+        // Enviar os dados para um arquivo PHP
+        $.ajax({
+            url: "uploadUniversoGeek.php", // Enviar os dados para o arquivo upload.php
+            type: "POST", // Método utilizado para enviar os dados
+            data: { // Dados que deve ser enviado
+                "imagem": img
+            },
+            success: function () {
+                $('#modalUniversoGeek').modal('hide')
+                setTimeout(function () {
+                    atualizarPagina('universogeekDashboard');
+                }, 1000);
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Salvo com Sucesso',
+                    showConfirmButton: false,
+                    timer: 1500
+
+                })
+
+            }
+        });
+    });
+});
+
+
+/* FIM FUNÇÃO UPLOAD DE IMAGE - UNIVERSO GEEK */
+</script>

@@ -120,4 +120,69 @@ include_once './funcDashboard/funcdashboard.php';
 </div>
 </div>
 
-<script src="./js/painel.js"></script>
+
+<script>
+/* FUNCTION CADASTRAR E UPLOAD IMAGE - COMENTARIO*/
+var redimensionarImgComentario = $('#previewUploadComentario').croppie({
+    enableExif: true,
+    enableOrientation: true,
+
+    viewport: { width: 300, height: 300 },
+    boundary: { width: 500, height: 400 },
+
+});
+
+$('#arquivoComentario').on('change', function () {
+    var lerImgComentario = new FileReader();
+
+    lerImgComentario.onload = function (e) {
+        redimensionarImgComentario.croppie('bind', {
+            url: e.target.result
+        });
+    }
+
+    lerImgComentario.readAsDataURL(this.files[0]);
+});
+
+function cadComentariosUpload(formId, pageAcao) {
+    $('#' + formId).on('submit', function (k) {
+        k.preventDefault();
+        var formdata = $(this).serializeArray();
+        redimensionarImgComentario.croppie('result', {
+            type: 'canvas',
+            size: 'viewport'
+        }).then(function (img) {
+
+            formdata.push(
+                {
+                    name: "acao", value: pageAcao,
+                    name: "imagem", value: img
+                },);
+            $.ajax({
+                url: "uploadComentarios.php",
+                type: "POST",
+                data: formdata,
+                success: function (retorna) {
+                    console.log(retorna);
+                    $('#modalCadastrarComentario').modal('hide')
+                    setTimeout(function () {
+                        atualizarPagina('comentariosDashboard');
+                    }, 1000);
+                    Swal.fire({
+                        position: 'center',
+                        icon: 'success',
+                        title: 'Salvo com Sucesso',
+                        showConfirmButton: false,
+                        timer: 1000
+
+                    })
+
+                }
+            });
+        });
+
+    })
+}
+/* FIM FUNCTION CADASTRAR E UPLOAD DE IMAGEM - COMENTÁRIO*/
+
+</script>
