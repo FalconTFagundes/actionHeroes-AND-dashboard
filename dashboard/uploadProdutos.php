@@ -41,7 +41,7 @@ $dimensoesProd = $dados_cadastrar['dimensoes'];
 $pesoProd = $dados_cadastrar['peso'] . 'g';
 $dataehoraAtual = Date("Y-m-d H:i:s");
 $valorProd = $dados_cadastrar['valor'];
-$descontoProd = $dados_cadastrar['desconto'] . '%';
+$descontoProd = $dados_cadastrar['desconto'];
 
 //Ajustando valor caso tenha desconto
 if(!empty($descontoProd)){
@@ -52,6 +52,8 @@ if(!empty($descontoProd)){
 
 /* Ajustando classificação de Frete Gratis ou Destaque */
 $classificacao = $dados_cadastrar['classificacaoProd'];
+$off = $dados_cadastrar['ofertaDoDia'];
+
 
 if($classificacao == 'fretegratis'){
     $freteClassificado = 'S';
@@ -62,11 +64,14 @@ if($classificacao == 'fretegratis'){
     $destaqueClassificado = 'S';
 }
 
-if($classificacao == 'ofertas'){
-$retornoInsert = insertQuatorze('produto', 'nome, img1, img2, img3, descricao, material, dimensoes, peso, valor, cadastro, desconto, destaque, freteGratis, ofertasDoDia', "$nomeProd","$imagem_nome1","$imagem_nome2","$imagem_nome3","$descricaoProd","$materialProd","$dimensoesProd","$pesoProd","$valorProd","$dataehoraAtua","$descontoProd", "$destaqueClassificado","$freteClassificado", 'S');
+if($off == 'ofertas'){
+    $off = 'S';
 } else {
-    $retornoInsert = insertQuatorze('produto', 'nome, img1, img2, img3, descricao, material, dimensoes, peso, valor, cadastro, desconto, destaque, freteGratis, ofertasDoDia', "$nomeProd","$imagem_nome1","$imagem_nome2","$imagem_nome3","$descricaoProd","$materialProd","$dimensoesProd","$pesoProd","$valorProd","$dataehoraAtua","$descontoProd", "$destaqueClassificado","$freteClassificado", 'N');
+    $off = 'N';
 }
+
+$retornoInsert = insertQuatorze('produto', 'nome, img1, img2, img3, descricao, material, dimensoes, peso, valor, cadastro, desconto, destaque, freteGratis, ofertasDoDia', "$nomeProd","$imagem_nome1","$imagem_nome2","$imagem_nome3","$descricaoProd","$materialProd","$dimensoesProd","$pesoProd","$valorProd","$dataehoraAtual","$descontoProd% ", "$destaqueClassificado","$freteClassificado", "$off");
+
 if ($retornoInsert == 'Gravado') {
     echo true;
 } else {

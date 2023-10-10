@@ -49,29 +49,6 @@ function listarTodosRegistros($tabela, $campos, $ativo)
     }
 }
 
-
-function listarTodosRegistrosOfertas($tabela, $campos, $ativo, $campoOfertas)
-{
-    $conn = conectar();
-    try {
-        $sqlLista = $conn->prepare("SELECT $campos FROM $tabela WHERE ativo = ? AND ofertasDoDia = ?");
-        $sqlLista->bindValue(1, $ativo, PDO::PARAM_STR);
-        $sqlLista->bindValue(2, $campoOfertas, PDO::PARAM_STR);
-        $sqlLista->execute();
-        if ($sqlLista->rowCount() > 0) {
-            return $sqlLista->fetchAll(PDO::FETCH_OBJ);
-        } else {
-            return 'Vazio';
-        }
-    } catch (PDOException $e) {
-        echo 'Exception -> ';
-        return $e->getMessage();
-    } finally {
-        $conn = null;
-    }
-}
-
-
 function listarTodosRegistrosId($tabela, $campos, $ativo, $campoid, $id)
 {
     $conn = conectar();
@@ -193,12 +170,12 @@ function excluirDashboardYummy($tabela, $campoid, $id)
 
 function insertUm($tabela, $camposTabela, $valor1)
 {
-   
+
     $conn = conectar();
     try {
         $sqlInsert = $conn->prepare("INSERT INTO $tabela($camposTabela) VALUES (?)");
         $sqlInsert->bindValue(1, $valor1, PDO::PARAM_STR);
-       
+
         $sqlInsert->execute();
 
         if ($sqlInsert->rowCount() > 0) {
@@ -217,13 +194,13 @@ function insertUm($tabela, $camposTabela, $valor1)
 
 function insertDois($tabela, $camposTabela, $valor1, $valor2)
 {
-   
+
     $conn = conectar();
     try {
         $sqlInsert = $conn->prepare("INSERT INTO $tabela($camposTabela) VALUES (?, ?)");
         $sqlInsert->bindValue(1, $valor1, PDO::PARAM_STR);
         $sqlInsert->bindValue(2, $valor2, PDO::PARAM_STR);
-       
+
         $sqlInsert->execute();
 
         if ($sqlInsert->rowCount() > 0) {
@@ -240,14 +217,14 @@ function insertDois($tabela, $camposTabela, $valor1, $valor2)
 }
 function insertTres($tabela, $camposTabela, $valor1, $valor2, $value3)
 {
-   
+
     $conn = conectar();
     try {
         $sqlInsert = $conn->prepare("INSERT INTO $tabela($camposTabela) VALUES (?, ?, ?)");
         $sqlInsert->bindValue(1, $valor1, PDO::PARAM_STR);
         $sqlInsert->bindValue(2, $valor2, PDO::PARAM_STR);
         $sqlInsert->bindValue(3, $value3, PDO::PARAM_STR);
-       
+
         $sqlInsert->execute();
 
         if ($sqlInsert->rowCount() > 0) {
@@ -290,7 +267,7 @@ function listarTodosRegistrosMaisUmCampo($tabela, $campos, $ativo, $destaque, $f
 
 function insertquatro($tabela, $camposTabela, $valor1, $valor2, $value3, $value4)
 {
-   
+
     $conn = conectar();
     try {
         $sqlInsert = $conn->prepare("INSERT INTO $tabela($camposTabela) VALUES (?, ?, ?,?)");
@@ -298,7 +275,7 @@ function insertquatro($tabela, $camposTabela, $valor1, $valor2, $value3, $value4
         $sqlInsert->bindValue(2, $valor2, PDO::PARAM_STR);
         $sqlInsert->bindValue(3, $value3, PDO::PARAM_STR);
         $sqlInsert->bindValue(4, $value4, PDO::PARAM_STR);
-       
+
         $sqlInsert->execute();
 
         if ($sqlInsert->rowCount() > 0) {
@@ -316,16 +293,16 @@ function insertquatro($tabela, $camposTabela, $valor1, $valor2, $value3, $value4
 
 function insertCinco($tabela, $camposTabela, $valor1, $valor2, $value3, $value4, $value5)
 {
-   
+
     $conn = conectar();
     try {
         $sqlInsert = $conn->prepare("INSERT INTO $tabela($camposTabela) VALUES (?, ?, ?, ?, ?)");
         $sqlInsert->bindValue(1, $valor1, PDO::PARAM_STR);
         $sqlInsert->bindValue(2, $valor2, PDO::PARAM_STR);
         $sqlInsert->bindValue(3, $value3, PDO::PARAM_STR);
-        $sqlInsert->bindValue(4, $value4, PDO::PARAM_STR); 
+        $sqlInsert->bindValue(4, $value4, PDO::PARAM_STR);
         $sqlInsert->bindValue(5, $value5, PDO::PARAM_STR);
-       
+
         $sqlInsert->execute();
 
         if ($sqlInsert->rowCount() > 0) {
@@ -341,7 +318,8 @@ function insertCinco($tabela, $camposTabela, $valor1, $valor2, $value3, $value4,
     }
 }
 
-function conectarAoBanco() {
+function conectarAoBanco()
+{
     $host = "localhost";
     $usuario = "root";
     $senha = "";
@@ -370,6 +348,108 @@ function listarProdutosDestaqueFreteGratis($ativo, $destaque, $freteGratis)
             return $sqlLista->fetchAll(PDO::FETCH_OBJ);
         } else {
             return []; // Retorna um array vazio quando nenhum registro é encontrado
+        }
+    } catch (PDOException $e) {
+        echo 'Exception -> ';
+        return $e->getMessage();
+    } finally {
+        $conn = null;
+    }
+}
+
+// func.php
+
+// Função para verificar se o usuário está logado
+function verificarLogin()
+{
+    // Verifica se a variável de sessão 'usuario_logado' está definida e é verdadeira
+    return isset($_SESSION['usuario_logado']) && $_SESSION['usuario_logado'] === true;
+}
+
+function insertonze($tabela, $camposTabela, $valor1, $valor2, $value3, $value4, $value5, $value6, $value7, $value8, $value9, $value10, $value11)
+{
+    $conn = conectar();
+    try {
+        if ($conn) {
+            $sqlInsert = $conn->prepare("INSERT INTO $tabela($camposTabela) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            $sqlInsert->bindValue(1, $valor1, PDO::PARAM_STR);
+            $sqlInsert->bindValue(2, $valor2, PDO::PARAM_STR);
+            $sqlInsert->bindValue(3, $value3, PDO::PARAM_STR);
+            $sqlInsert->bindValue(4, $value4, PDO::PARAM_STR);
+            $sqlInsert->bindValue(5, $value5, PDO::PARAM_STR);
+            $sqlInsert->bindValue(6, $value6, PDO::PARAM_STR);
+            $sqlInsert->bindValue(7, $value7, PDO::PARAM_STR);
+            $sqlInsert->bindValue(8, $value8, PDO::PARAM_STR);
+            $sqlInsert->bindValue(9, $value9, PDO::PARAM_STR);
+            $sqlInsert->bindValue(10, $value10, PDO::PARAM_STR);
+            $sqlInsert->bindValue(11, $value11, PDO::PARAM_STR);
+
+            $sqlInsert->execute();
+
+            if ($sqlInsert->rowCount() > 0) {
+                return "Cadastrado";
+            } else {
+                return "Vazio";
+            }
+        } else {
+            return "Erro na conexão com o banco de dados";
+        }
+    } catch (PDOException $e) {
+        return "Erro: " . $e->getMessage();
+    } finally {
+        $conn = null;
+    }
+}
+
+
+function insertDoze($tabela, $campos, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9, $value10, $value11, $value12)
+{
+    $conn = conectar();
+    try {
+        $conn->beginTransaction();
+        $sqInsert = $conn->prepare("INSERT INTO $tabela($campos)VALUES(?,?,?,?,?,?,?,?,?,?,?,?)");
+        $sqInsert->bindValue(1, $value1, PDO::PARAM_STR);
+        $sqInsert->bindValue(2, $value2, PDO::PARAM_STR);
+        $sqInsert->bindValue(3, $value3, PDO::PARAM_STR);
+        $sqInsert->bindValue(4, $value4, PDO::PARAM_STR);
+        $sqInsert->bindValue(5, $value5, PDO::PARAM_STR);
+        $sqInsert->bindValue(6, $value6, PDO::PARAM_STR);
+        $sqInsert->bindValue(7, $value7, PDO::PARAM_STR);
+        $sqInsert->bindValue(8, $value8, PDO::PARAM_STR);
+        $sqInsert->bindValue(9, $value9, PDO::PARAM_STR);
+        $sqInsert->bindValue(10, $value10, PDO::PARAM_STR);
+        $sqInsert->bindValue(11, $value11, PDO::PARAM_STR);
+        $sqInsert->bindValue(12, $value12, PDO::PARAM_STR);
+
+        $sqInsert->execute();
+        $conn->commit();
+        if ($sqInsert->rowCount() > 0) {
+            return 'Gravado';
+        } else {
+            return 'nGravado';
+        };
+    } catch (PDOException $e) {
+        echo 'Exception -> ';
+        return $e->getMessage();
+    } finally {
+        $conn = null;
+    }
+}
+
+
+
+function listarTodosRegistrosOfertas($tabela, $campos, $ativo, $campoOfertas)
+{
+    $conn = conectar();
+    try {
+        $sqlLista = $conn->prepare("SELECT $campos FROM $tabela WHERE ativo = ? AND ofertasDoDia = ?");
+        $sqlLista->bindValue(1, $ativo, PDO::PARAM_STR);
+        $sqlLista->bindValue(2, $campoOfertas, PDO::PARAM_STR);
+        $sqlLista->execute();
+        if ($sqlLista->rowCount() > 0) {
+            return $sqlLista->fetchAll(PDO::FETCH_OBJ);
+        } else {
+            return 'Vazio';
         }
     } catch (PDOException $e) {
         echo 'Exception -> ';

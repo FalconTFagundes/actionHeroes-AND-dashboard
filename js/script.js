@@ -60,8 +60,8 @@ $(document).ready(function () {
         dots: true,
         infinite: true,
         speed: 300,
-        slidesToShow: 5,
-        slidesToScroll: 4,
+        slidesToShow: 6,
+        slidesToScroll: 6,
         responsive: [
             {
                 breakpoint: 1280,

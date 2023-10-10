@@ -177,7 +177,7 @@ include_once 'config/constantes.php';
                     </div>
 
                     <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="ofertasDoDia" name="classificacaoProd" value="ofertas">
+                        <input class="form-check-input" type="checkbox" id="ofertasDoDia" name="ofertaDoDia" value="ofertas">
                         <label class="form-check-label" for="ofertasDoDia">Adicionar em Ofertas do Dia</label>
                     </div>
 

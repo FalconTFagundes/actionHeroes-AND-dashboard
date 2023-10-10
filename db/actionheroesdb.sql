@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 07/10/2023 às 00:51
+-- Tempo de geração: 10/10/2023 às 02:51
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -43,6 +43,27 @@ INSERT INTO `banner` (`idbanner`, `img`, `cadastro`, `alteracao`, `ativo`) VALUE
 (2, 'deadpool.jpg', '2023-10-02 21:09:00', '2023-10-04 21:34:41', 'A'),
 (3, 'off.jpg', '2023-10-02 21:09:00', '2023-10-03 01:19:29', 'A'),
 (4, 'batman.jpg', '2023-10-02 21:09:00', '2023-10-03 01:19:31', 'A');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `cliente`
+--
+
+CREATE TABLE `cliente` (
+  `idcliente` int(11) NOT NULL,
+  `telefone` varchar(15) NOT NULL,
+  `cep` varchar(10) NOT NULL,
+  `email_contato` varchar(255) NOT NULL,
+  `cpf` varchar(14) NOT NULL,
+  `rua` varchar(255) NOT NULL,
+  `cidade` varchar(255) NOT NULL,
+  `estado` varchar(255) NOT NULL,
+  `bairro` varchar(255) NOT NULL,
+  `numero` varchar(10) NOT NULL,
+  `complemento` varchar(255) DEFAULT NULL,
+  `usuario_id` int(10) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -299,6 +320,13 @@ ALTER TABLE `banner`
   ADD PRIMARY KEY (`idbanner`);
 
 --
+-- Índices de tabela `cliente`
+--
+ALTER TABLE `cliente`
+  ADD PRIMARY KEY (`idcliente`),
+  ADD KEY `usuario_id` (`usuario_id`);
+
+--
 -- Índices de tabela `comentarios`
 --
 ALTER TABLE `comentarios`
@@ -351,6 +379,12 @@ ALTER TABLE `banner`
   MODIFY `idbanner` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
+-- AUTO_INCREMENT de tabela `cliente`
+--
+ALTER TABLE `cliente`
+  MODIFY `idcliente` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de tabela `comentarios`
 --
 ALTER TABLE `comentarios`
@@ -391,6 +425,16 @@ ALTER TABLE `universogeek`
 --
 ALTER TABLE `usuario`
   MODIFY `idusuario` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- Restrições para tabelas despejadas
+--
+
+--
+-- Restrições para tabelas `cliente`
+--
+ALTER TABLE `cliente`
+  ADD CONSTRAINT `cliente_ibfk_1` FOREIGN KEY (`usuario_id`) REFERENCES `usuario` (`idusuario`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

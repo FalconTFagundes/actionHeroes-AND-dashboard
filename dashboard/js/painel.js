@@ -8,7 +8,6 @@ By: Rafael Fagundes
 
 
 /* FUNCTION ATUALIZAR PÁGINA */
-
 function atualizarPagina(dataMenu) {
     var dados = {
         acao: dataMenu
@@ -25,8 +24,6 @@ function atualizarPagina(dataMenu) {
             $('div#conteudo').html(e);
         }
     })
-
-
 }
 
 
@@ -38,9 +35,9 @@ $('.clickMenulateral').on('click', function () {
     var dados = {
         acao: dataMenu
     }
-    
+
     $(this).addClass("show active");
-    
+
     $.ajax({
         type: "POST",
         dataType: 'html',
@@ -50,7 +47,7 @@ $('.clickMenulateral').on('click', function () {
             msgGeral('processando', 700);
         }, success: function (retorno) {
             $('#conteudo').html(retorno);
-            
+
         }
     });
 })
@@ -86,15 +83,13 @@ function cadGeral(formId, modalId, pageAcao, pageRetorno) {
                     title: 'Salvo com Sucesso',
                     showConfirmButton: false,
                     timer: 1000
-
                 })
-
-
             }
         });
     })
 }
 /* FIM FUNCTION CADASTRAR GERAL */
+
 
 
 /* FUNCTION EXCLUIR */
@@ -146,8 +141,10 @@ function excGeral(idvar, acaopage, pageretorno, m1, m2) {
         });
     })
 }
+/* FINAL FUNÇÃO DE EXCLUIR */
 
 
+/* INICIO FUNÇÃO DE ATIVAR */
 function ativarGeral(e, f, acaopage, pageretorno) {
     if (f == 'ativar') {
         var ativo = 'A';
@@ -180,10 +177,12 @@ function ativarGeral(e, f, acaopage, pageretorno) {
             console.log(retorno);
         }
     });
-
-
 }
+/* FIM DA FUNÇÃO DE ATIVAR */
 
+
+
+/* FUNÇÃO DE ALERTA DE MENSAGEM */
 function msgGeral(mensagem, timer) {
     Swal.fire({
         position: 'top-center',
@@ -193,3 +192,4 @@ function msgGeral(mensagem, timer) {
         timer: timer
     })
 }
+/* FINAL FUNÇÃO DE ALERTA DE MENSAGEM */

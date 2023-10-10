@@ -1,8 +1,33 @@
 <?php
-
-include_once 'config/conexao.php';
 include_once 'config/constantes.php';
+include_once 'config/conexao.php';
 include_once 'func/func.php';
+
+
+if (isset($_GET['idproduto'])) {
+    $produto_id = $_GET['idproduto'];
+
+
+    $produto = listarTodosRegistrosId('produto', 'nome, valor', 'A', 'idproduto', $produto_id);
+
+    if ($produto && $produto !== 'Vazio') {
+        $produto = $produto[0];
+
+    
+        $produto_adicionado = array(
+            'id' => $produto_id,
+            'nome' => $produto->nome,
+            'preco' => $produto->valor
+        );
+
+        if (!isset($_SESSION['carrinho'])) {
+            $_SESSION['carrinho'] = array();
+        }
+
+        $_SESSION['carrinho'][] = $produto_adicionado;
+    }
+}
+
 
 if (isset($_GET['idproduto'])) {
     $produto_id = $_GET['idproduto'];
@@ -292,9 +317,10 @@ if (isset($_GET['idproduto'])) {
                     <p>Peso: <?php echo $produto->peso; ?></p>
                     <p>Valor: <?php echo $produto->valor; ?></p>
                     <!-- Adicione mais detalhes do produto aqui -->
-                    <div class="button-container ">
-                        <button class="neon-button">Adicionar ao carrinho</button>
-                    </div>
+                    <form action="carrinho.php" method="POST">
+                        <input type="hidden" name="produto_id" value="<?php echo $produto_id; ?>">
+                        <button type="submit" class="neon-button">Adicionar ao Carrinho</button>
+                    </form>
                 </div>
             </div>
 

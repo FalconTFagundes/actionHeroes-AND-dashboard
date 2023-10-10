@@ -1,8 +1,8 @@
 <?php
-session_start(); // Inicie a sessão
+session_start(); 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -125,7 +125,6 @@ session_start(); // Inicie a sessão
 
         .login-img {
             width: 95%;
-            /* Torna a imagem 5% menor que a largura do contêiner pai */
         }
     </style>
 </head>
@@ -133,10 +132,10 @@ session_start(); // Inicie a sessão
 <body>
     <main class="">
         <div class="brand-wrapper ">
-            <img src="./img/logotipo/logoActionHeroesSemFundo.png" class="logo">
+            <a href="index.php"><img src="./img/logotipo/logoActionHeroesSemFundo.png" class="logo"></a>
         </div>
         <div class="login-section-wrapper">
-            <!--mensagem de erro -->
+
             <?php if (isset($_SESSION['login_error'])) : ?>
                 <p style="color: red;"><?php echo $_SESSION['login_error']; ?></p>
                 <?php unset($_SESSION['login_error']); ?>
